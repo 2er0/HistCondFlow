@@ -10,7 +10,7 @@ fi
 # debug mode to print commands instead of running them
 debug=false
 # experiment name
-experiment_name="TFselfopt_re1"
+experiment_name="TFselfopt"
 # options for dataset
 # "fsb", "srb", "real"
 dataset="fsb"
@@ -18,7 +18,8 @@ dataset="fsb"
 # version 1 is without numerical stability improvements
 # version 2 is with simple numerical stability improvements
 # version 3 is with improved numerical stability improvements
-code_version="3"
+# version 4 is with improved numerical stability improvements, ST-Net and self-optimization
+code_version="4"
 self_optimization="True"
 runNumber=0
 seek_start=0
@@ -27,7 +28,6 @@ for x in "RealNVP,1,GPUQ,10" \
          "tcNF-base,101,GPUQ,10" \
          "tcNF-cnn,101,GPUQ,10" \
          "tcNF-mlp,101,GPUQ,10" \
-         "RealNVP-extended,51,GPUQ,10" \
          "tcNF-stateless,101,GPUQ,2" \
          "tcNF-stateful,1,GPUQ,2"
 do

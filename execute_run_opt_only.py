@@ -240,8 +240,6 @@ if __name__ == "__main__":
         process_func_list_1 = [
             partial(run, run_args=args, generator=_gen, model_type="RealNVP", past=1, coupling_number=3,
                     device="cuda:0"),
-            partial(run, run_args=args, generator=_gen, model_type="RealNVP-extended", past=51, coupling_number=3,
-                    device="cuda:0"),
             partial(run, run_args=args, generator=_gen, model_type="tcNF-stateful", past=1, coupling_number=3,
                     device="cuda:0"),
         ]

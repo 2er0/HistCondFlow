@@ -49,7 +49,7 @@ def flow_parse_args():
                         help="Run self optimization for the model")
 
     parser.add_argument("--model_types", type=str, default=["RealNVP"], nargs="+",
-                        help="Model type one or list of ['RealNVP', 'RealNVP-extended', …, 'tcNF-extended', …]")
+                        help="Model type one or list of ['RealNVP', 'tcNF-base', …]")
     parser.add_argument("--coupling_layers", type=int, default=[7], nargs="+",  # [3, 5, 7, 9]
                         help="List with odd numbers indicating the amount coupling layers to use.\n"
                              "One final coupling layer will be added automatically")

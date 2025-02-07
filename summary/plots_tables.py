@@ -59,7 +59,7 @@ def create_pox_plot_by_type_plotly(data, title: str = None):
     first_order_group = ["tcNF-base", "tcNF-cnn",
                          "tcNF-stateless", "tcNF-mlp",
                          "tcNF-stateful"]
-    second_order_group = ["RealNVP", "RealNVP-extended",
+    second_order_group = ["RealNVP",
                           "PCA", "KNN", "HBOS", "iForest", "GDN", "DAMP", "PCC", "IF-LOF", "CBLOF", "Torks",
                           "KMeans", "mSTAMP", "COP"]
 
