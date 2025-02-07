@@ -175,5 +175,4 @@ run.state
 .run
 .run-gpu-node
 some_plots
-results
-summary/*.pdf
+results-full

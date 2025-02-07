@@ -1,0 +1,3523 @@
+{
+    "dataset": "smd_machine-1-5",
+    "run_args": {
+        "project": "TFselfopt_re4-real-3",
+        "user": "timeflow",
+        "wandb_mode": "online",
+        "slurm_id": 20904982,
+        "code_version": 3,
+        "batch_size": 128,
+        "epochs": 10000,
+        "lr": 0.0002,
+        "early_stopping": 50,
+        "past_range": [
+            101
+        ],
+        "nruns": 1,
+        "self_optimization": true,
+        "model_types": [
+            "tcNF-cnn"
+        ],
+        "coupling_layers": [
+            7
+        ],
+        "dataset": "real",
+        "generator_seek": 8,
+        "generator_stop": 9,
+        "load_pretrained": false,
+        "pretrained_model": ""
+    },
+    "parameters": {
+        "channels": 38,
+        "past": 32,
+        "code_version": 4,
+        "model_type": "tcNF-cnn",
+        "group": "smd_machine-1-5",
+        "device": "cuda:0",
+        "epochs": 10000,
+        "coupling_layers_": 7,
+        "coupling_layers": 15,
+        "input_shape": [
+            23604,
+            38
+        ],
+        "hist_shape": [
+            23604,
+            32,
+            38
+        ],
+        "normalized": true,
+        "z_score": false,
+        "normalize_factors": {
+            "z_score": false,
+            "col_sub": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.040035,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.001229,
+                0.0,
+                0.0,
+                0.0,
+                8.5e-05,
+                0.000115,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.00049,
+                0.0,
+                0.0,
+                0.000332,
+                0.0,
+                0.0,
+                0.0,
+                0.00156,
+                0.00156,
+                0.0,
+                0.0
+            ],
+            "col_divide": [
+                0.070707,
+                0.015014,
+                0.011424,
+                0.013869,
+                1.0,
+                0.958572,
+                0.168449,
+                1.0,
+                1.0,
+                0.058535,
+                0.13704,
+                0.444444,
+                0.111111,
+                0.938126,
+                1.0,
+                0.8378369999999999,
+                1.0,
+                1.0,
+                0.89038,
+                0.210802,
+                0.894343,
+                0.393943,
+                1.0,
+                0.159968,
+                1.0,
+                0.159109,
+                1.0,
+                0.617928,
+                1.0,
+                0.8,
+                0.999668,
+                0.194805,
+                0.555556,
+                0.527473,
+                0.99844,
+                0.99844,
+                1.0,
+                1.0
+            ],
+            "col_hist_sub": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.040035,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.001229,
+                0.0,
+                0.0,
+                0.0,
+                8.5e-05,
+                0.000115,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.00049,
+                0.0,
+                0.0,
+                0.000332,
+                0.0,
+                0.0,
+                0.0,
+                0.00156,
+                0.00156,
+                0.0,
+                0.0
+            ],
+            "col_hist_divide": [
+                0.070707,
+                0.015014,
+                0.011424,
+                0.013869,
+                1.0,
+                0.958572,
+                0.168449,
+                1.0,
+                1.0,
+                0.058535,
+                0.13704,
+                0.444444,
+                0.111111,
+                0.938126,
+                1.0,
+                0.8378369999999999,
+                1.0,
+                1.0,
+                0.89038,
+                0.210802,
+                0.894343,
+                0.393943,
+                1.0,
+                0.159968,
+                1.0,
+                0.159109,
+                1.0,
+                0.617928,
+                1.0,
+                0.8,
+                0.999668,
+                0.194805,
+                0.555556,
+                0.527473,
+                0.99844,
+                0.99844,
+                1.0,
+                1.0
+            ]
+        },
+        "fixed_past": false,
+        "hidden_multiplier": 14,
+        "st_net_layers": 4,
+        "st_dropout": 0.2,
+        "st_funnel_factor": 10,
+        "encoder_layers": 2,
+        "encoder_size": 4,
+        "encoder_dropout": 0.3,
+        "encoder_channel_depth": 10
+    },
+    "optimization_trace": {
+        "0": {
+            "0": {
+                "hidden_multiplier": 18,
+                "st_net_layers": 5,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 5,
+                "coupling_layers": 5,
+                "past": 70,
+                "encoder_layers": 4,
+                "encoder_size": 7,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 1,
+                "opt_goal": -101.84260600322001,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -101.84260600322001
+                        },
+                        "print": "best val_loss: -101.843"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9213639651138057,
+                            "VUS_ROC": 0.9548761390535001
+                        },
+                        "print": "(1 - AUC_ROC: 0.921) * 0.3 + (1 - VUS_ROC: 0.955) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 11,
+                "st_net_layers": 5,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 7,
+                "coupling_layers": 9,
+                "past": 18,
+                "encoder_layers": 5,
+                "encoder_size": 4,
+                "encoder_dropout": 0.7,
+                "encoder_channel_depth": 9,
+                "opt_goal": -118.19836075241501,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -118.19836075241501
+                        },
+                        "print": "best val_loss: -118.198"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9554533078068496,
+                            "VUS_ROC": 0.9667152090422922
+                        },
+                        "print": "(1 - AUC_ROC: 0.955) * 0.3 + (1 - VUS_ROC: 0.967) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 34,
+                "st_net_layers": 7,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 3,
+                "coupling_layers": 12,
+                "past": 90,
+                "encoder_layers": 3,
+                "encoder_size": 4,
+                "encoder_dropout": 0.8,
+                "encoder_channel_depth": 6,
+                "opt_goal": -88.84954083932412,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -88.84954083932412
+                        },
+                        "print": "best val_loss: -88.850"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9182037864284195,
+                            "VUS_ROC": 0.9542643595204313
+                        },
+                        "print": "(1 - AUC_ROC: 0.918) * 0.3 + (1 - VUS_ROC: 0.954) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 18,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 5,
+                "coupling_layers": 18,
+                "past": 11,
+                "encoder_layers": 2,
+                "encoder_size": 3,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 2,
+                "opt_goal": -121.7979732204128,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -121.7979732204128
+                        },
+                        "print": "best val_loss: -121.798"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9413750265900871,
+                            "VUS_ROC": 0.9610121462529753
+                        },
+                        "print": "(1 - AUC_ROC: 0.941) * 0.3 + (1 - VUS_ROC: 0.961) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 18,
+                "st_net_layers": 7,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 7,
+                "coupling_layers": 9,
+                "past": 80,
+                "encoder_layers": 3,
+                "encoder_size": 4,
+                "encoder_dropout": 0.8,
+                "encoder_channel_depth": 5,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 39,
+                "st_net_layers": 4,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 4,
+                "coupling_layers": 12,
+                "past": 73,
+                "encoder_layers": 3,
+                "encoder_size": 5,
+                "encoder_dropout": 0.6,
+                "encoder_channel_depth": 14,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 50,
+                "st_net_layers": 5,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 9,
+                "coupling_layers": 12,
+                "past": 17,
+                "encoder_layers": 1,
+                "encoder_size": 6,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 9,
+                "opt_goal": -115.78346396781303,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -115.78346396781303
+                        },
+                        "print": "best val_loss: -115.783"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9451423101467773,
+                            "VUS_ROC": 0.9665614595739818
+                        },
+                        "print": "(1 - AUC_ROC: 0.945) * 0.3 + (1 - VUS_ROC: 0.967) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 4,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 2,
+                "coupling_layers": 9,
+                "past": 85,
+                "encoder_layers": 1,
+                "encoder_size": 5,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 18,
+                "opt_goal": -115.90032426731007,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -115.90032426731007
+                        },
+                        "print": "best val_loss: -115.900"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9340799829823442,
+                            "VUS_ROC": 0.9584483392497742
+                        },
+                        "print": "(1 - AUC_ROC: 0.934) * 0.3 + (1 - VUS_ROC: 0.958) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 43,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 8,
+                "coupling_layers": 19,
+                "past": 68,
+                "encoder_layers": 3,
+                "encoder_size": 6,
+                "encoder_dropout": 0.7,
+                "encoder_channel_depth": 11,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 48,
+                "st_net_layers": 5,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 10,
+                "coupling_layers": 10,
+                "past": 55,
+                "encoder_layers": 2,
+                "encoder_size": 5,
+                "encoder_dropout": 0.6,
+                "encoder_channel_depth": 13,
+                "opt_goal": -101.56997783763988,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -101.56997783763988
+                        },
+                        "print": "best val_loss: -101.570"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9572359072537757,
+                            "VUS_ROC": 0.9773686803596875
+                        },
+                        "print": "(1 - AUC_ROC: 0.957) * 0.3 + (1 - VUS_ROC: 0.977) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 21,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 6,
+                "coupling_layers": 20,
+                "past": 23,
+                "encoder_layers": 2,
+                "encoder_size": 6,
+                "encoder_dropout": 0.7,
+                "encoder_channel_depth": 15,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 41,
+                "st_net_layers": 7,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 9,
+                "coupling_layers": 5,
+                "past": 99,
+                "encoder_layers": 3,
+                "encoder_size": 5,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 18,
+                "opt_goal": -86.71502953606682,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -86.71502953606682
+                        },
+                        "print": "best val_loss: -86.715"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9358055732822803,
+                            "VUS_ROC": 0.9608639672327789
+                        },
+                        "print": "(1 - AUC_ROC: 0.936) * 0.3 + (1 - VUS_ROC: 0.961) * 0.7"
+                    }
+                ]
+            }
+        },
+        "1": {
+            "0": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 3,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 3,
+                "coupling_layers": 15,
+                "past": 15,
+                "encoder_layers": 2,
+                "encoder_size": 5,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 15,
+                "opt_goal": -119.06234741210938,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -119.06234741210938
+                        },
+                        "print": "best val_loss: -119.062"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9443488619442673,
+                            "VUS_ROC": 0.9606338811033471
+                        },
+                        "print": "(1 - AUC_ROC: 0.944) * 0.3 + (1 - VUS_ROC: 0.961) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 7,
+                "st_net_layers": 5,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 8,
+                "coupling_layers": 14,
+                "past": 61,
+                "encoder_layers": 3,
+                "encoder_size": 5,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 16,
+                "opt_goal": -123.24284981392525,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -123.24284981392525
+                        },
+                        "print": "best val_loss: -123.243"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9664658583280153,
+                            "VUS_ROC": 0.9778473921010054
+                        },
+                        "print": "(1 - AUC_ROC: 0.966) * 0.3 + (1 - VUS_ROC: 0.978) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 6,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 8,
+                "coupling_layers": 17,
+                "past": 32,
+                "encoder_layers": 3,
+                "encoder_size": 6,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 16,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 21,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 6,
+                "coupling_layers": 12,
+                "past": 49,
+                "encoder_layers": 3,
+                "encoder_size": 3,
+                "encoder_dropout": 0.9,
+                "encoder_channel_depth": 15,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 23,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 5,
+                "coupling_layers": 16,
+                "past": 42,
+                "encoder_layers": 3,
+                "encoder_size": 4,
+                "encoder_dropout": 0.6,
+                "encoder_channel_depth": 8,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 7,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 10,
+                "coupling_layers": 20,
+                "past": 40,
+                "encoder_layers": 2,
+                "encoder_size": 5,
+                "encoder_dropout": 0.6,
+                "encoder_channel_depth": 2,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 6,
+                "st_net_layers": 7,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 2,
+                "coupling_layers": 10,
+                "past": 14,
+                "encoder_layers": 4,
+                "encoder_size": 6,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 1,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 14,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 10,
+                "coupling_layers": 15,
+                "past": 32,
+                "encoder_layers": 2,
+                "encoder_size": 4,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 10,
+                "opt_goal": -146.11432647705078,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -146.11432647705078
+                        },
+                        "print": "best val_loss: -146.114"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9588185492448416,
+                            "VUS_ROC": 0.9758442792173797
+                        },
+                        "print": "(1 - AUC_ROC: 0.959) * 0.3 + (1 - VUS_ROC: 0.976) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 5,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 5,
+                "coupling_layers": 13,
+                "past": 11,
+                "encoder_layers": 3,
+                "encoder_size": 4,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 2,
+                "opt_goal": -120.33031979122677,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -120.33031979122677
+                        },
+                        "print": "best val_loss: -120.330"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9351593278025951,
+                            "VUS_ROC": 0.9614492199884714
+                        },
+                        "print": "(1 - AUC_ROC: 0.935) * 0.3 + (1 - VUS_ROC: 0.961) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 24,
+                "st_net_layers": 4,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 4,
+                "coupling_layers": 20,
+                "past": 11,
+                "encoder_layers": 4,
+                "encoder_size": 4,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 6,
+                "opt_goal": -118.4959621944943,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -118.4959621944943
+                        },
+                        "print": "best val_loss: -118.496"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9070882790895554,
+                            "VUS_ROC": 0.9567065825720557
+                        },
+                        "print": "(1 - AUC_ROC: 0.907) * 0.3 + (1 - VUS_ROC: 0.957) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 5,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 9,
+                "coupling_layers": 18,
+                "past": 65,
+                "encoder_layers": 2,
+                "encoder_size": 6,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 9,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 16,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 5,
+                "coupling_layers": 20,
+                "past": 26,
+                "encoder_layers": 3,
+                "encoder_size": 4,
+                "encoder_dropout": 0.6,
+                "encoder_channel_depth": 9,
+                "opt_goal": -120.29309370711043,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -120.29309370711043
+                        },
+                        "print": "best val_loss: -120.293"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9550265900872155,
+                            "VUS_ROC": 0.9715240434745445
+                        },
+                        "print": "(1 - AUC_ROC: 0.955) * 0.3 + (1 - VUS_ROC: 0.972) * 0.7"
+                    }
+                ]
+            }
+        },
+        "2": {
+            "0": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 5,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 10,
+                "coupling_layers": 18,
+                "past": 11,
+                "encoder_layers": 3,
+                "encoder_size": 4,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 5,
+                "opt_goal": -127.59394795185811,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -127.59394795185811
+                        },
+                        "print": "best val_loss: -127.594"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7755375452031484,
+                            "VUS_ROC": 0.8238209634507178
+                        },
+                        "print": "(1 - AUC_ROC: 0.776) * 0.3 + (1 - VUS_ROC: 0.824) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 10,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 10,
+                "coupling_layers": 10,
+                "past": 72,
+                "encoder_layers": 3,
+                "encoder_size": 6,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 13,
+                "opt_goal": -119.52062596501531,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -119.52062596501531
+                        },
+                        "print": "best val_loss: -119.521"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9520195703041906,
+                            "VUS_ROC": 0.9734290051128602
+                        },
+                        "print": "(1 - AUC_ROC: 0.952) * 0.3 + (1 - VUS_ROC: 0.973) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 28,
+                "st_net_layers": 5,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 6,
+                "coupling_layers": 18,
+                "past": 23,
+                "encoder_layers": 3,
+                "encoder_size": 5,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 7,
+                "opt_goal": -110.54189218057168,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -110.54189218057168
+                        },
+                        "print": "best val_loss: -110.542"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9579583067432462,
+                            "VUS_ROC": 0.965275932749101
+                        },
+                        "print": "(1 - AUC_ROC: 0.958) * 0.3 + (1 - VUS_ROC: 0.965) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 26,
+                "st_net_layers": 5,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 10,
+                "coupling_layers": 17,
+                "past": 42,
+                "encoder_layers": 5,
+                "encoder_size": 4,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 6,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 9,
+                "coupling_layers": 17,
+                "past": 42,
+                "encoder_layers": 5,
+                "encoder_size": 7,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 14,
+                "opt_goal": -122.64916744747677,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -122.64916744747677
+                        },
+                        "print": "best val_loss: -122.649"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9646938949159753,
+                            "VUS_ROC": 0.9774670375227498
+                        },
+                        "print": "(1 - AUC_ROC: 0.965) * 0.3 + (1 - VUS_ROC: 0.977) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 6,
+                "coupling_layers": 13,
+                "past": 53,
+                "encoder_layers": 4,
+                "encoder_size": 6,
+                "encoder_dropout": 0.7,
+                "encoder_channel_depth": 5,
+                "opt_goal": -126.88408516548775,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -126.88408516548775
+                        },
+                        "print": "best val_loss: -126.884"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8974362901510315,
+                            "VUS_ROC": 0.9528300492819417
+                        },
+                        "print": "(1 - AUC_ROC: 0.897) * 0.3 + (1 - VUS_ROC: 0.953) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 18,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 9,
+                "coupling_layers": 16,
+                "past": 13,
+                "encoder_layers": 2,
+                "encoder_size": 3,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 7,
+                "opt_goal": -130.09944173452016,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -130.09944173452016
+                        },
+                        "print": "best val_loss: -130.099"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.937453733248245,
+                            "VUS_ROC": 0.9628405694233765
+                        },
+                        "print": "(1 - AUC_ROC: 0.937) * 0.3 + (1 - VUS_ROC: 0.963) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 10,
+                "coupling_layers": 16,
+                "past": 51,
+                "encoder_layers": 4,
+                "encoder_size": 5,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 15,
+                "opt_goal": -124.68558729017103,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -124.68558729017103
+                        },
+                        "print": "best val_loss: -124.686"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9072308019570304,
+                            "VUS_ROC": 0.9567916695776537
+                        },
+                        "print": "(1 - AUC_ROC: 0.907) * 0.3 + (1 - VUS_ROC: 0.957) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 4,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 8,
+                "coupling_layers": 16,
+                "past": 28,
+                "encoder_layers": 1,
+                "encoder_size": 4,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 13,
+                "opt_goal": -123.00368685335727,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -123.00368685335727
+                        },
+                        "print": "best val_loss: -123.004"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9411376302914274,
+                            "VUS_ROC": 0.963617443807158
+                        },
+                        "print": "(1 - AUC_ROC: 0.941) * 0.3 + (1 - VUS_ROC: 0.964) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 8,
+                "st_net_layers": 3,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 8,
+                "coupling_layers": 17,
+                "past": 47,
+                "encoder_layers": 3,
+                "encoder_size": 4,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 13,
+                "opt_goal": -136.55094785948057,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -136.55094785948057
+                        },
+                        "print": "best val_loss: -136.551"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9685181876196554,
+                            "VUS_ROC": 0.9748775666971047
+                        },
+                        "print": "(1 - AUC_ROC: 0.969) * 0.3 + (1 - VUS_ROC: 0.975) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 12,
+                "st_net_layers": 4,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 3,
+                "coupling_layers": 19,
+                "past": 16,
+                "encoder_layers": 4,
+                "encoder_size": 3,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 10,
+                "opt_goal": -122.58497660868876,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -122.58497660868876
+                        },
+                        "print": "best val_loss: -122.585"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.940043820463731,
+                            "VUS_ROC": 0.9679466290050849
+                        },
+                        "print": "(1 - AUC_ROC: 0.940) * 0.3 + (1 - VUS_ROC: 0.968) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 8,
+                "st_net_layers": 5,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 7,
+                "coupling_layers": 7,
+                "past": 53,
+                "encoder_layers": 2,
+                "encoder_size": 5,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 11,
+                "opt_goal": -122.45361266265044,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -122.45361266265044
+                        },
+                        "print": "best val_loss: -122.454"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9593137630291428,
+                            "VUS_ROC": 0.9811073155495222
+                        },
+                        "print": "(1 - AUC_ROC: 0.959) * 0.3 + (1 - VUS_ROC: 0.981) * 0.7"
+                    }
+                ]
+            }
+        },
+        "3": {
+            "0": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 10,
+                "coupling_layers": 17,
+                "past": 50,
+                "encoder_layers": 3,
+                "encoder_size": 3,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 19,
+                "opt_goal": -138.3747466834816,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -138.3747466834816
+                        },
+                        "print": "best val_loss: -138.375"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.962724952137843,
+                            "VUS_ROC": 0.9794068745304133
+                        },
+                        "print": "(1 - AUC_ROC: 0.963) * 0.3 + (1 - VUS_ROC: 0.979) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 9,
+                "coupling_layers": 18,
+                "past": 44,
+                "encoder_layers": 2,
+                "encoder_size": 6,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 13,
+                "opt_goal": -134.63552361565667,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -134.63552361565667
+                        },
+                        "print": "best val_loss: -134.636"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9644718145075515,
+                            "VUS_ROC": 0.9788159941721812
+                        },
+                        "print": "(1 - AUC_ROC: 0.964) * 0.3 + (1 - VUS_ROC: 0.979) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 4,
+                "st_dropout": 0.9,
+                "st_funnel_factor": 9,
+                "coupling_layers": 16,
+                "past": 41,
+                "encoder_layers": 4,
+                "encoder_size": 3,
+                "encoder_dropout": 0.7,
+                "encoder_channel_depth": 13,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 6,
+                "st_net_layers": 4,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 5,
+                "coupling_layers": 14,
+                "past": 32,
+                "encoder_layers": 3,
+                "encoder_size": 4,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 10,
+                "opt_goal": -118.31096917229729,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -118.31096917229729
+                        },
+                        "print": "best val_loss: -118.311"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9678630078706658,
+                            "VUS_ROC": 0.9749571810398397
+                        },
+                        "print": "(1 - AUC_ROC: 0.968) * 0.3 + (1 - VUS_ROC: 0.975) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 3,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 1,
+                "coupling_layers": 17,
+                "past": 55,
+                "encoder_layers": 3,
+                "encoder_size": 4,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 19,
+                "opt_goal": -126.31666523701436,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -126.31666523701436
+                        },
+                        "print": "best val_loss: -126.317"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9597817485641351,
+                            "VUS_ROC": 0.9747094414158751
+                        },
+                        "print": "(1 - AUC_ROC: 0.960) * 0.3 + (1 - VUS_ROC: 0.975) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 9,
+                "st_net_layers": 4,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 9,
+                "coupling_layers": 19,
+                "past": 49,
+                "encoder_layers": 2,
+                "encoder_size": 4,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 10,
+                "opt_goal": -125.77971463590055,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -125.77971463590055
+                        },
+                        "print": "best val_loss: -125.780"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.960936821952776,
+                            "VUS_ROC": 0.9729369477189365
+                        },
+                        "print": "(1 - AUC_ROC: 0.961) * 0.3 + (1 - VUS_ROC: 0.973) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 37,
+                "st_net_layers": 5,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 9,
+                "coupling_layers": 20,
+                "past": 43,
+                "encoder_layers": 3,
+                "encoder_size": 5,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 7,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 17,
+                "st_net_layers": 6,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 8,
+                "coupling_layers": 18,
+                "past": 20,
+                "encoder_layers": 1,
+                "encoder_size": 3,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 12,
+                "opt_goal": -122.18660674224029,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -122.18660674224029
+                        },
+                        "print": "best val_loss: -122.187"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9540944479897893,
+                            "VUS_ROC": 0.9709674167927284
+                        },
+                        "print": "(1 - AUC_ROC: 0.954) * 0.3 + (1 - VUS_ROC: 0.971) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 3,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 9,
+                "coupling_layers": 18,
+                "past": 27,
+                "encoder_layers": 4,
+                "encoder_size": 5,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 5,
+                "opt_goal": -128.28501417830185,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -128.28501417830185
+                        },
+                        "print": "best val_loss: -128.285"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9413635396724103,
+                            "VUS_ROC": 0.9616919228148938
+                        },
+                        "print": "(1 - AUC_ROC: 0.941) * 0.3 + (1 - VUS_ROC: 0.962) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 20,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 10,
+                "coupling_layers": 6,
+                "past": 13,
+                "encoder_layers": 2,
+                "encoder_size": 6,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 11,
+                "opt_goal": -115.29552645296664,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -115.29552645296664
+                        },
+                        "print": "best val_loss: -115.296"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.943577111252925,
+                            "VUS_ROC": 0.9661200131304274
+                        },
+                        "print": "(1 - AUC_ROC: 0.944) * 0.3 + (1 - VUS_ROC: 0.966) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 6,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 9,
+                "coupling_layers": 12,
+                "past": 16,
+                "encoder_layers": 1,
+                "encoder_size": 4,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 2,
+                "opt_goal": -125.02179511817727,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -125.02179511817727
+                        },
+                        "print": "best val_loss: -125.022"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9407036800680706,
+                            "VUS_ROC": 0.9637852225155764
+                        },
+                        "print": "(1 - AUC_ROC: 0.941) * 0.3 + (1 - VUS_ROC: 0.964) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 23,
+                "st_net_layers": 4,
+                "st_dropout": 0.9,
+                "st_funnel_factor": 7,
+                "coupling_layers": 15,
+                "past": 64,
+                "encoder_layers": 3,
+                "encoder_size": 5,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 18,
+                "opt_goal": -120.54982901908257,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -120.54982901908257
+                        },
+                        "print": "best val_loss: -120.550"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.927397574984046,
+                            "VUS_ROC": 0.9545210266164178
+                        },
+                        "print": "(1 - AUC_ROC: 0.927) * 0.3 + (1 - VUS_ROC: 0.955) * 0.7"
+                    }
+                ]
+            }
+        },
+        "4": {
+            "0": {
+                "hidden_multiplier": 31,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 8,
+                "coupling_layers": 13,
+                "past": 50,
+                "encoder_layers": 2,
+                "encoder_size": 4,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 19,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 23,
+                "st_net_layers": 5,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 7,
+                "coupling_layers": 11,
+                "past": 43,
+                "encoder_layers": 2,
+                "encoder_size": 3,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 17,
+                "opt_goal": -129.37366815515466,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -129.37366815515466
+                        },
+                        "print": "best val_loss: -129.374"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.940069346947458,
+                            "VUS_ROC": 0.9603774809069393
+                        },
+                        "print": "(1 - AUC_ROC: 0.940) * 0.3 + (1 - VUS_ROC: 0.960) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 17,
+                "st_net_layers": 4,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 10,
+                "coupling_layers": 19,
+                "past": 26,
+                "encoder_layers": 3,
+                "encoder_size": 5,
+                "encoder_dropout": 0.7,
+                "encoder_channel_depth": 12,
+                "opt_goal": -120.79157009640255,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -120.79157009640255
+                        },
+                        "print": "best val_loss: -120.792"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9618961922995107,
+                            "VUS_ROC": 0.9707356418491383
+                        },
+                        "print": "(1 - AUC_ROC: 0.962) * 0.3 + (1 - VUS_ROC: 0.971) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 10,
+                "st_net_layers": 4,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 8,
+                "coupling_layers": 12,
+                "past": 24,
+                "encoder_layers": 3,
+                "encoder_size": 3,
+                "encoder_dropout": 0.7,
+                "encoder_channel_depth": 6,
+                "opt_goal": -114.069669362661,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -114.069669362661
+                        },
+                        "print": "best val_loss: -114.070"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9083892788768346,
+                            "VUS_ROC": 0.9543273104861303
+                        },
+                        "print": "(1 - AUC_ROC: 0.908) * 0.3 + (1 - VUS_ROC: 0.954) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 24,
+                "st_net_layers": 6,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 10,
+                "coupling_layers": 20,
+                "past": 65,
+                "encoder_layers": 2,
+                "encoder_size": 3,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 13,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 7,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 9,
+                "coupling_layers": 17,
+                "past": 16,
+                "encoder_layers": 2,
+                "encoder_size": 5,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 11,
+                "opt_goal": -134.96004011824326,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -134.96004011824326
+                        },
+                        "print": "best val_loss: -134.960"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9472559029993619,
+                            "VUS_ROC": 0.9650370335951324
+                        },
+                        "print": "(1 - AUC_ROC: 0.947) * 0.3 + (1 - VUS_ROC: 0.965) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 16,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 10,
+                "coupling_layers": 13,
+                "past": 62,
+                "encoder_layers": 3,
+                "encoder_size": 6,
+                "encoder_dropout": 0.7,
+                "encoder_channel_depth": 17,
+                "opt_goal": -131.56548474286055,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -131.56548474286055
+                        },
+                        "print": "best val_loss: -131.565"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9584747925973196,
+                            "VUS_ROC": 0.979851472899019
+                        },
+                        "print": "(1 - AUC_ROC: 0.958) * 0.3 + (1 - VUS_ROC: 0.980) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 29,
+                "st_net_layers": 5,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 10,
+                "coupling_layers": 14,
+                "past": 55,
+                "encoder_layers": 2,
+                "encoder_size": 5,
+                "encoder_dropout": 0.7,
+                "encoder_channel_depth": 9,
+                "opt_goal": -116.08767823915224,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -116.08767823915224
+                        },
+                        "print": "best val_loss: -116.088"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9606819825569028,
+                            "VUS_ROC": 0.9761877750754481
+                        },
+                        "print": "(1 - AUC_ROC: 0.961) * 0.3 + (1 - VUS_ROC: 0.976) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 9,
+                "coupling_layers": 18,
+                "past": 44,
+                "encoder_layers": 1,
+                "encoder_size": 5,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 5,
+                "opt_goal": -127.05953876392262,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -127.05953876392262
+                        },
+                        "print": "best val_loss: -127.060"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9324424590512658,
+                            "VUS_ROC": 0.9603448992708211
+                        },
+                        "print": "(1 - AUC_ROC: 0.932) * 0.3 + (1 - VUS_ROC: 0.960) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 10,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 6,
+                "coupling_layers": 12,
+                "past": 61,
+                "encoder_layers": 4,
+                "encoder_size": 3,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 18,
+                "opt_goal": -121.27233515559016,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -121.27233515559016
+                        },
+                        "print": "best val_loss: -121.272"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9124420336098702,
+                            "VUS_ROC": 0.9559358364771905
+                        },
+                        "print": "(1 - AUC_ROC: 0.912) * 0.3 + (1 - VUS_ROC: 0.956) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 4,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 6,
+                "coupling_layers": 13,
+                "past": 41,
+                "encoder_layers": 3,
+                "encoder_size": 3,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 17,
+                "opt_goal": -135.4454384881097,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -135.4454384881097
+                        },
+                        "print": "best val_loss: -135.445"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.925731121038077,
+                            "VUS_ROC": 0.9577031897172383
+                        },
+                        "print": "(1 - AUC_ROC: 0.926) * 0.3 + (1 - VUS_ROC: 0.958) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 14,
+                "st_net_layers": 6,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 10,
+                "coupling_layers": 18,
+                "past": 31,
+                "encoder_layers": 3,
+                "encoder_size": 3,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 5,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            }
+        },
+        "5": {
+            "0": {
+                "hidden_multiplier": 9,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 10,
+                "coupling_layers": 17,
+                "past": 16,
+                "encoder_layers": 5,
+                "encoder_size": 4,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 20,
+                "opt_goal": -130.45103825749578,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -130.45103825749578
+                        },
+                        "print": "best val_loss: -130.451"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9377098489683047,
+                            "VUS_ROC": 0.962672764740902
+                        },
+                        "print": "(1 - AUC_ROC: 0.938) * 0.3 + (1 - VUS_ROC: 0.963) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 5,
+                "coupling_layers": 15,
+                "past": 53,
+                "encoder_layers": 3,
+                "encoder_size": 3,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 20,
+                "opt_goal": -137.12238146807695,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -137.12238146807695
+                        },
+                        "print": "best val_loss: -137.122"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9594405445649862,
+                            "VUS_ROC": 0.9713095252943202
+                        },
+                        "print": "(1 - AUC_ROC: 0.959) * 0.3 + (1 - VUS_ROC: 0.971) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 7,
+                "st_net_layers": 4,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 8,
+                "coupling_layers": 18,
+                "past": 25,
+                "encoder_layers": 2,
+                "encoder_size": 4,
+                "encoder_dropout": 0.7,
+                "encoder_channel_depth": 8,
+                "opt_goal": -121.8133864531646,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -121.8133864531646
+                        },
+                        "print": "best val_loss: -121.813"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9616528398213147,
+                            "VUS_ROC": 0.9691421730809662
+                        },
+                        "print": "(1 - AUC_ROC: 0.962) * 0.3 + (1 - VUS_ROC: 0.969) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 27,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 8,
+                "coupling_layers": 20,
+                "past": 75,
+                "encoder_layers": 3,
+                "encoder_size": 4,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 20,
+                "opt_goal": -130.4892547195022,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -130.4892547195022
+                        },
+                        "print": "best val_loss: -130.489"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9557217613273771,
+                            "VUS_ROC": 0.9730553198630223
+                        },
+                        "print": "(1 - AUC_ROC: 0.956) * 0.3 + (1 - VUS_ROC: 0.973) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 32,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 3,
+                "coupling_layers": 5,
+                "past": 28,
+                "encoder_layers": 2,
+                "encoder_size": 5,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 15,
+                "opt_goal": -108.05892428836307,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -108.05892428836307
+                        },
+                        "print": "best val_loss: -108.059"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9603514145926397,
+                            "VUS_ROC": 0.9787579638448612
+                        },
+                        "print": "(1 - AUC_ROC: 0.960) * 0.3 + (1 - VUS_ROC: 0.979) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 11,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 8,
+                "coupling_layers": 20,
+                "past": 41,
+                "encoder_layers": 2,
+                "encoder_size": 3,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 15,
+                "opt_goal": -143.34485791180586,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -143.34485791180586
+                        },
+                        "print": "best val_loss: -143.345"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9612559029993618,
+                            "VUS_ROC": 0.9778469917439989
+                        },
+                        "print": "(1 - AUC_ROC: 0.961) * 0.3 + (1 - VUS_ROC: 0.978) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 35,
+                "st_net_layers": 5,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 8,
+                "coupling_layers": 10,
+                "past": 10,
+                "encoder_layers": 1,
+                "encoder_size": 4,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 19,
+                "opt_goal": -119.10939108358848,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -119.10939108358848
+                        },
+                        "print": "best val_loss: -119.109"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9232980216975112,
+                            "VUS_ROC": 0.9671106248209235
+                        },
+                        "print": "(1 - AUC_ROC: 0.923) * 0.3 + (1 - VUS_ROC: 0.967) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 11,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 5,
+                "coupling_layers": 11,
+                "past": 49,
+                "encoder_layers": 4,
+                "encoder_size": 6,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 15,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 26,
+                "st_net_layers": 5,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 10,
+                "coupling_layers": 18,
+                "past": 27,
+                "encoder_layers": 2,
+                "encoder_size": 5,
+                "encoder_dropout": 0.7,
+                "encoder_channel_depth": 17,
+                "opt_goal": -122.46325415533943,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -122.46325415533943
+                        },
+                        "print": "best val_loss: -122.463"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9322139970219102,
+                            "VUS_ROC": 0.9582607927962167
+                        },
+                        "print": "(1 - AUC_ROC: 0.932) * 0.3 + (1 - VUS_ROC: 0.958) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 23,
+                "st_net_layers": 5,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 2,
+                "coupling_layers": 11,
+                "past": 13,
+                "encoder_layers": 4,
+                "encoder_size": 6,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 17,
+                "opt_goal": -108.7605304202518,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -108.7605304202518
+                        },
+                        "print": "best val_loss: -108.761"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.936187194213997,
+                            "VUS_ROC": 0.9620260765687915
+                        },
+                        "print": "(1 - AUC_ROC: 0.936) * 0.3 + (1 - VUS_ROC: 0.962) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 15,
+                "st_net_layers": 5,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 7,
+                "coupling_layers": 19,
+                "past": 29,
+                "encoder_layers": 5,
+                "encoder_size": 3,
+                "encoder_dropout": 0.7,
+                "encoder_channel_depth": 12,
+                "opt_goal": -139.4433127738334,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -139.4433127738334
+                        },
+                        "print": "best val_loss: -139.443"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9277221867687726,
+                            "VUS_ROC": 0.9641911164576887
+                        },
+                        "print": "(1 - AUC_ROC: 0.928) * 0.3 + (1 - VUS_ROC: 0.964) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 18,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 4,
+                "coupling_layers": 18,
+                "past": 10,
+                "encoder_layers": 1,
+                "encoder_size": 4,
+                "encoder_dropout": 0.6,
+                "encoder_channel_depth": 18,
+                "opt_goal": -128.11005690291123,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -128.11005690291123
+                        },
+                        "print": "best val_loss: -128.110"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9288223782174005,
+                            "VUS_ROC": 0.9735270996270201
+                        },
+                        "print": "(1 - AUC_ROC: 0.929) * 0.3 + (1 - VUS_ROC: 0.974) * 0.7"
+                    }
+                ]
+            }
+        },
+        "6": {
+            "0": {
+                "hidden_multiplier": 21,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 5,
+                "coupling_layers": 20,
+                "past": 88,
+                "encoder_layers": 4,
+                "encoder_size": 3,
+                "encoder_dropout": 0.9,
+                "encoder_channel_depth": 20,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 1,
+                "coupling_layers": 19,
+                "past": 62,
+                "encoder_layers": 1,
+                "encoder_size": 4,
+                "encoder_dropout": 0.8,
+                "encoder_channel_depth": 14,
+                "opt_goal": -108.35704174557247,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -108.35704174557247
+                        },
+                        "print": "best val_loss: -108.357"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9469402254839396,
+                            "VUS_ROC": 0.9609073284018778
+                        },
+                        "print": "(1 - AUC_ROC: 0.947) * 0.3 + (1 - VUS_ROC: 0.961) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 8,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 4,
+                "coupling_layers": 16,
+                "past": 31,
+                "encoder_layers": 2,
+                "encoder_size": 6,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 12,
+                "opt_goal": -130.7453652459222,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -130.7453652459222
+                        },
+                        "print": "best val_loss: -130.745"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9627849393746012,
+                            "VUS_ROC": 0.9789793492805184
+                        },
+                        "print": "(1 - AUC_ROC: 0.963) * 0.3 + (1 - VUS_ROC: 0.979) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 20,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 1,
+                "coupling_layers": 18,
+                "past": 100,
+                "encoder_layers": 1,
+                "encoder_size": 5,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 9,
+                "opt_goal": -74.87169142027159,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -74.87169142027159
+                        },
+                        "print": "best val_loss: -74.872"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9460148904488406,
+                            "VUS_ROC": 0.9635361158681313
+                        },
+                        "print": "(1 - AUC_ROC: 0.946) * 0.3 + (1 - VUS_ROC: 0.964) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 6,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 4,
+                "coupling_layers": 18,
+                "past": 51,
+                "encoder_layers": 5,
+                "encoder_size": 4,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 19,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 20,
+                "st_net_layers": 5,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 10,
+                "coupling_layers": 19,
+                "past": 70,
+                "encoder_layers": 5,
+                "encoder_size": 5,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 18,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 17,
+                "st_net_layers": 4,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 7,
+                "coupling_layers": 11,
+                "past": 13,
+                "encoder_layers": 1,
+                "encoder_size": 5,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 16,
+                "opt_goal": -125.91142149229307,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -125.91142149229307
+                        },
+                        "print": "best val_loss: -125.911"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9385998723675815,
+                            "VUS_ROC": 0.9649229911862042
+                        },
+                        "print": "(1 - AUC_ROC: 0.939) * 0.3 + (1 - VUS_ROC: 0.965) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 24,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 9,
+                "coupling_layers": 10,
+                "past": 72,
+                "encoder_layers": 2,
+                "encoder_size": 3,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 17,
+                "opt_goal": -102.56510750023094,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -102.56510750023094
+                        },
+                        "print": "best val_loss: -102.565"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9578396085939161,
+                            "VUS_ROC": 0.9804798528182092
+                        },
+                        "print": "(1 - AUC_ROC: 0.958) * 0.3 + (1 - VUS_ROC: 0.980) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 7,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 10,
+                "coupling_layers": 18,
+                "past": 63,
+                "encoder_layers": 2,
+                "encoder_size": 5,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 10,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 15,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 7,
+                "coupling_layers": 13,
+                "past": 14,
+                "encoder_layers": 5,
+                "encoder_size": 4,
+                "encoder_dropout": 0.7,
+                "encoder_channel_depth": 15,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 16,
+                "st_net_layers": 5,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 7,
+                "coupling_layers": 12,
+                "past": 17,
+                "encoder_layers": 3,
+                "encoder_size": 3,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 20,
+                "opt_goal": -122.90227137385187,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -122.90227137385187
+                        },
+                        "print": "best val_loss: -122.902"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9499812805786003,
+                            "VUS_ROC": 0.9661933638660261
+                        },
+                        "print": "(1 - AUC_ROC: 0.950) * 0.3 + (1 - VUS_ROC: 0.966) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 6,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 5,
+                "coupling_layers": 18,
+                "past": 74,
+                "encoder_layers": 2,
+                "encoder_size": 4,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 20,
+                "opt_goal": -137.28636911753063,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -137.28636911753063
+                        },
+                        "print": "best val_loss: -137.286"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9644964901084876,
+                            "VUS_ROC": 0.9786494217929009
+                        },
+                        "print": "(1 - AUC_ROC: 0.964) * 0.3 + (1 - VUS_ROC: 0.979) * 0.7"
+                    }
+                ]
+            }
+        },
+        "7": {
+            "0": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 5,
+                "coupling_layers": 20,
+                "past": 24,
+                "encoder_layers": 1,
+                "encoder_size": 5,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 18,
+                "opt_goal": -127.39463641192462,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -127.39463641192462
+                        },
+                        "print": "best val_loss: -127.395"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.948956817698362,
+                            "VUS_ROC": 0.9650416141973973
+                        },
+                        "print": "(1 - AUC_ROC: 0.949) * 0.3 + (1 - VUS_ROC: 0.965) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 6,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 5,
+                "coupling_layers": 20,
+                "past": 72,
+                "encoder_layers": 2,
+                "encoder_size": 3,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 15,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 26,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 5,
+                "coupling_layers": 17,
+                "past": 11,
+                "encoder_layers": 1,
+                "encoder_size": 4,
+                "encoder_dropout": 0.8,
+                "encoder_channel_depth": 7,
+                "opt_goal": -124.1112202824773,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -124.1112202824773
+                        },
+                        "print": "best val_loss: -124.111"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9266870878536482,
+                            "VUS_ROC": 0.9725260420511443
+                        },
+                        "print": "(1 - AUC_ROC: 0.927) * 0.3 + (1 - VUS_ROC: 0.973) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 14,
+                "st_net_layers": 4,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 4,
+                "coupling_layers": 14,
+                "past": 25,
+                "encoder_layers": 1,
+                "encoder_size": 3,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 15,
+                "opt_goal": -110.1891394950248,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -110.1891394950248
+                        },
+                        "print": "best val_loss: -110.189"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9554673473728994,
+                            "VUS_ROC": 0.9715783059045642
+                        },
+                        "print": "(1 - AUC_ROC: 0.955) * 0.3 + (1 - VUS_ROC: 0.972) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 21,
+                "st_net_layers": 4,
+                "st_dropout": 0.9,
+                "st_funnel_factor": 3,
+                "coupling_layers": 10,
+                "past": 33,
+                "encoder_layers": 2,
+                "encoder_size": 3,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 3,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 7,
+                "st_net_layers": 6,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 1,
+                "coupling_layers": 10,
+                "past": 48,
+                "encoder_layers": 3,
+                "encoder_size": 3,
+                "encoder_dropout": 0.6,
+                "encoder_channel_depth": 14,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 8,
+                "st_net_layers": 5,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 1,
+                "coupling_layers": 18,
+                "past": 65,
+                "encoder_layers": 1,
+                "encoder_size": 3,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 13,
+                "opt_goal": -99.18810818646405,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -99.18810818646405
+                        },
+                        "print": "best val_loss: -99.188"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.953120187194214,
+                            "VUS_ROC": 0.9714140954165683
+                        },
+                        "print": "(1 - AUC_ROC: 0.953) * 0.3 + (1 - VUS_ROC: 0.971) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 5,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 5,
+                "coupling_layers": 20,
+                "past": 40,
+                "encoder_layers": 2,
+                "encoder_size": 3,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 16,
+                "opt_goal": -128.91526691333667,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -128.91526691333667
+                        },
+                        "print": "best val_loss: -128.915"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9593639651138055,
+                            "VUS_ROC": 0.9703988953418461
+                        },
+                        "print": "(1 - AUC_ROC: 0.959) * 0.3 + (1 - VUS_ROC: 0.970) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 6,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 8,
+                "coupling_layers": 20,
+                "past": 68,
+                "encoder_layers": 3,
+                "encoder_size": 4,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 16,
+                "opt_goal": -126.52190337309966,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -126.52190337309966
+                        },
+                        "print": "best val_loss: -126.522"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8906445437141034,
+                            "VUS_ROC": 0.9500217624415735
+                        },
+                        "print": "(1 - AUC_ROC: 0.891) * 0.3 + (1 - VUS_ROC: 0.950) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 25,
+                "st_net_layers": 3,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 8,
+                "coupling_layers": 15,
+                "past": 17,
+                "encoder_layers": 1,
+                "encoder_size": 4,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 4,
+                "opt_goal": -124.08779701026711,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -124.08779701026711
+                        },
+                        "print": "best val_loss: -124.088"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9471899595830675,
+                            "VUS_ROC": 0.965385363298049
+                        },
+                        "print": "(1 - AUC_ROC: 0.947) * 0.3 + (1 - VUS_ROC: 0.965) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 7,
+                "coupling_layers": 14,
+                "past": 85,
+                "encoder_layers": 2,
+                "encoder_size": 5,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 20,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 4,
+                "coupling_layers": 19,
+                "past": 72,
+                "encoder_layers": 2,
+                "encoder_size": 4,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 16,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            }
+        },
+        "8": {
+            "0": {
+                "hidden_multiplier": 22,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 2,
+                "coupling_layers": 18,
+                "past": 39,
+                "encoder_layers": 3,
+                "encoder_size": 5,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 13,
+                "opt_goal": -115.12587119437553,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -115.12587119437553
+                        },
+                        "print": "best val_loss: -115.126"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9644160816847479,
+                            "VUS_ROC": 0.9814956175981194
+                        },
+                        "print": "(1 - AUC_ROC: 0.964) * 0.3 + (1 - VUS_ROC: 0.981) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 6,
+                "coupling_layers": 20,
+                "past": 58,
+                "encoder_layers": 1,
+                "encoder_size": 3,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 12,
+                "opt_goal": -115.82224923211174,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -115.82224923211174
+                        },
+                        "print": "best val_loss: -115.822"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9565152095298873,
+                            "VUS_ROC": 0.9764697711234189
+                        },
+                        "print": "(1 - AUC_ROC: 0.957) * 0.3 + (1 - VUS_ROC: 0.976) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 7,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 9,
+                "coupling_layers": 20,
+                "past": 49,
+                "encoder_layers": 3,
+                "encoder_size": 3,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 19,
+                "opt_goal": -133.1010655583562,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -133.1010655583562
+                        },
+                        "print": "best val_loss: -133.101"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9608045096787918,
+                            "VUS_ROC": 0.9782611872948892
+                        },
+                        "print": "(1 - AUC_ROC: 0.961) * 0.3 + (1 - VUS_ROC: 0.978) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 12,
+                "st_net_layers": 4,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 5,
+                "coupling_layers": 17,
+                "past": 66,
+                "encoder_layers": 4,
+                "encoder_size": 3,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 18,
+                "opt_goal": -119.1680015357765,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -119.1680015357765
+                        },
+                        "print": "best val_loss: -119.168"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9331610295681769,
+                            "VUS_ROC": 0.9589039379811592
+                        },
+                        "print": "(1 - AUC_ROC: 0.933) * 0.3 + (1 - VUS_ROC: 0.959) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 14,
+                "st_net_layers": 3,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 6,
+                "coupling_layers": 20,
+                "past": 20,
+                "encoder_layers": 3,
+                "encoder_size": 5,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 17,
+                "opt_goal": -123.12662980363176,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -123.12662980363176
+                        },
+                        "print": "best val_loss: -123.127"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9620952988725804,
+                            "VUS_ROC": 0.9704751611088867
+                        },
+                        "print": "(1 - AUC_ROC: 0.962) * 0.3 + (1 - VUS_ROC: 0.970) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 10,
+                "st_net_layers": 7,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 8,
+                "coupling_layers": 18,
+                "past": 55,
+                "encoder_layers": 1,
+                "encoder_size": 5,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 16,
+                "opt_goal": -112.03026271510768,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -112.03026271510768
+                        },
+                        "print": "best val_loss: -112.030"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9388308870453095,
+                            "VUS_ROC": 0.962679814216669
+                        },
+                        "print": "(1 - AUC_ROC: 0.939) * 0.3 + (1 - VUS_ROC: 0.963) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 17,
+                "st_net_layers": 7,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 3,
+                "coupling_layers": 19,
+                "past": 23,
+                "encoder_layers": 1,
+                "encoder_size": 4,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 18,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 16,
+                "st_net_layers": 6,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 8,
+                "coupling_layers": 9,
+                "past": 60,
+                "encoder_layers": 2,
+                "encoder_size": 6,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 17,
+                "opt_goal": -100.6199907869906,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -100.6199907869906
+                        },
+                        "print": "best val_loss: -100.620"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9311788981067857,
+                            "VUS_ROC": 0.9605903325656454
+                        },
+                        "print": "(1 - AUC_ROC: 0.931) * 0.3 + (1 - VUS_ROC: 0.961) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 5,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 1,
+                "coupling_layers": 17,
+                "past": 38,
+                "encoder_layers": 2,
+                "encoder_size": 4,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 18,
+                "opt_goal": -121.88230029956715,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -121.88230029956715
+                        },
+                        "print": "best val_loss: -121.882"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9657102744097001,
+                            "VUS_ROC": 0.9758629228419757
+                        },
+                        "print": "(1 - AUC_ROC: 0.966) * 0.3 + (1 - VUS_ROC: 0.976) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 8,
+                "st_net_layers": 4,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 4,
+                "coupling_layers": 14,
+                "past": 41,
+                "encoder_layers": 3,
+                "encoder_size": 3,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 9,
+                "opt_goal": -113.64552802008552,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -113.64552802008552
+                        },
+                        "print": "best val_loss: -113.646"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9307577111252924,
+                            "VUS_ROC": 0.9600790132258776
+                        },
+                        "print": "(1 - AUC_ROC: 0.931) * 0.3 + (1 - VUS_ROC: 0.960) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 19,
+                "st_net_layers": 4,
+                "st_dropout": 0.9,
+                "st_funnel_factor": 9,
+                "coupling_layers": 17,
+                "past": 10,
+                "encoder_layers": 1,
+                "encoder_size": 3,
+                "encoder_dropout": 0.8,
+                "encoder_channel_depth": 12,
+                "opt_goal": -121.4240497898411,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -121.4240497898411
+                        },
+                        "print": "best val_loss: -121.424"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9214345883854499,
+                            "VUS_ROC": 0.9548122576979783
+                        },
+                        "print": "(1 - AUC_ROC: 0.921) * 0.3 + (1 - VUS_ROC: 0.955) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 22,
+                "st_net_layers": 4,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 1,
+                "coupling_layers": 19,
+                "past": 42,
+                "encoder_layers": 1,
+                "encoder_size": 5,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 18,
+                "opt_goal": -110.2406286291174,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -110.2406286291174
+                        },
+                        "print": "best val_loss: -110.241"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9391912359072538,
+                            "VUS_ROC": 0.9633134226618012
+                        },
+                        "print": "(1 - AUC_ROC: 0.939) * 0.3 + (1 - VUS_ROC: 0.963) * 0.7"
+                    }
+                ]
+            }
+        },
+        "9": {
+            "0": {
+                "hidden_multiplier": 12,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 6,
+                "coupling_layers": 16,
+                "past": 15,
+                "encoder_layers": 3,
+                "encoder_size": 4,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 16,
+                "opt_goal": -121.66504627949483,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -121.66504627949483
+                        },
+                        "print": "best val_loss: -121.665"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9463203573707722,
+                            "VUS_ROC": 0.9630838569525294
+                        },
+                        "print": "(1 - AUC_ROC: 0.946) * 0.3 + (1 - VUS_ROC: 0.963) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 28,
+                "st_net_layers": 3,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 9,
+                "coupling_layers": 18,
+                "past": 48,
+                "encoder_layers": 2,
+                "encoder_size": 3,
+                "encoder_dropout": 0.5,
+                "encoder_channel_depth": 19,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 4,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 4,
+                "coupling_layers": 15,
+                "past": 21,
+                "encoder_layers": 4,
+                "encoder_size": 5,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 20,
+                "opt_goal": -123.28384935533678,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -123.28384935533678
+                        },
+                        "print": "best val_loss: -123.284"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9493031269942565,
+                            "VUS_ROC": 0.9626922656240613
+                        },
+                        "print": "(1 - AUC_ROC: 0.949) * 0.3 + (1 - VUS_ROC: 0.963) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 5,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 4,
+                "coupling_layers": 19,
+                "past": 57,
+                "encoder_layers": 1,
+                "encoder_size": 4,
+                "encoder_dropout": 0.4,
+                "encoder_channel_depth": 18,
+                "opt_goal": -123.95308334762986,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -123.95308334762986
+                        },
+                        "print": "best val_loss: -123.953"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9315541374175706,
+                            "VUS_ROC": 0.9607791866445965
+                        },
+                        "print": "(1 - AUC_ROC: 0.932) * 0.3 + (1 - VUS_ROC: 0.961) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 7,
+                "st_net_layers": 4,
+                "st_dropout": 0.9,
+                "st_funnel_factor": 3,
+                "coupling_layers": 13,
+                "past": 47,
+                "encoder_layers": 1,
+                "encoder_size": 4,
+                "encoder_dropout": 0.9,
+                "encoder_channel_depth": 20,
+                "opt_goal": -115.30314893980284,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -115.30314893980284
+                        },
+                        "print": "best val_loss: -115.303"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9237587747287811,
+                            "VUS_ROC": 0.9551980796467336
+                        },
+                        "print": "(1 - AUC_ROC: 0.924) * 0.3 + (1 - VUS_ROC: 0.955) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 16,
+                "st_net_layers": 5,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 7,
+                "coupling_layers": 19,
+                "past": 49,
+                "encoder_layers": 1,
+                "encoder_size": 3,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 15,
+                "opt_goal": -116.98042153023384,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -116.98042153023384
+                        },
+                        "print": "best val_loss: -116.980"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9350453095086151,
+                            "VUS_ROC": 0.9600310561545704
+                        },
+                        "print": "(1 - AUC_ROC: 0.935) * 0.3 + (1 - VUS_ROC: 0.960) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 3,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 4,
+                "coupling_layers": 18,
+                "past": 45,
+                "encoder_layers": 2,
+                "encoder_size": 4,
+                "encoder_dropout": 0.3,
+                "encoder_channel_depth": 9,
+                "opt_goal": -123.50209210370038,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -123.50209210370038
+                        },
+                        "print": "best val_loss: -123.502"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9672971708147202,
+                            "VUS_ROC": 0.9776988188744616
+                        },
+                        "print": "(1 - AUC_ROC: 0.967) * 0.3 + (1 - VUS_ROC: 0.978) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 35,
+                "st_net_layers": 5,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 6,
+                "coupling_layers": 18,
+                "past": 31,
+                "encoder_layers": 3,
+                "encoder_size": 4,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 12,
+                "opt_goal": -102.2380375217747,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -102.2380375217747
+                        },
+                        "print": "best val_loss: -102.238"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.942832163369496,
+                            "VUS_ROC": 0.9621275115266898
+                        },
+                        "print": "(1 - AUC_ROC: 0.943) * 0.3 + (1 - VUS_ROC: 0.962) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 3,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 5,
+                "coupling_layers": 10,
+                "past": 32,
+                "encoder_layers": 4,
+                "encoder_size": 3,
+                "encoder_dropout": 0.1,
+                "encoder_channel_depth": 18,
+                "opt_goal": -114.54299988617768,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -114.54299988617768
+                        },
+                        "print": "best val_loss: -114.543"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.96010933843863,
+                            "VUS_ROC": 0.9659151823493619
+                        },
+                        "print": "(1 - AUC_ROC: 0.960) * 0.3 + (1 - VUS_ROC: 0.966) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 15,
+                "st_net_layers": 3,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 2,
+                "coupling_layers": 16,
+                "past": 51,
+                "encoder_layers": 2,
+                "encoder_size": 3,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 12,
+                "opt_goal": -138.78562205546612,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -138.78562205546612
+                        },
+                        "print": "best val_loss: -138.786"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9583450329717081,
+                            "VUS_ROC": 0.980036933933991
+                        },
+                        "print": "(1 - AUC_ROC: 0.958) * 0.3 + (1 - VUS_ROC: 0.980) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 3,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 7,
+                "coupling_layers": 14,
+                "past": 80,
+                "encoder_layers": 2,
+                "encoder_size": 4,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 19,
+                "opt_goal": -111.04888153076172,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -111.04888153076172
+                        },
+                        "print": "best val_loss: -111.049"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9388172729206551,
+                            "VUS_ROC": 0.9587742759070802
+                        },
+                        "print": "(1 - AUC_ROC: 0.939) * 0.3 + (1 - VUS_ROC: 0.959) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 18,
+                "st_net_layers": 5,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 9,
+                "coupling_layers": 14,
+                "past": 11,
+                "encoder_layers": 4,
+                "encoder_size": 4,
+                "encoder_dropout": 0.2,
+                "encoder_channel_depth": 20,
+                "opt_goal": -118.60018157958984,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -118.60018157958984
+                        },
+                        "print": "best val_loss: -118.600"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9146977238885342,
+                            "VUS_ROC": 0.9579386285763414
+                        },
+                        "print": "(1 - AUC_ROC: 0.915) * 0.3 + (1 - VUS_ROC: 0.958) * 0.7"
+                    }
+                ]
+            }
+        },
+        "iterations": 10,
+        "best_params": {
+            "hidden_multiplier": 14,
+            "st_net_layers": 4,
+            "st_dropout": 0.2,
+            "st_funnel_factor": 10,
+            "coupling_layers": 15,
+            "past": 32,
+            "encoder_layers": 2,
+            "encoder_size": 4,
+            "encoder_dropout": 0.3,
+            "encoder_channel_depth": 10,
+            "hist_shape": [
+                23604,
+                32,
+                38
+            ]
+        },
+        "best_candidate": [
+            1,
+            [
+                7
+            ]
+        ]
+    },
+    "test": {
+        "0": {
+            "AUC_ROC": 0.9588185492448416,
+            "AUC_PR": 0.23426187375950858,
+            "Precision": 0.13363363363363365,
+            "Recall": 0.89,
+            "F": 0.23237597911227154,
+            "Precision_at_k": 0.89,
+            "Rprecision": 0.013436808306847403,
+            "Rrecall": 0.8946560442358764,
+            "RF": 0.026475974859397504,
+            "R_AUC_ROC": 0.96715112542865,
+            "R_AUC_PR": 0.60222448856169,
+            "VUS_ROC": 0.9758442792173797,
+            "VUS_PR": 0.5349529209900544,
+            "Affiliation_Precision": 0.9904439300502648,
+            "Affiliation_Recall": 0.5691041384254225,
+            "sliding_window": 125.0
+        },
+        "mean": {
+            "AUC_ROC": 0.9588185492448416,
+            "AUC_PR": 0.23426187375950858,
+            "Precision": 0.13363363363363365,
+            "Recall": 0.89,
+            "F": 0.23237597911227154,
+            "Precision_at_k": 0.89,
+            "Rprecision": 0.013436808306847403,
+            "Rrecall": 0.8946560442358764,
+            "RF": 0.026475974859397504,
+            "R_AUC_ROC": 0.96715112542865,
+            "R_AUC_PR": 0.60222448856169,
+            "VUS_ROC": 0.9758442792173797,
+            "VUS_PR": 0.5349529209900544,
+            "Affiliation_Precision": 0.9904439300502648,
+            "Affiliation_Recall": 0.5691041384254225,
+            "sliding_window": 125.0
+        }
+    }
+}

@@ -1,0 +1,3145 @@
+{
+    "dataset": "smd_machine-2-5",
+    "run_args": {
+        "project": "TFselfopt_re4-real-3",
+        "user": "timeflow",
+        "wandb_mode": "online",
+        "slurm_id": 20901794,
+        "code_version": 3,
+        "batch_size": 128,
+        "epochs": 10000,
+        "lr": 0.0002,
+        "early_stopping": 50,
+        "past_range": [
+            101
+        ],
+        "nruns": 1,
+        "self_optimization": true,
+        "model_types": [
+            "tcNF-base"
+        ],
+        "coupling_layers": [
+            7
+        ],
+        "dataset": "real",
+        "generator_seek": 16,
+        "generator_stop": 17,
+        "load_pretrained": false,
+        "pretrained_model": ""
+    },
+    "parameters": {
+        "channels": 38,
+        "past": 3,
+        "code_version": 4,
+        "model_type": "tcNF-base",
+        "group": "smd_machine-2-5",
+        "device": "cuda:0",
+        "epochs": 10000,
+        "coupling_layers_": 7,
+        "coupling_layers": 9,
+        "input_shape": [
+            23587,
+            38
+        ],
+        "hist_shape": [
+            23587,
+            3,
+            38
+        ],
+        "normalized": true,
+        "z_score": false,
+        "normalize_factors": {
+            "z_score": false,
+            "col_sub": [
+                0.0,
+                0.0,
+                0.0,
+                0.000113,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.000684,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.00091,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.001538,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.071429,
+                0.0,
+                0.006803,
+                0.0,
+                0.008772,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "col_divide": [
+                1.0,
+                1.0,
+                1.0,
+                0.999887,
+                1.0,
+                0.748535,
+                0.482375,
+                1.0,
+                0.718884,
+                1.0,
+                0.151147,
+                0.816667,
+                1.0,
+                0.697769,
+                1.0,
+                0.150785,
+                1.0,
+                1.0,
+                0.124527,
+                1.0,
+                0.139921,
+                0.392011,
+                0.998462,
+                0.976028,
+                1.0,
+                0.975775,
+                1.0,
+                0.139915,
+                1.0,
+                0.8571420000000001,
+                0.391989,
+                0.238095,
+                1.0,
+                0.576023,
+                0.680307,
+                0.680307,
+                1.0,
+                1.0
+            ],
+            "col_hist_sub": [
+                0.0,
+                0.0,
+                0.0,
+                0.000113,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.000684,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.00091,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.001538,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.071429,
+                0.0,
+                0.006803,
+                0.0,
+                0.008772,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "col_hist_divide": [
+                1.0,
+                1.0,
+                1.0,
+                0.999887,
+                1.0,
+                0.748535,
+                0.602968,
+                1.0,
+                0.718884,
+                1.0,
+                0.151147,
+                0.816667,
+                1.0,
+                0.697769,
+                1.0,
+                0.150785,
+                1.0,
+                1.0,
+                0.124527,
+                1.0,
+                0.139921,
+                0.392011,
+                0.998462,
+                0.976028,
+                1.0,
+                0.975775,
+                1.0,
+                0.139915,
+                1.0,
+                0.8571420000000001,
+                0.391989,
+                0.238095,
+                1.0,
+                0.576023,
+                0.680307,
+                0.680307,
+                1.0,
+                1.0
+            ]
+        },
+        "fixed_past": false,
+        "hidden_multiplier": 6,
+        "st_net_layers": 4,
+        "st_dropout": 0.1,
+        "st_funnel_factor": 7
+    },
+    "optimization_trace": {
+        "0": {
+            "0": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 6,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 6,
+                "coupling_layers": 11,
+                "past": 47,
+                "opt_goal": -121.1376379889411,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -121.1376379889411
+                        },
+                        "print": "best val_loss: -121.138"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7592132142134985,
+                            "VUS_ROC": 0.7890804378720454
+                        },
+                        "print": "(1 - AUC_ROC: 0.759) * 0.3 + (1 - VUS_ROC: 0.789) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 7,
+                "st_net_layers": 7,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 2,
+                "coupling_layers": 10,
+                "past": 72,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 38,
+                "st_net_layers": 7,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 3,
+                "coupling_layers": 7,
+                "past": 36,
+                "opt_goal": -96.59610830770957,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -96.59610830770957
+                        },
+                        "print": "best val_loss: -96.596"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7925984525975995,
+                            "VUS_ROC": 0.7754275795517456
+                        },
+                        "print": "(1 - AUC_ROC: 0.793) * 0.3 + (1 - VUS_ROC: 0.775) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 20,
+                "st_net_layers": 5,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 8,
+                "coupling_layers": 17,
+                "past": 96,
+                "opt_goal": -113.07058159080711,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -113.07058159080711
+                        },
+                        "print": "best val_loss: -113.071"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7786756223189913,
+                            "VUS_ROC": 0.7817023935867475
+                        },
+                        "print": "(1 - AUC_ROC: 0.779) * 0.3 + (1 - VUS_ROC: 0.782) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 49,
+                "st_net_layers": 5,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 9,
+                "coupling_layers": 12,
+                "past": 99,
+                "opt_goal": -112.94163822483372,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -112.94163822483372
+                        },
+                        "print": "best val_loss: -112.942"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7874781773112641,
+                            "VUS_ROC": 0.8360748532733716
+                        },
+                        "print": "(1 - AUC_ROC: 0.787) * 0.3 + (1 - VUS_ROC: 0.836) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 12,
+                "st_net_layers": 6,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 5,
+                "coupling_layers": 11,
+                "past": 23,
+                "opt_goal": -112.32786920908335,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -112.32786920908335
+                        },
+                        "print": "best val_loss: -112.328"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8436095404191399,
+                            "VUS_ROC": 0.826473487248199
+                        },
+                        "print": "(1 - AUC_ROC: 0.844) * 0.3 + (1 - VUS_ROC: 0.826) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 30,
+                "st_net_layers": 6,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 5,
+                "coupling_layers": 15,
+                "past": 82,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 20,
+                "st_net_layers": 5,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 5,
+                "coupling_layers": 6,
+                "past": 21,
+                "opt_goal": -111.03071542688318,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -111.03071542688318
+                        },
+                        "print": "best val_loss: -111.031"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.793223795622283,
+                            "VUS_ROC": 0.8246454667506448
+                        },
+                        "print": "(1 - AUC_ROC: 0.793) * 0.3 + (1 - VUS_ROC: 0.825) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 45,
+                "st_net_layers": 7,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 5,
+                "coupling_layers": 7,
+                "past": 17,
+                "opt_goal": -97.7762674383215,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -97.7762674383215
+                        },
+                        "print": "best val_loss: -97.776"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7823150239395121,
+                            "VUS_ROC": 0.7741525437382814
+                        },
+                        "print": "(1 - AUC_ROC: 0.782) * 0.3 + (1 - VUS_ROC: 0.774) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 39,
+                "st_net_layers": 6,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 6,
+                "coupling_layers": 3,
+                "past": 14,
+                "opt_goal": -101.62861499270878,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -101.62861499270878
+                        },
+                        "print": "best val_loss: -101.629"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8227402346288835,
+                            "VUS_ROC": 0.8308690708508719
+                        },
+                        "print": "(1 - AUC_ROC: 0.823) * 0.3 + (1 - VUS_ROC: 0.831) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 26,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 2,
+                "coupling_layers": 5,
+                "past": 30,
+                "opt_goal": -132.344059712178,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -132.344059712178
+                        },
+                        "print": "best val_loss: -132.344"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7665169995811488,
+                            "VUS_ROC": 0.8126304648050529
+                        },
+                        "print": "(1 - AUC_ROC: 0.767) * 0.3 + (1 - VUS_ROC: 0.813) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 16,
+                "st_net_layers": 7,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 7,
+                "coupling_layers": 12,
+                "past": 84,
+                "opt_goal": -98.80562911162505,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -98.80562911162505
+                        },
+                        "print": "best val_loss: -98.806"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7821072006297209,
+                            "VUS_ROC": 0.8191654241345819
+                        },
+                        "print": "(1 - AUC_ROC: 0.782) * 0.3 + (1 - VUS_ROC: 0.819) * 0.7"
+                    }
+                ]
+            }
+        },
+        "1": {
+            "0": {
+                "hidden_multiplier": 30,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 5,
+                "coupling_layers": 8,
+                "past": 73,
+                "opt_goal": -110.65323989455764,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -110.65323989455764
+                        },
+                        "print": "best val_loss: -110.653"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7880891223262128,
+                            "VUS_ROC": 0.8281902417597101
+                        },
+                        "print": "(1 - AUC_ROC: 0.788) * 0.3 + (1 - VUS_ROC: 0.828) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 49,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 6,
+                "coupling_layers": 6,
+                "past": 86,
+                "opt_goal": -90.41300428235853,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -90.41300428235853
+                        },
+                        "print": "best val_loss: -90.413"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8245892730765343,
+                            "VUS_ROC": 0.8653014615019697
+                        },
+                        "print": "(1 - AUC_ROC: 0.825) * 0.3 + (1 - VUS_ROC: 0.865) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 15,
+                "st_net_layers": 6,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 9,
+                "coupling_layers": 10,
+                "past": 69,
+                "opt_goal": -104.01506485810151,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -104.01506485810151
+                        },
+                        "print": "best val_loss: -104.015"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8076179688966881,
+                            "VUS_ROC": 0.8117788135680716
+                        },
+                        "print": "(1 - AUC_ROC: 0.808) * 0.3 + (1 - VUS_ROC: 0.812) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 18,
+                "st_net_layers": 3,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 1,
+                "coupling_layers": 8,
+                "past": 59,
+                "opt_goal": -96.89576009801917,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -96.89576009801917
+                        },
+                        "print": "best val_loss: -96.896"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7184684940855323,
+                            "VUS_ROC": 0.749129601336983
+                        },
+                        "print": "(1 - AUC_ROC: 0.718) * 0.3 + (1 - VUS_ROC: 0.749) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 25,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 4,
+                "coupling_layers": 9,
+                "past": 96,
+                "opt_goal": -122.41868446968697,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -122.41868446968697
+                        },
+                        "print": "best val_loss: -122.419"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7992243128673976,
+                            "VUS_ROC": 0.8159153387795192
+                        },
+                        "print": "(1 - AUC_ROC: 0.799) * 0.3 + (1 - VUS_ROC: 0.816) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 11,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 4,
+                "coupling_layers": 9,
+                "past": 28,
+                "opt_goal": -128.35913292137352,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -128.35913292137352
+                        },
+                        "print": "best val_loss: -128.359"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7855397042043994,
+                            "VUS_ROC": 0.8335116382744645
+                        },
+                        "print": "(1 - AUC_ROC: 0.786) * 0.3 + (1 - VUS_ROC: 0.834) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 20,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 3,
+                "coupling_layers": 11,
+                "past": 36,
+                "opt_goal": -112.65894162977064,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -112.65894162977064
+                        },
+                        "print": "best val_loss: -112.659"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8745158161459913,
+                            "VUS_ROC": 0.8948667178311029
+                        },
+                        "print": "(1 - AUC_ROC: 0.875) * 0.3 + (1 - VUS_ROC: 0.895) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 1,
+                "coupling_layers": 9,
+                "past": 78,
+                "opt_goal": -122.49734744510135,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -122.49734744510135
+                        },
+                        "print": "best val_loss: -122.497"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8036314804584256,
+                            "VUS_ROC": 0.8118147465260113
+                        },
+                        "print": "(1 - AUC_ROC: 0.804) * 0.3 + (1 - VUS_ROC: 0.812) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 30,
+                "st_net_layers": 6,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 9,
+                "coupling_layers": 11,
+                "past": 17,
+                "opt_goal": -117.41569374703072,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -117.41569374703072
+                        },
+                        "print": "best val_loss: -117.416"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7441174651920217,
+                            "VUS_ROC": 0.7928058497290178
+                        },
+                        "print": "(1 - AUC_ROC: 0.744) * 0.3 + (1 - VUS_ROC: 0.793) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 15,
+                "st_net_layers": 5,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 5,
+                "coupling_layers": 13,
+                "past": 47,
+                "opt_goal": -113.87895037676837,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -113.87895037676837
+                        },
+                        "print": "best val_loss: -113.879"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8408038918858414,
+                            "VUS_ROC": 0.8435731271034251
+                        },
+                        "print": "(1 - AUC_ROC: 0.841) * 0.3 + (1 - VUS_ROC: 0.844) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 49,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 9,
+                "coupling_layers": 20,
+                "past": 63,
+                "opt_goal": -121.57824005951753,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -121.57824005951753
+                        },
+                        "print": "best val_loss: -121.578"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8257890696087352,
+                            "VUS_ROC": 0.8585710612825724
+                        },
+                        "print": "(1 - AUC_ROC: 0.826) * 0.3 + (1 - VUS_ROC: 0.859) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 22,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 3,
+                "coupling_layers": 15,
+                "past": 33,
+                "opt_goal": -131.62965970425992,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -131.62965970425992
+                        },
+                        "print": "best val_loss: -131.630"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7792955265970507,
+                            "VUS_ROC": 0.8057224234157334
+                        },
+                        "print": "(1 - AUC_ROC: 0.779) * 0.3 + (1 - VUS_ROC: 0.806) * 0.7"
+                    }
+                ]
+            }
+        },
+        "2": {
+            "0": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 7,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 4,
+                "coupling_layers": 8,
+                "past": 52,
+                "opt_goal": -114.27120002540383,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -114.27120002540383
+                        },
+                        "print": "best val_loss: -114.271"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7707975414157171,
+                            "VUS_ROC": 0.7976600902596045
+                        },
+                        "print": "(1 - AUC_ROC: 0.771) * 0.3 + (1 - VUS_ROC: 0.798) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 20,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 5,
+                "coupling_layers": 11,
+                "past": 69,
+                "opt_goal": -112.64884690980654,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -112.64884690980654
+                        },
+                        "print": "best val_loss: -112.649"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8772819942732931,
+                            "VUS_ROC": 0.8658415875455074
+                        },
+                        "print": "(1 - AUC_ROC: 0.877) * 0.3 + (1 - VUS_ROC: 0.866) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 9,
+                "st_net_layers": 4,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 6,
+                "coupling_layers": 13,
+                "past": 76,
+                "opt_goal": -113.4969762853674,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -113.4969762853674
+                        },
+                        "print": "best val_loss: -113.497"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8347653936840128,
+                            "VUS_ROC": 0.8312395783929588
+                        },
+                        "print": "(1 - AUC_ROC: 0.835) * 0.3 + (1 - VUS_ROC: 0.831) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 10,
+                "st_net_layers": 7,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 1,
+                "coupling_layers": 20,
+                "past": 45,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 32,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 2,
+                "coupling_layers": 5,
+                "past": 69,
+                "opt_goal": -111.51235188664617,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -111.51235188664617
+                        },
+                        "print": "best val_loss: -111.512"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8345338294553489,
+                            "VUS_ROC": 0.8398200738345948
+                        },
+                        "print": "(1 - AUC_ROC: 0.835) * 0.3 + (1 - VUS_ROC: 0.840) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 49,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 4,
+                "coupling_layers": 9,
+                "past": 99,
+                "opt_goal": -107.37523166553395,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -107.37523166553395
+                        },
+                        "print": "best val_loss: -107.375"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8145748705533169,
+                            "VUS_ROC": 0.826617210608606
+                        },
+                        "print": "(1 - AUC_ROC: 0.815) * 0.3 + (1 - VUS_ROC: 0.827) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 9,
+                "st_net_layers": 7,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 1,
+                "coupling_layers": 15,
+                "past": 51,
+                "opt_goal": -113.87287088342615,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -113.87287088342615
+                        },
+                        "print": "best val_loss: -113.873"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7664579406603406,
+                            "VUS_ROC": 0.8178327206657905
+                        },
+                        "print": "(1 - AUC_ROC: 0.766) * 0.3 + (1 - VUS_ROC: 0.818) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 12,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 7,
+                "coupling_layers": 12,
+                "past": 24,
+                "opt_goal": -135.84368545944625,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -135.84368545944625
+                        },
+                        "print": "best val_loss: -135.844"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7892465823909183,
+                            "VUS_ROC": 0.8278535060605247
+                        },
+                        "print": "(1 - AUC_ROC: 0.789) * 0.3 + (1 - VUS_ROC: 0.828) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 6,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 7,
+                "coupling_layers": 17,
+                "past": 66,
+                "opt_goal": -111.50202555269809,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -111.50202555269809
+                        },
+                        "print": "best val_loss: -111.502"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7711616440631455,
+                            "VUS_ROC": 0.7733141421466307
+                        },
+                        "print": "(1 - AUC_ROC: 0.771) * 0.3 + (1 - VUS_ROC: 0.773) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 7,
+                "st_net_layers": 5,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 6,
+                "coupling_layers": 19,
+                "past": 7,
+                "opt_goal": -134.26573655412002,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -134.26573655412002
+                        },
+                        "print": "best val_loss: -134.266"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8225735065788523,
+                            "VUS_ROC": 0.8272144533857018
+                        },
+                        "print": "(1 - AUC_ROC: 0.823) * 0.3 + (1 - VUS_ROC: 0.827) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 19,
+                "st_net_layers": 6,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 5,
+                "coupling_layers": 9,
+                "past": 47,
+                "opt_goal": -121.8991695094753,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -121.8991695094753
+                        },
+                        "print": "best val_loss: -121.899"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8246845526958129,
+                            "VUS_ROC": 0.8353010260769992
+                        },
+                        "print": "(1 - AUC_ROC: 0.825) * 0.3 + (1 - VUS_ROC: 0.835) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 9,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 2,
+                "coupling_layers": 5,
+                "past": 23,
+                "opt_goal": -120.72214404956715,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -120.72214404956715
+                        },
+                        "print": "best val_loss: -120.722"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7865236885624738,
+                            "VUS_ROC": 0.8133049868534268
+                        },
+                        "print": "(1 - AUC_ROC: 0.787) * 0.3 + (1 - VUS_ROC: 0.813) * 0.7"
+                    }
+                ]
+            }
+        },
+        "3": {
+            "0": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 5,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 10,
+                "coupling_layers": 14,
+                "past": 2,
+                "opt_goal": -137.58050186569625,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -137.58050186569625
+                        },
+                        "print": "best val_loss: -137.581"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8661115985672401,
+                            "VUS_ROC": 0.8466753803527814
+                        },
+                        "print": "(1 - AUC_ROC: 0.866) * 0.3 + (1 - VUS_ROC: 0.847) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 3,
+                "coupling_layers": 10,
+                "past": 67,
+                "opt_goal": -119.0610877372123,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -119.0610877372123
+                        },
+                        "print": "best val_loss: -119.061"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7680754600141544,
+                            "VUS_ROC": 0.8027127153373191
+                        },
+                        "print": "(1 - AUC_ROC: 0.768) * 0.3 + (1 - VUS_ROC: 0.803) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 31,
+                "st_net_layers": 5,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 8,
+                "coupling_layers": 15,
+                "past": 65,
+                "opt_goal": -121.56270351925411,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -121.56270351925411
+                        },
+                        "print": "best val_loss: -121.563"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8121077557880901,
+                            "VUS_ROC": 0.8302494830071718
+                        },
+                        "print": "(1 - AUC_ROC: 0.812) * 0.3 + (1 - VUS_ROC: 0.830) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 5,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 3,
+                "coupling_layers": 7,
+                "past": 26,
+                "opt_goal": -124.07119678806615,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -124.07119678806615
+                        },
+                        "print": "best val_loss: -124.071"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.783782876207808,
+                            "VUS_ROC": 0.814608449390083
+                        },
+                        "print": "(1 - AUC_ROC: 0.784) * 0.3 + (1 - VUS_ROC: 0.815) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 7,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 3,
+                "coupling_layers": 19,
+                "past": 44,
+                "opt_goal": -113.86157154392552,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -113.86157154392552
+                        },
+                        "print": "best val_loss: -113.862"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7869435101535306,
+                            "VUS_ROC": 0.7829921739089585
+                        },
+                        "print": "(1 - AUC_ROC: 0.787) * 0.3 + (1 - VUS_ROC: 0.783) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 12,
+                "st_net_layers": 5,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 4,
+                "coupling_layers": 14,
+                "past": 3,
+                "opt_goal": -131.42661842139992,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -131.42661842139992
+                        },
+                        "print": "best val_loss: -131.427"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7689845431272297,
+                            "VUS_ROC": 0.8072855222408468
+                        },
+                        "print": "(1 - AUC_ROC: 0.769) * 0.3 + (1 - VUS_ROC: 0.807) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 5,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 8,
+                "coupling_layers": 14,
+                "past": 11,
+                "opt_goal": -128.79501940753008,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -128.79501940753008
+                        },
+                        "print": "best val_loss: -128.795"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8730040251238499,
+                            "VUS_ROC": 0.8567996129036047
+                        },
+                        "print": "(1 - AUC_ROC: 0.873) * 0.3 + (1 - VUS_ROC: 0.857) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 19,
+                "st_net_layers": 4,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 6,
+                "coupling_layers": 19,
+                "past": 39,
+                "opt_goal": -125.37671022157411,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -125.37671022157411
+                        },
+                        "print": "best val_loss: -125.377"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7922483868812917,
+                            "VUS_ROC": 0.8187036804294905
+                        },
+                        "print": "(1 - AUC_ROC: 0.792) * 0.3 + (1 - VUS_ROC: 0.819) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 8,
+                "coupling_layers": 7,
+                "past": 29,
+                "opt_goal": -127.1400573318069,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -127.1400573318069
+                        },
+                        "print": "best val_loss: -127.140"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8894333728714416,
+                            "VUS_ROC": 0.8718807285285833
+                        },
+                        "print": "(1 - AUC_ROC: 0.889) * 0.3 + (1 - VUS_ROC: 0.872) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 6,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 4,
+                "coupling_layers": 14,
+                "past": 9,
+                "opt_goal": -117.168302175161,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -117.168302175161
+                        },
+                        "print": "best val_loss: -117.168"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8159139531608822,
+                            "VUS_ROC": 0.8164922189403314
+                        },
+                        "print": "(1 - AUC_ROC: 0.816) * 0.3 + (1 - VUS_ROC: 0.816) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 6,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 6,
+                "coupling_layers": 17,
+                "past": 14,
+                "opt_goal": -140.63819287274336,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -140.63819287274336
+                        },
+                        "print": "best val_loss: -140.638"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8303372835333709,
+                            "VUS_ROC": 0.8360473839594078
+                        },
+                        "print": "(1 - AUC_ROC: 0.830) * 0.3 + (1 - VUS_ROC: 0.836) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 22,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 7,
+                "coupling_layers": 18,
+                "past": 55,
+                "opt_goal": -121.29449277310758,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -121.29449277310758
+                        },
+                        "print": "best val_loss: -121.294"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8474714567355605,
+                            "VUS_ROC": 0.8614113698362246
+                        },
+                        "print": "(1 - AUC_ROC: 0.847) * 0.3 + (1 - VUS_ROC: 0.861) * 0.7"
+                    }
+                ]
+            }
+        },
+        "4": {
+            "0": {
+                "hidden_multiplier": 17,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 9,
+                "coupling_layers": 16,
+                "past": 6,
+                "opt_goal": -141.85729629929,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -141.85729629929
+                        },
+                        "print": "best val_loss: -141.857"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7953250023470111,
+                            "VUS_ROC": 0.813723077944704
+                        },
+                        "print": "(1 - AUC_ROC: 0.795) * 0.3 + (1 - VUS_ROC: 0.814) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 7,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 10,
+                "coupling_layers": 18,
+                "past": 51,
+                "opt_goal": -111.55335050015836,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -111.55335050015836
+                        },
+                        "print": "best val_loss: -111.553"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.748176801240666,
+                            "VUS_ROC": 0.7998281284613544
+                        },
+                        "print": "(1 - AUC_ROC: 0.748) * 0.3 + (1 - VUS_ROC: 0.800) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 9,
+                "st_net_layers": 7,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 6,
+                "coupling_layers": 15,
+                "past": 8,
+                "opt_goal": -135.89948293325062,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -135.89948293325062
+                        },
+                        "print": "best val_loss: -135.899"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7895748479859035,
+                            "VUS_ROC": 0.8654865915436224
+                        },
+                        "print": "(1 - AUC_ROC: 0.790) * 0.3 + (1 - VUS_ROC: 0.865) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 5,
+                "coupling_layers": 8,
+                "past": 11,
+                "opt_goal": -129.00324352367505,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -129.00324352367505
+                        },
+                        "print": "best val_loss: -129.003"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8438687045943644,
+                            "VUS_ROC": 0.8386458384392252
+                        },
+                        "print": "(1 - AUC_ROC: 0.844) * 0.3 + (1 - VUS_ROC: 0.839) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 9,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 1,
+                "coupling_layers": 11,
+                "past": 86,
+                "opt_goal": -113.3892384090939,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -113.3892384090939
+                        },
+                        "print": "best val_loss: -113.389"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8426745950503344,
+                            "VUS_ROC": 0.8553033924294743
+                        },
+                        "print": "(1 - AUC_ROC: 0.843) * 0.3 + (1 - VUS_ROC: 0.855) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 6,
+                "coupling_layers": 19,
+                "past": 52,
+                "opt_goal": -120.42736960746147,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -120.42736960746147
+                        },
+                        "print": "best val_loss: -120.427"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8420869621734044,
+                            "VUS_ROC": 0.8430274843052007
+                        },
+                        "print": "(1 - AUC_ROC: 0.842) * 0.3 + (1 - VUS_ROC: 0.843) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 9,
+                "st_net_layers": 6,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 7,
+                "coupling_layers": 19,
+                "past": 28,
+                "opt_goal": -111.36935517594621,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -111.36935517594621
+                        },
+                        "print": "best val_loss: -111.369"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8150933343082456,
+                            "VUS_ROC": 0.8561656784597128
+                        },
+                        "print": "(1 - AUC_ROC: 0.815) * 0.3 + (1 - VUS_ROC: 0.856) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 21,
+                "st_net_layers": 7,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 10,
+                "coupling_layers": 11,
+                "past": 1,
+                "opt_goal": -140.99540669209247,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -140.99540669209247
+                        },
+                        "print": "best val_loss: -140.995"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7754626319742335,
+                            "VUS_ROC": 0.8088443811774987
+                        },
+                        "print": "(1 - AUC_ROC: 0.775) * 0.3 + (1 - VUS_ROC: 0.809) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 14,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 7,
+                "coupling_layers": 20,
+                "past": 4,
+                "opt_goal": -147.97884595716323,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -147.97884595716323
+                        },
+                        "print": "best val_loss: -147.979"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7458289326877248,
+                            "VUS_ROC": 0.7970662606479125
+                        },
+                        "print": "(1 - AUC_ROC: 0.746) * 0.3 + (1 - VUS_ROC: 0.797) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 19,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 8,
+                "coupling_layers": 11,
+                "past": 62,
+                "opt_goal": -124.94700375118771,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -124.94700375118771
+                        },
+                        "print": "best val_loss: -124.947"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7855163017967272,
+                            "VUS_ROC": 0.8004281655378185
+                        },
+                        "print": "(1 - AUC_ROC: 0.786) * 0.3 + (1 - VUS_ROC: 0.800) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 7,
+                "coupling_layers": 15,
+                "past": 16,
+                "opt_goal": -129.98654607824378,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -129.98654607824378
+                        },
+                        "print": "best val_loss: -129.987"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8642652230743677,
+                            "VUS_ROC": 0.836680322432352
+                        },
+                        "print": "(1 - AUC_ROC: 0.864) * 0.3 + (1 - VUS_ROC: 0.837) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 5,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 6,
+                "coupling_layers": 18,
+                "past": 5,
+                "opt_goal": -133.54461340002112,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -133.54461340002112
+                        },
+                        "print": "best val_loss: -133.545"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8226424500267198,
+                            "VUS_ROC": 0.8284881006859536
+                        },
+                        "print": "(1 - AUC_ROC: 0.823) * 0.3 + (1 - VUS_ROC: 0.828) * 0.7"
+                    }
+                ]
+            }
+        },
+        "5": {
+            "0": {
+                "hidden_multiplier": 18,
+                "st_net_layers": 7,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 10,
+                "coupling_layers": 20,
+                "past": 37,
+                "opt_goal": -123.32179177773965,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -123.32179177773965
+                        },
+                        "print": "best val_loss: -123.322"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9139759088348715,
+                            "VUS_ROC": 0.8919349578652247
+                        },
+                        "print": "(1 - AUC_ROC: 0.914) * 0.3 + (1 - VUS_ROC: 0.892) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 28,
+                "st_net_layers": 5,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 5,
+                "coupling_layers": 20,
+                "past": 1,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 18,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 9,
+                "coupling_layers": 14,
+                "past": 4,
+                "opt_goal": -144.84797833416914,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -144.84797833416914
+                        },
+                        "print": "best val_loss: -144.848"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7675357828906509,
+                            "VUS_ROC": 0.7844715266291142
+                        },
+                        "print": "(1 - AUC_ROC: 0.768) * 0.3 + (1 - VUS_ROC: 0.784) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 27,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 8,
+                "coupling_layers": 18,
+                "past": 47,
+                "opt_goal": -127.17220656936233,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -127.17220656936233
+                        },
+                        "print": "best val_loss: -127.172"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7932675764042346,
+                            "VUS_ROC": 0.8168749105621754
+                        },
+                        "print": "(1 - AUC_ROC: 0.793) * 0.3 + (1 - VUS_ROC: 0.817) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 14,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 4,
+                "coupling_layers": 18,
+                "past": 9,
+                "opt_goal": -140.30470234638935,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -140.30470234638935
+                        },
+                        "print": "best val_loss: -140.305"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7623420506737727,
+                            "VUS_ROC": 0.7968809301945634
+                        },
+                        "print": "(1 - AUC_ROC: 0.762) * 0.3 + (1 - VUS_ROC: 0.797) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 5,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 10,
+                "coupling_layers": 15,
+                "past": 4,
+                "opt_goal": -136.43982943973026,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -136.43982943973026
+                        },
+                        "print": "best val_loss: -136.440"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.792474647767812,
+                            "VUS_ROC": 0.8117990820954394
+                        },
+                        "print": "(1 - AUC_ROC: 0.792) * 0.3 + (1 - VUS_ROC: 0.812) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 10,
+                "st_net_layers": 6,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 8,
+                "coupling_layers": 20,
+                "past": 39,
+                "opt_goal": -115.60822028082771,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -115.60822028082771
+                        },
+                        "print": "best val_loss: -115.608"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7825682980198448,
+                            "VUS_ROC": 0.7827621578357419
+                        },
+                        "print": "(1 - AUC_ROC: 0.783) * 0.3 + (1 - VUS_ROC: 0.783) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 9,
+                "coupling_layers": 17,
+                "past": 16,
+                "opt_goal": -133.8189115782042,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -133.8189115782042
+                        },
+                        "print": "best val_loss: -133.819"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.885470535082398,
+                            "VUS_ROC": 0.8735120516572599
+                        },
+                        "print": "(1 - AUC_ROC: 0.885) * 0.3 + (1 - VUS_ROC: 0.874) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 23,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 6,
+                "coupling_layers": 14,
+                "past": 25,
+                "opt_goal": -131.64391430004224,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -131.64391430004224
+                        },
+                        "print": "best val_loss: -131.644"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7516293446784234,
+                            "VUS_ROC": 0.8047949437389392
+                        },
+                        "print": "(1 - AUC_ROC: 0.752) * 0.3 + (1 - VUS_ROC: 0.805) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 7,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 7,
+                "coupling_layers": 19,
+                "past": 1,
+                "opt_goal": -135.85018199198956,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -135.85018199198956
+                        },
+                        "print": "best val_loss: -135.850"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8141138634328466,
+                            "VUS_ROC": 0.8113890372712091
+                        },
+                        "print": "(1 - AUC_ROC: 0.814) * 0.3 + (1 - VUS_ROC: 0.811) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 26,
+                "st_net_layers": 6,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 6,
+                "coupling_layers": 18,
+                "past": 21,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 29,
+                "st_net_layers": 6,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 8,
+                "coupling_layers": 9,
+                "past": 11,
+                "opt_goal": -133.878263112661,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -133.878263112661
+                        },
+                        "print": "best val_loss: -133.878"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9259337492958968,
+                            "VUS_ROC": 0.8903986934466144
+                        },
+                        "print": "(1 - AUC_ROC: 0.926) * 0.3 + (1 - VUS_ROC: 0.890) * 0.7"
+                    }
+                ]
+            }
+        },
+        "6": {
+            "0": {
+                "hidden_multiplier": 11,
+                "st_net_layers": 5,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 9,
+                "coupling_layers": 10,
+                "past": 2,
+                "opt_goal": -140.94685198809648,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -140.94685198809648
+                        },
+                        "print": "best val_loss: -140.947"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8471030888470038,
+                            "VUS_ROC": 0.8384135860595522
+                        },
+                        "print": "(1 - AUC_ROC: 0.847) * 0.3 + (1 - VUS_ROC: 0.838) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 4,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 9,
+                "coupling_layers": 19,
+                "past": 19,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 38,
+                "st_net_layers": 6,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 8,
+                "coupling_layers": 17,
+                "past": 35,
+                "opt_goal": -103.39818841057854,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -103.39818841057854
+                        },
+                        "print": "best val_loss: -103.398"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7957255062322168,
+                            "VUS_ROC": 0.8026892160445083
+                        },
+                        "print": "(1 - AUC_ROC: 0.796) * 0.3 + (1 - VUS_ROC: 0.803) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 14,
+                "st_net_layers": 5,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 10,
+                "coupling_layers": 20,
+                "past": 32,
+                "opt_goal": -125.72127904118719,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -125.72127904118719
+                        },
+                        "print": "best val_loss: -125.721"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7919459835420366,
+                            "VUS_ROC": 0.8132462819314674
+                        },
+                        "print": "(1 - AUC_ROC: 0.792) * 0.3 + (1 - VUS_ROC: 0.813) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 3,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 5,
+                "coupling_layers": 16,
+                "past": 1,
+                "opt_goal": Infinity,
+                "details": [
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    },
+                    {
+                        "print": "Exception occurred",
+                        "values": {}
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 6,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 7,
+                "coupling_layers": 3,
+                "past": 35,
+                "opt_goal": -121.57558111242346,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -121.57558111242346
+                        },
+                        "print": "best val_loss: -121.576"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8326535351401707,
+                            "VUS_ROC": 0.8393097428335863
+                        },
+                        "print": "(1 - AUC_ROC: 0.833) * 0.3 + (1 - VUS_ROC: 0.839) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 18,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 9,
+                "coupling_layers": 8,
+                "past": 1,
+                "opt_goal": -128.8541919605152,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -128.8541919605152
+                        },
+                        "print": "best val_loss: -128.854"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.887208248479859,
+                            "VUS_ROC": 0.8789535506150998
+                        },
+                        "print": "(1 - AUC_ROC: 0.887) * 0.3 + (1 - VUS_ROC: 0.879) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 7,
+                "coupling_layers": 6,
+                "past": 33,
+                "opt_goal": -108.7566360267433,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -108.7566360267433
+                        },
+                        "print": "best val_loss: -108.757"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8217261453413638,
+                            "VUS_ROC": 0.8137946055422622
+                        },
+                        "print": "(1 - AUC_ROC: 0.822) * 0.3 + (1 - VUS_ROC: 0.814) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 7,
+                "coupling_layers": 19,
+                "past": 23,
+                "opt_goal": -128.9273013553104,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -128.9273013553104
+                        },
+                        "print": "best val_loss: -128.927"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8113441196542311,
+                            "VUS_ROC": 0.8372883594162829
+                        },
+                        "print": "(1 - AUC_ROC: 0.811) * 0.3 + (1 - VUS_ROC: 0.837) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 26,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 9,
+                "coupling_layers": 20,
+                "past": 5,
+                "opt_goal": -125.86557398615656,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -125.86557398615656
+                        },
+                        "print": "best val_loss: -125.866"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8674941911477967,
+                            "VUS_ROC": 0.8607515740746225
+                        },
+                        "print": "(1 - AUC_ROC: 0.867) * 0.3 + (1 - VUS_ROC: 0.861) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 21,
+                "st_net_layers": 7,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 8,
+                "coupling_layers": 15,
+                "past": 47,
+                "opt_goal": -107.51506310540276,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -107.51506310540276
+                        },
+                        "print": "best val_loss: -107.515"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7507568433424325,
+                            "VUS_ROC": 0.8066092061039951
+                        },
+                        "print": "(1 - AUC_ROC: 0.751) * 0.3 + (1 - VUS_ROC: 0.807) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 16,
+                "st_net_layers": 6,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 6,
+                "coupling_layers": 16,
+                "past": 23,
+                "opt_goal": -99.78692420753273,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -99.78692420753273
+                        },
+                        "print": "best val_loss: -99.787"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7857037015974119,
+                            "VUS_ROC": 0.793056428367174
+                        },
+                        "print": "(1 - AUC_ROC: 0.786) * 0.3 + (1 - VUS_ROC: 0.793) * 0.7"
+                    }
+                ]
+            }
+        },
+        "7": {
+            "0": {
+                "hidden_multiplier": 23,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 5,
+                "coupling_layers": 15,
+                "past": 2,
+                "opt_goal": -133.02245537010398,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -133.02245537010398
+                        },
+                        "print": "best val_loss: -133.022"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.857567282486243,
+                            "VUS_ROC": 0.8506058688888615
+                        },
+                        "print": "(1 - AUC_ROC: 0.858) * 0.3 + (1 - VUS_ROC: 0.851) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 43,
+                "st_net_layers": 3,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 7,
+                "coupling_layers": 6,
+                "past": 28,
+                "opt_goal": -98.59141025027714,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -98.59141025027714
+                        },
+                        "print": "best val_loss: -98.591"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.6046687916143103,
+                            "VUS_ROC": 0.650307383691601
+                        },
+                        "print": "(1 - AUC_ROC: 0.605) * 0.3 + (1 - VUS_ROC: 0.650) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 23,
+                "st_net_layers": 5,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 9,
+                "coupling_layers": 18,
+                "past": 14,
+                "opt_goal": -126.62423087455132,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -126.62423087455132
+                        },
+                        "print": "best val_loss: -126.624"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7872870764547857,
+                            "VUS_ROC": 0.8084135070450221
+                        },
+                        "print": "(1 - AUC_ROC: 0.787) * 0.3 + (1 - VUS_ROC: 0.808) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 4,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 4,
+                "coupling_layers": 6,
+                "past": 3,
+                "opt_goal": -133.17523626379065,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -133.17523626379065
+                        },
+                        "print": "best val_loss: -133.175"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8718007080751621,
+                            "VUS_ROC": 0.8530481471230973
+                        },
+                        "print": "(1 - AUC_ROC: 0.872) * 0.3 + (1 - VUS_ROC: 0.853) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 5,
+                "coupling_layers": 15,
+                "past": 65,
+                "opt_goal": -105.24102886303051,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -105.24102886303051
+                        },
+                        "print": "best val_loss: -105.241"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8471346380909052,
+                            "VUS_ROC": 0.8571855513604942
+                        },
+                        "print": "(1 - AUC_ROC: 0.847) * 0.3 + (1 - VUS_ROC: 0.857) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 5,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 8,
+                "coupling_layers": 4,
+                "past": 45,
+                "opt_goal": -106.03405318389068,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -106.03405318389068
+                        },
+                        "print": "best val_loss: -106.034"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8560646764013461,
+                            "VUS_ROC": 0.8399838771725312
+                        },
+                        "print": "(1 - AUC_ROC: 0.856) * 0.3 + (1 - VUS_ROC: 0.840) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 10,
+                "coupling_layers": 9,
+                "past": 1,
+                "opt_goal": -140.41658556139146,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -140.41658556139146
+                        },
+                        "print": "best val_loss: -140.417"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8447731613876973,
+                            "VUS_ROC": 0.8407025059480802
+                        },
+                        "print": "(1 - AUC_ROC: 0.845) * 0.3 + (1 - VUS_ROC: 0.841) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 32,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 5,
+                "coupling_layers": 20,
+                "past": 38,
+                "opt_goal": -122.14294619173617,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -122.14294619173617
+                        },
+                        "print": "best val_loss: -122.143"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7909256430810115,
+                            "VUS_ROC": 0.8202141479942581
+                        },
+                        "print": "(1 - AUC_ROC: 0.791) * 0.3 + (1 - VUS_ROC: 0.820) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 4,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 7,
+                "coupling_layers": 10,
+                "past": 21,
+                "opt_goal": -101.13299601786845,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -101.13299601786845
+                        },
+                        "print": "best val_loss: -101.133"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.865128652310181,
+                            "VUS_ROC": 0.8454797701379847
+                        },
+                        "print": "(1 - AUC_ROC: 0.865) * 0.3 + (1 - VUS_ROC: 0.845) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 7,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 8,
+                "coupling_layers": 15,
+                "past": 43,
+                "opt_goal": -116.50025692501583,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -116.50025692501583
+                        },
+                        "print": "best val_loss: -116.500"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8151676488004967,
+                            "VUS_ROC": 0.8313830864917341
+                        },
+                        "print": "(1 - AUC_ROC: 0.815) * 0.3 + (1 - VUS_ROC: 0.831) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 15,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 9,
+                "coupling_layers": 14,
+                "past": 17,
+                "opt_goal": -136.0380211907464,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -136.0380211907464
+                        },
+                        "print": "best val_loss: -136.038"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.849607214170169,
+                            "VUS_ROC": 0.8551039798767912
+                        },
+                        "print": "(1 - AUC_ROC: 0.850) * 0.3 + (1 - VUS_ROC: 0.855) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 16,
+                "st_net_layers": 5,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 6,
+                "coupling_layers": 18,
+                "past": 65,
+                "opt_goal": -119.96558235787056,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -119.96558235787056
+                        },
+                        "print": "best val_loss: -119.966"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8521729485318543,
+                            "VUS_ROC": 0.8566826532873608
+                        },
+                        "print": "(1 - AUC_ROC: 0.852) * 0.3 + (1 - VUS_ROC: 0.857) * 0.7"
+                    }
+                ]
+            }
+        },
+        "8": {
+            "0": {
+                "hidden_multiplier": 7,
+                "st_net_layers": 4,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 8,
+                "coupling_layers": 3,
+                "past": 13,
+                "opt_goal": -113.97400902413032,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -113.97400902413032
+                        },
+                        "print": "best val_loss: -113.974"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8090225872727009,
+                            "VUS_ROC": 0.7986060129198342
+                        },
+                        "print": "(1 - AUC_ROC: 0.809) * 0.3 + (1 - VUS_ROC: 0.799) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 6,
+                "coupling_layers": 8,
+                "past": 1,
+                "opt_goal": -141.9119019379487,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -141.9119019379487
+                        },
+                        "print": "best val_loss: -141.912"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.889079854340887,
+                            "VUS_ROC": 0.8735447116107108
+                        },
+                        "print": "(1 - AUC_ROC: 0.889) * 0.3 + (1 - VUS_ROC: 0.874) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 6,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 5,
+                "coupling_layers": 8,
+                "past": 5,
+                "opt_goal": -123.31709825670397,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -123.31709825670397
+                        },
+                        "print": "best val_loss: -123.317"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8565420223291015,
+                            "VUS_ROC": 0.8351455038846104
+                        },
+                        "print": "(1 - AUC_ROC: 0.857) * 0.3 + (1 - VUS_ROC: 0.835) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 24,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 7,
+                "coupling_layers": 10,
+                "past": 30,
+                "opt_goal": -118.09981041985588,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -118.09981041985588
+                        },
+                        "print": "best val_loss: -118.100"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7464330172090067,
+                            "VUS_ROC": 0.8027395653995699
+                        },
+                        "print": "(1 - AUC_ROC: 0.746) * 0.3 + (1 - VUS_ROC: 0.803) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 20,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 10,
+                "coupling_layers": 3,
+                "past": 20,
+                "opt_goal": -120.29600772342167,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -120.29600772342167
+                        },
+                        "print": "best val_loss: -120.296"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8964992977020957,
+                            "VUS_ROC": 0.9033129670135226
+                        },
+                        "print": "(1 - AUC_ROC: 0.896) * 0.3 + (1 - VUS_ROC: 0.903) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 5,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 8,
+                "coupling_layers": 12,
+                "past": 2,
+                "opt_goal": -134.40518786456133,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -134.40518786456133
+                        },
+                        "print": "best val_loss: -134.405"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8491679394687811,
+                            "VUS_ROC": 0.8347338997350865
+                        },
+                        "print": "(1 - AUC_ROC: 0.849) * 0.3 + (1 - VUS_ROC: 0.835) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 4,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 9,
+                "coupling_layers": 20,
+                "past": 45,
+                "opt_goal": -118.5424867578455,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -118.5424867578455
+                        },
+                        "print": "best val_loss: -118.542"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.823772626088652,
+                            "VUS_ROC": 0.815940653400437
+                        },
+                        "print": "(1 - AUC_ROC: 0.824) * 0.3 + (1 - VUS_ROC: 0.816) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 14,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 9,
+                "coupling_layers": 3,
+                "past": 32,
+                "opt_goal": -125.85773385537637,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -125.85773385537637
+                        },
+                        "print": "best val_loss: -125.858"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7952518839276688,
+                            "VUS_ROC": 0.8078472712158601
+                        },
+                        "print": "(1 - AUC_ROC: 0.795) * 0.3 + (1 - VUS_ROC: 0.808) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 21,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 8,
+                "coupling_layers": 17,
+                "past": 6,
+                "opt_goal": -127.8190124099319,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -127.8190124099319
+                        },
+                        "print": "best val_loss: -127.819"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.710402088117625,
+                            "VUS_ROC": 0.7557207258775895
+                        },
+                        "print": "(1 - AUC_ROC: 0.710) * 0.3 + (1 - VUS_ROC: 0.756) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 3,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 9,
+                "coupling_layers": 12,
+                "past": 8,
+                "opt_goal": -141.87867406896643,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -141.87867406896643
+                        },
+                        "print": "best val_loss: -141.879"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7735381280962492,
+                            "VUS_ROC": 0.7955791771318083
+                        },
+                        "print": "(1 - AUC_ROC: 0.774) * 0.3 + (1 - VUS_ROC: 0.796) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 20,
+                "st_net_layers": 7,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 9,
+                "coupling_layers": 17,
+                "past": 17,
+                "opt_goal": -122.40898029224293,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -122.40898029224293
+                        },
+                        "print": "best val_loss: -122.409"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8258536349784076,
+                            "VUS_ROC": 0.8428960867744145
+                        },
+                        "print": "(1 - AUC_ROC: 0.826) * 0.3 + (1 - VUS_ROC: 0.843) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 18,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 9,
+                "coupling_layers": 7,
+                "past": 24,
+                "opt_goal": -129.28712298419023,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -129.28712298419023
+                        },
+                        "print": "best val_loss: -129.287"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8433915617733292,
+                            "VUS_ROC": 0.8699542704124338
+                        },
+                        "print": "(1 - AUC_ROC: 0.843) * 0.3 + (1 - VUS_ROC: 0.870) * 0.7"
+                    }
+                ]
+            }
+        },
+        "9": {
+            "0": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 8,
+                "coupling_layers": 17,
+                "past": 37,
+                "opt_goal": -130.00435370367927,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -130.00435370367927
+                        },
+                        "print": "best val_loss: -130.004"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8602924556234384,
+                            "VUS_ROC": 0.8722545512071291
+                        },
+                        "print": "(1 - AUC_ROC: 0.860) * 0.3 + (1 - VUS_ROC: 0.872) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 6,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 7,
+                "coupling_layers": 9,
+                "past": 3,
+                "opt_goal": -149.11319258406357,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -149.11319258406357
+                        },
+                        "print": "best val_loss: -149.113"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8687522341739242,
+                            "VUS_ROC": 0.8632648970911942
+                        },
+                        "print": "(1 - AUC_ROC: 0.869) * 0.3 + (1 - VUS_ROC: 0.863) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 20,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 7,
+                "coupling_layers": 3,
+                "past": 46,
+                "opt_goal": -113.21874731940193,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -113.21874731940193
+                        },
+                        "print": "best val_loss: -113.219"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.782504951290495,
+                            "VUS_ROC": 0.8101604839168146
+                        },
+                        "print": "(1 - AUC_ROC: 0.783) * 0.3 + (1 - VUS_ROC: 0.810) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 3,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 6,
+                "coupling_layers": 15,
+                "past": 25,
+                "opt_goal": -132.81955224114495,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -132.81955224114495
+                        },
+                        "print": "best val_loss: -132.820"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7642769806967372,
+                            "VUS_ROC": 0.774691559626747
+                        },
+                        "print": "(1 - AUC_ROC: 0.764) * 0.3 + (1 - VUS_ROC: 0.775) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 11,
+                "st_net_layers": 5,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 8,
+                "coupling_layers": 8,
+                "past": 2,
+                "opt_goal": -117.22284894376187,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -117.22284894376187
+                        },
+                        "print": "best val_loss: -117.223"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8104681880714069,
+                            "VUS_ROC": 0.8041381246886663
+                        },
+                        "print": "(1 - AUC_ROC: 0.810) * 0.3 + (1 - VUS_ROC: 0.804) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 17,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 8,
+                "coupling_layers": 20,
+                "past": 10,
+                "opt_goal": -141.46527367669182,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -141.46527367669182
+                        },
+                        "print": "best val_loss: -141.465"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7616233913947744,
+                            "VUS_ROC": 0.7956936407392141
+                        },
+                        "print": "(1 - AUC_ROC: 0.762) * 0.3 + (1 - VUS_ROC: 0.796) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 15,
+                "st_net_layers": 5,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 9,
+                "coupling_layers": 9,
+                "past": 14,
+                "opt_goal": -137.1210139506572,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -137.1210139506572
+                        },
+                        "print": "best val_loss: -137.121"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8203457192324913,
+                            "VUS_ROC": 0.8287322259358005
+                        },
+                        "print": "(1 - AUC_ROC: 0.820) * 0.3 + (1 - VUS_ROC: 0.829) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 24,
+                "st_net_layers": 6,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 4,
+                "coupling_layers": 14,
+                "past": 7,
+                "opt_goal": -127.27934326996674,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -127.27934326996674
+                        },
+                        "print": "best val_loss: -127.279"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7502780079653943,
+                            "VUS_ROC": 0.7787227914729054
+                        },
+                        "print": "(1 - AUC_ROC: 0.750) * 0.3 + (1 - VUS_ROC: 0.779) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 3,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 2,
+                "coupling_layers": 7,
+                "past": 61,
+                "opt_goal": -116.61203147269585,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -116.61203147269585
+                        },
+                        "print": "best val_loss: -116.612"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7869317976659879,
+                            "VUS_ROC": 0.7888713290507593
+                        },
+                        "print": "(1 - AUC_ROC: 0.787) * 0.3 + (1 - VUS_ROC: 0.789) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 11,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 8,
+                "coupling_layers": 15,
+                "past": 36,
+                "opt_goal": -131.48006233009133,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -131.48006233009133
+                        },
+                        "print": "best val_loss: -131.480"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.776919335940321,
+                            "VUS_ROC": 0.7939366892047768
+                        },
+                        "print": "(1 - AUC_ROC: 0.777) * 0.3 + (1 - VUS_ROC: 0.794) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 10,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 10,
+                "coupling_layers": 15,
+                "past": 42,
+                "opt_goal": -131.92390627474398,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -131.92390627474398
+                        },
+                        "print": "best val_loss: -131.924"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7743536467134624,
+                            "VUS_ROC": 0.8117127353846986
+                        },
+                        "print": "(1 - AUC_ROC: 0.774) * 0.3 + (1 - VUS_ROC: 0.812) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 6,
+                "st_net_layers": 3,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 7,
+                "coupling_layers": 11,
+                "past": 14,
+                "opt_goal": -142.90890379209776,
+                "details": [
+                    {
+                        "values": {
+                            "best_val_loss": -142.90890379209776
+                        },
+                        "print": "best val_loss: -142.909"
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8519175079798375,
+                            "VUS_ROC": 0.8468495112087604
+                        },
+                        "print": "(1 - AUC_ROC: 0.852) * 0.3 + (1 - VUS_ROC: 0.847) * 0.7"
+                    }
+                ]
+            }
+        },
+        "iterations": 10,
+        "best_params": {
+            "hidden_multiplier": 6,
+            "st_net_layers": 4,
+            "st_dropout": 0.1,
+            "st_funnel_factor": 7,
+            "coupling_layers": 9,
+            "past": 3,
+            "hist_shape": [
+                23587,
+                3,
+                38
+            ]
+        },
+        "best_candidate": [
+            9,
+            [
+                1
+            ]
+        ]
+    },
+    "test": {
+        "0": {
+            "AUC_ROC": 0.8687522341739242,
+            "AUC_PR": 0.38600691073287385,
+            "Precision": 0.15897642554906308,
+            "Recall": 0.8051020408163265,
+            "F": 0.26552246340232205,
+            "Precision_at_k": 0.8051020408163265,
+            "Rprecision": 0.10844174758767712,
+            "Rrecall": 0.6187646714646488,
+            "RF": 0.18454161173820235,
+            "R_AUC_ROC": 0.8421184744608552,
+            "R_AUC_PR": 0.4192550371105664,
+            "VUS_ROC": 0.8632648970911942,
+            "VUS_PR": 0.38321903081159764,
+            "Affiliation_Precision": 1.0,
+            "Affiliation_Recall": 0.04299084831570065,
+            "sliding_window": 125.0
+        },
+        "mean": {
+            "AUC_ROC": 0.8687522341739242,
+            "AUC_PR": 0.38600691073287385,
+            "Precision": 0.15897642554906308,
+            "Recall": 0.8051020408163265,
+            "F": 0.26552246340232205,
+            "Precision_at_k": 0.8051020408163265,
+            "Rprecision": 0.10844174758767712,
+            "Rrecall": 0.6187646714646488,
+            "RF": 0.18454161173820235,
+            "R_AUC_ROC": 0.8421184744608552,
+            "R_AUC_PR": 0.4192550371105664,
+            "VUS_ROC": 0.8632648970911942,
+            "VUS_PR": 0.38321903081159764,
+            "Affiliation_Precision": 1.0,
+            "Affiliation_Recall": 0.04299084831570065,
+            "sliding_window": 125.0
+        }
+    }
+}

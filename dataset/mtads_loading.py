@@ -8,11 +8,8 @@ import yaml
 from requests import get
 import zipfile
 
-from dataset.DatasetUtils.Aneo.main import load_aneo_complex, load_aneo_dynamic
 from dataset.DatasetUtils.data_loader import (
     load_all_real_datasets,
-    load_statnett_data,
-    load_aneo_data,
 )
 
 default_benchmark_path = {
@@ -173,14 +170,6 @@ def load_all_stored_datasets(args: dataclass) -> Generator:
         )
     elif _args.dataset == "real":
         return load_all_real_datasets()
-    elif _args.dataset == "statnett":
-        return load_statnett_data()
-    elif _args.dataset == "aneo":
-        return load_aneo_data()
-    elif _args.dataset == "aneo_complex":
-        return load_aneo_complex()
-    elif _args.dataset == "aneo_dynamic":
-        return load_aneo_dynamic()
     else:
         return load_all_m_tads_stored_datasets(_args.dataset)
 

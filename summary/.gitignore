@@ -1,6 +1,5 @@
 *.png
 *.svg
-*.tex
 *.old
-*.json
-*.py
+build_anomaly_type_groups.py
+gather_results.py

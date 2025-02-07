@@ -1,0 +1,664 @@
+{
+  "anomaly2sequence": {
+    "platform": [
+      "2-sine-one-channel-anomaly-noise-30%",
+      "2-sine-one-channel-anomaly-noise-00%",
+      "2-sine-one-channel-anomaly-noise-10%",
+      "2-sine-one-channel-anomaly-noise-30%-no-anomaly",
+      "2-sine-one-channel-anomaly-noise-50%-no-anomaly",
+      "2-sine-one-channel-anomaly-noise-01%",
+      "4-sine-long-9-diff-anomalies-one-channel",
+      "2-sine-one-channel-anomaly-noise-10%-no-anomaly",
+      "2-sine-one-channel-anomaly-noise-00%-no-anomaly",
+      "2-rw-one-channels-platform-anomaly-no-anomaly",
+      "4-sine-long-9-diff-anomalies-one-channel-no-anomaly",
+      "2-sine-one-channel-anomaly-noise-50%",
+      "2-rw-one-channels-platform-anomaly",
+      "2-sine-one-channel-anomaly-noise-01%-no-anomaly"
+    ],
+    "mean": [
+      "2-sine-one-channel-anomaly-beginning",
+      "6-rw-one-channels-anomaly-no-anomaly",
+      "2-sine-one-channel-anomaly-middle-no-anomaly",
+      "4-cbf-all-channel-anomaly",
+      "4-cbf-all-channel-anomaly-no-anomaly",
+      "2-cbf-one-channel-short-anomaly",
+      "2-sine-one-channel-mean-anomaly-no-anomaly",
+      "2-cbf-one-channel-short-anomaly-no-anomaly",
+      "2-sine-one-channel-anomaly-middle",
+      "4-sine-long-9-diff-anomalies-one-channel",
+      "4-sine-long-9-diff-anomalies-one-channel-no-anomaly",
+      "2-cbf-one-channel-middle-anomaly",
+      "2-sine-one-channel-mean-anomaly",
+      "10-rw-one-channels-anomaly-no-anomaly",
+      "2-cbf-one-channel-middle-anomaly-no-anomaly",
+      "4-rw-all-channels-anomaly-no-anomaly",
+      "2-rw-one-channels-anomaly",
+      "4-rw-all-channels-anomaly",
+      "10-rw-one-channels-anomaly",
+      "2-sine-one-channel-anomaly-beginning-no-anomaly",
+      "6-cbf-one-channel-anomaly-no-anomaly",
+      "2-rw-one-channels-anomaly-no-anomaly",
+      "6-rw-one-channels-anomaly",
+      "6-cbf-one-channel-anomaly"
+    ],
+    "frequency": [
+      "2-sine-long-2-diff-anomalies-one-channel",
+      "2-sine-long-2-diff-anomalies-one-channel-no-anomaly",
+      "8-ecg-one-channel-anomaly",
+      "2-sine-short-5-anomalies-one-channel-no-anomaly",
+      "2-ecg-one-channel-anomaly",
+      "6-ecg-one-channel-anomaly",
+      "2-ecg-all-channel-anomaly-no-anomaly",
+      "2-ecg-all-channel-anomaly",
+      "4-sine-long-9-diff-anomalies-one-channel",
+      "2-ecg-one-channel-anomaly-no-anomaly",
+      "2-sine-short-5-anomalies-one-channel",
+      "2-sine-one-channel-frequency-anomaly-no-anomaly",
+      "4-sine-long-9-diff-anomalies-one-channel-no-anomaly",
+      "8-ecg-one-channel-anomaly-no-anomaly",
+      "2-sine-all-channel-anomaly",
+      "2-sine-long-5-anomalies-one-channel-no-anomaly",
+      "4-sine-all-channel-anomaly-no-anomaly",
+      "2-sine-one-channel-frequency-anomaly",
+      "2-sine-all-channel-anomaly-no-anomaly",
+      "3-sine-one-channel-anomaly",
+      "6-ecg-one-channel-anomaly-no-anomaly",
+      "3-sine-one-channel-anomaly-no-anomaly",
+      "2-sine-long-5-anomalies-one-channel",
+      "4-sine-all-channel-anomaly"
+    ],
+    "pattern": [
+      "6-ecg-one-channel-pattern-anomaly",
+      "2-sine-long-2-diff-anomalies-one-channel",
+      "2-sine-long-2-diff-anomalies-one-channel-no-anomaly",
+      "4-sine-long-9-diff-anomalies-one-channel",
+      "6-ecg-one-channel-pattern-anomaly-no-anomaly",
+      "4-sine-long-9-diff-anomalies-one-channel-no-anomaly"
+    ],
+    "pattern-shift": [
+      "4-sine-long-9-diff-anomalies-one-channel",
+      "4-sine-long-9-diff-anomalies-one-channel-no-anomaly"
+    ],
+    "amplitude": [
+      "4-sine-long-9-diff-anomalies-one-channel",
+      "4-ecg-one-channel-amplitude-anomaly",
+      "4-sine-long-9-diff-anomalies-one-channel-no-anomaly",
+      "4-ecg-one-channel-amplitude-anomaly-no-anomaly"
+    ],
+    "extremum": [
+      "2-cbf-all-channel-middle-platform-anomaly",
+      "4-sine-long-9-diff-anomalies-one-channel",
+      "4-rw-one-channels-extremum-anomaly-no-anomaly",
+      "4-sine-long-9-diff-anomalies-one-channel-no-anomaly",
+      "4-rw-one-channels-extremum-anomaly",
+      "2-cbf-all-channel-middle-platform-anomaly-no-anomaly"
+    ],
+    "variance": [
+      "4-sine-long-9-diff-anomalies-one-channel-no-anomaly",
+      "4-sine-long-9-diff-anomalies-one-channel",
+      "4-rw-one-channels-variance-anomaly-no-anomaly",
+      "4-rw-one-channels-variance-anomaly"
+    ],
+    "trend": [
+      "2-rw-one-channels-trend-anomaly",
+      "2-cbf-one-channel-middle-trend-anomaly-no-anomaly",
+      "4-sine-long-9-diff-anomalies-one-channel",
+      "2-rw-one-channels-trend-anomaly-no-anomaly",
+      "4-sine-long-9-diff-anomalies-one-channel-no-anomaly",
+      "2-cbf-one-channel-middle-trend-anomaly"
+    ],
+    "signal-cancellation": [
+      "2-increasing-all",
+      "2-increasing-all-no-anomaly"
+    ],
+    "signal-reset": [
+      "2-wave-light-off-synced-one-channel-no-anomaly",
+      "2-wave-no-synced-cut-all-channel-no-anomaly",
+      "2-wave-light-off-synced-one-channel",
+      "2-wave-no-synced-cut-all-channel",
+      "4-wave-two-channel-no-anomaly",
+      "2-wave-off-synced-all-channel",
+      "4-saw-all-no-anomaly",
+      "2-wave-synced-one-channel-no-anomaly",
+      "2-wave-one-channel",
+      "4-wave-two-channel",
+      "2-saw-all-no-anomaly",
+      "2-wave-synced-one-channel",
+      "2-saw-all",
+      "4-saw-all",
+      "2-wave-off-synced-all-channel-no-anomaly",
+      "2-wave-one-channel-no-anomaly"
+    ],
+    "signal-cut": [
+      "2-std_cut_increasing_continue-stdRatio_2-stdPast_50-no-anomaly",
+      "2-std_cut_increasing-stdRatio_3-stdPast_70-no-anomaly",
+      "2-std_cut_increasing_continue-stdRatio_2-stdPast_30-no-anomaly",
+      "2-std_cut_increasing_continue-stdRatio_3-stdPast_30-no-anomaly",
+      "2-std_cut_increasing_continue-stdRatio_3-stdPast_10-no-anomaly",
+      "2-std_cut_increasing-stdRatio_3-stdPast_40",
+      "2-std_cut_increasing_continue-stdRatio_3-stdPast_50-no-anomaly",
+      "2-std_cut_increasing-stdRatio_3-stdPast_40-no-anomaly",
+      "2-std_cut_increasing-stdRatio_2-stdPast_40-no-anomaly",
+      "2-std_cut_increasing-stdRatio_2-stdPast_10",
+      "2-std_cut_increasing_continue-stdRatio_3-stdPast_30",
+      "2-std_cut_increasing_continue-stdRatio_3-stdPast_50",
+      "2-std_cut_increasing-stdRatio_3-stdPast_10",
+      "2-std_cut_increasing-stdRatio_2-stdPast_70-no-anomaly",
+      "2-std_cut_increasing-stdRatio_2-stdPast_40",
+      "2-std_cut_increasing-stdRatio_3-stdPast_70",
+      "2-std_cut_increasing_continue-stdRatio_2-stdPast_30",
+      "2-std_cut_increasing_continue-stdRatio_2-stdPast_50",
+      "2-std_cut_increasing_continue-stdRatio_2-stdPast_10-no-anomaly",
+      "2-std_cut_increasing-stdRatio_2-stdPast_70",
+      "2-std_cut_increasing-stdRatio_3-stdPast_10-no-anomaly",
+      "2-std_cut_increasing_continue-stdRatio_2-stdPast_10",
+      "2-std_cut_increasing-stdRatio_2-stdPast_10-no-anomaly",
+      "2-std_cut_increasing_continue-stdRatio_3-stdPast_10"
+    ],
+    "signal-cut-match": [
+      "4-std_cut_wave-stdRatio_2-stdPast_30-no-anomaly",
+      "4-std_cut_wave-stdRatio_2-stdPast_30",
+      "2-std_cut_wave-stdRatio_2-stdPast_30",
+      "4-std_cut_wave-stdRatio_2-stdPast_70-no-anomaly",
+      "2-medium_past_std_cut_wave-no-anomaly",
+      "4-std_cut_wave-stdRatio_2-stdPast_10-no-anomaly",
+      "2-std_cut_wave-stdRatio_2-stdPast_10",
+      "2-big_past_std_cut_wave",
+      "2-std_cut_wave-stdRatio_2-stdPast_70",
+      "4-std_cut_wave-stdRatio_2-stdPast_10",
+      "2-big_past_std_cut_wave-no-anomaly",
+      "2-std_cut_wave-stdRatio_2-stdPast_30-no-anomaly",
+      "2-std_cut_wave-stdRatio_2-stdPast_10-no-anomaly",
+      "2-std_cut_wave-stdRatio_2-stdPast_70-no-anomaly",
+      "4-std_cut_wave-stdRatio_2-stdPast_70",
+      "2-medium_past_std_cut_wave"
+    ],
+    "disconnect": [
+      "4-corr-0.35_mInfluence-noTrend-1_channel_anomaly",
+      "4-corr-0.35_mInfluence-noTrend-1_channel_anomaly-no-anomaly",
+      "2-corr-0.5_mInfluence-0.5_inclTrend-1_channel_anomaly",
+      "2-corr-0.5_mInfluence-0.0_inclTrend-1_channel_anomaly",
+      "2-corr-0.5_mInfluence-noTrend-1_channel_anomaly",
+      "2-corr-0.8_mInfluence-noTrend-1_channel_anomaly-no-anomaly",
+      "2-corr-0.5_mInfluence-noTrend-1_channel_anomaly-no-anomaly",
+      "2-corr-0.5_mInfluence-0.0_inclTrend-1_channel_anomaly-no-anomaly",
+      "2-corr-0.8_mInfluence-noTrend-1_channel_anomaly",
+      "2-corr-0.5_mInfluence-0.5_inclTrend-1_channel_anomaly-no-anomaly"
+    ],
+    "nature": [
+      "4-lotka_volterra-3-prey-2-predator-500-cooldown-1-mil-steps",
+      "4-lotka_volterra-2-prey-2-predator-1000-cooldown-1-mil-steps",
+      "4-lotka_volterra-3-prey-2-predator-300-cooldown-short",
+      "4-lotka_volterra-2-prey-2-predator-1000-cooldown-1-mil-steps-no-anomaly",
+      "4-lotka_volterra-2-prey-2-predator-300-cooldown-short-no-anomaly",
+      "4-lotka_volterra-2-prey-2-predator-300-cooldown-short",
+      "4-lotka_volterra-3-prey-2-predator-300-cooldown-short-no-anomaly",
+      "4-lotka_volterra-3-prey-2-predator-500-cooldown-1-mil-steps-no-anomaly"
+    ]
+  },
+  "sequence2anomaly": {
+    "10-rw-one-channels-anomaly-no-anomaly": [
+      "mean"
+    ],
+    "10-rw-one-channels-anomaly": [
+      "mean"
+    ],
+    "2-big_past_std_cut_wave-no-anomaly": [
+      "signal-cut-match"
+    ],
+    "2-big_past_std_cut_wave": [
+      "signal-cut-match"
+    ],
+    "2-cbf-all-channel-middle-platform-anomaly-no-anomaly": [
+      "extremum"
+    ],
+    "2-cbf-all-channel-middle-platform-anomaly": [
+      "extremum"
+    ],
+    "2-cbf-one-channel-middle-anomaly-no-anomaly": [
+      "mean"
+    ],
+    "2-cbf-one-channel-middle-anomaly": [
+      "mean"
+    ],
+    "2-cbf-one-channel-middle-trend-anomaly-no-anomaly": [
+      "trend"
+    ],
+    "2-cbf-one-channel-middle-trend-anomaly": [
+      "trend"
+    ],
+    "2-cbf-one-channel-short-anomaly-no-anomaly": [
+      "mean"
+    ],
+    "2-cbf-one-channel-short-anomaly": [
+      "mean"
+    ],
+    "2-corr-0.5_mInfluence-0.0_inclTrend-1_channel_anomaly-no-anomaly": [
+      "disconnect"
+    ],
+    "2-corr-0.5_mInfluence-0.0_inclTrend-1_channel_anomaly": [
+      "disconnect"
+    ],
+    "2-corr-0.5_mInfluence-0.5_inclTrend-1_channel_anomaly-no-anomaly": [
+      "disconnect"
+    ],
+    "2-corr-0.5_mInfluence-0.5_inclTrend-1_channel_anomaly": [
+      "disconnect"
+    ],
+    "2-corr-0.5_mInfluence-noTrend-1_channel_anomaly-no-anomaly": [
+      "disconnect"
+    ],
+    "2-corr-0.5_mInfluence-noTrend-1_channel_anomaly": [
+      "disconnect"
+    ],
+    "2-corr-0.8_mInfluence-noTrend-1_channel_anomaly-no-anomaly": [
+      "disconnect"
+    ],
+    "2-corr-0.8_mInfluence-noTrend-1_channel_anomaly": [
+      "disconnect"
+    ],
+    "2-ecg-all-channel-anomaly-no-anomaly": [
+      "frequency"
+    ],
+    "2-ecg-all-channel-anomaly": [
+      "frequency"
+    ],
+    "2-ecg-one-channel-anomaly-no-anomaly": [
+      "frequency"
+    ],
+    "2-ecg-one-channel-anomaly": [
+      "frequency"
+    ],
+    "2-increasing-all-no-anomaly": [
+      "signal-cancellation"
+    ],
+    "2-increasing-all": [
+      "signal-cancellation"
+    ],
+    "2-medium_past_std_cut_wave-no-anomaly": [
+      "signal-cut-match"
+    ],
+    "2-medium_past_std_cut_wave": [
+      "signal-cut-match"
+    ],
+    "2-rw-one-channels-anomaly-no-anomaly": [
+      "mean"
+    ],
+    "2-rw-one-channels-anomaly": [
+      "mean"
+    ],
+    "2-rw-one-channels-platform-anomaly-no-anomaly": [
+      "platform"
+    ],
+    "2-rw-one-channels-platform-anomaly": [
+      "platform"
+    ],
+    "2-rw-one-channels-trend-anomaly-no-anomaly": [
+      "trend"
+    ],
+    "2-rw-one-channels-trend-anomaly": [
+      "trend"
+    ],
+    "2-saw-all-no-anomaly": [
+      "signal-reset"
+    ],
+    "2-saw-all": [
+      "signal-reset"
+    ],
+    "2-sine-all-channel-anomaly-no-anomaly": [
+      "frequency"
+    ],
+    "2-sine-all-channel-anomaly": [
+      "frequency"
+    ],
+    "2-sine-long-2-diff-anomalies-one-channel-no-anomaly": [
+      "frequency",
+      "pattern"
+    ],
+    "2-sine-long-2-diff-anomalies-one-channel": [
+      "frequency",
+      "pattern"
+    ],
+    "2-sine-long-5-anomalies-one-channel-no-anomaly": [
+      "frequency"
+    ],
+    "2-sine-long-5-anomalies-one-channel": [
+      "frequency"
+    ],
+    "2-sine-one-channel-anomaly-beginning-no-anomaly": [
+      "mean"
+    ],
+    "2-sine-one-channel-anomaly-beginning": [
+      "mean"
+    ],
+    "2-sine-one-channel-anomaly-middle-no-anomaly": [
+      "mean"
+    ],
+    "2-sine-one-channel-anomaly-middle": [
+      "mean"
+    ],
+    "2-sine-one-channel-anomaly-noise-00%-no-anomaly": [
+      "platform"
+    ],
+    "2-sine-one-channel-anomaly-noise-00%": [
+      "platform"
+    ],
+    "2-sine-one-channel-anomaly-noise-01%-no-anomaly": [
+      "platform"
+    ],
+    "2-sine-one-channel-anomaly-noise-01%": [
+      "platform"
+    ],
+    "2-sine-one-channel-anomaly-noise-10%-no-anomaly": [
+      "platform"
+    ],
+    "2-sine-one-channel-anomaly-noise-10%": [
+      "platform"
+    ],
+    "2-sine-one-channel-anomaly-noise-30%-no-anomaly": [
+      "platform"
+    ],
+    "2-sine-one-channel-anomaly-noise-30%": [
+      "platform"
+    ],
+    "2-sine-one-channel-anomaly-noise-50%-no-anomaly": [
+      "platform"
+    ],
+    "2-sine-one-channel-anomaly-noise-50%": [
+      "platform"
+    ],
+    "2-sine-one-channel-frequency-anomaly-no-anomaly": [
+      "frequency"
+    ],
+    "2-sine-one-channel-frequency-anomaly": [
+      "frequency"
+    ],
+    "2-sine-one-channel-mean-anomaly-no-anomaly": [
+      "mean"
+    ],
+    "2-sine-one-channel-mean-anomaly": [
+      "mean"
+    ],
+    "2-sine-short-5-anomalies-one-channel-no-anomaly": [
+      "frequency"
+    ],
+    "2-sine-short-5-anomalies-one-channel": [
+      "frequency"
+    ],
+    "2-std_cut_increasing-stdRatio_2-stdPast_10-no-anomaly": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing-stdRatio_2-stdPast_10": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing-stdRatio_2-stdPast_40-no-anomaly": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing-stdRatio_2-stdPast_40": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing-stdRatio_2-stdPast_70-no-anomaly": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing-stdRatio_2-stdPast_70": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing-stdRatio_3-stdPast_10-no-anomaly": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing-stdRatio_3-stdPast_10": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing-stdRatio_3-stdPast_40-no-anomaly": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing-stdRatio_3-stdPast_40": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing-stdRatio_3-stdPast_70-no-anomaly": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing-stdRatio_3-stdPast_70": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing_continue-stdRatio_2-stdPast_10-no-anomaly": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing_continue-stdRatio_2-stdPast_10": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing_continue-stdRatio_2-stdPast_30-no-anomaly": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing_continue-stdRatio_2-stdPast_30": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing_continue-stdRatio_2-stdPast_50-no-anomaly": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing_continue-stdRatio_2-stdPast_50": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing_continue-stdRatio_3-stdPast_10-no-anomaly": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing_continue-stdRatio_3-stdPast_10": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing_continue-stdRatio_3-stdPast_30-no-anomaly": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing_continue-stdRatio_3-stdPast_30": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing_continue-stdRatio_3-stdPast_50-no-anomaly": [
+      "signal-cut"
+    ],
+    "2-std_cut_increasing_continue-stdRatio_3-stdPast_50": [
+      "signal-cut"
+    ],
+    "2-std_cut_wave-stdRatio_2-stdPast_10-no-anomaly": [
+      "signal-cut-match"
+    ],
+    "2-std_cut_wave-stdRatio_2-stdPast_10": [
+      "signal-cut-match"
+    ],
+    "2-std_cut_wave-stdRatio_2-stdPast_30-no-anomaly": [
+      "signal-cut-match"
+    ],
+    "2-std_cut_wave-stdRatio_2-stdPast_30": [
+      "signal-cut-match"
+    ],
+    "2-std_cut_wave-stdRatio_2-stdPast_70-no-anomaly": [
+      "signal-cut-match"
+    ],
+    "2-std_cut_wave-stdRatio_2-stdPast_70": [
+      "signal-cut-match"
+    ],
+    "2-wave-light-off-synced-one-channel-no-anomaly": [
+      "signal-reset"
+    ],
+    "2-wave-light-off-synced-one-channel": [
+      "signal-reset"
+    ],
+    "2-wave-no-synced-cut-all-channel-no-anomaly": [
+      "signal-reset"
+    ],
+    "2-wave-no-synced-cut-all-channel": [
+      "signal-reset"
+    ],
+    "2-wave-off-synced-all-channel-no-anomaly": [
+      "signal-reset"
+    ],
+    "2-wave-off-synced-all-channel": [
+      "signal-reset"
+    ],
+    "2-wave-one-channel-no-anomaly": [
+      "signal-reset"
+    ],
+    "2-wave-one-channel": [
+      "signal-reset"
+    ],
+    "2-wave-synced-one-channel-no-anomaly": [
+      "signal-reset"
+    ],
+    "2-wave-synced-one-channel": [
+      "signal-reset"
+    ],
+    "3-sine-one-channel-anomaly-no-anomaly": [
+      "frequency"
+    ],
+    "3-sine-one-channel-anomaly": [
+      "frequency"
+    ],
+    "4-cbf-all-channel-anomaly-no-anomaly": [
+      "mean"
+    ],
+    "4-cbf-all-channel-anomaly": [
+      "mean"
+    ],
+    "4-corr-0.35_mInfluence-noTrend-1_channel_anomaly-no-anomaly": [
+      "disconnect"
+    ],
+    "4-corr-0.35_mInfluence-noTrend-1_channel_anomaly": [
+      "disconnect"
+    ],
+    "4-ecg-one-channel-amplitude-anomaly-no-anomaly": [
+      "amplitude"
+    ],
+    "4-ecg-one-channel-amplitude-anomaly": [
+      "amplitude"
+    ],
+    "4-rw-all-channels-anomaly-no-anomaly": [
+      "mean"
+    ],
+    "4-rw-all-channels-anomaly": [
+      "mean"
+    ],
+    "4-rw-one-channels-extremum-anomaly-no-anomaly": [
+      "extremum"
+    ],
+    "4-rw-one-channels-extremum-anomaly": [
+      "extremum"
+    ],
+    "4-rw-one-channels-variance-anomaly-no-anomaly": [
+      "variance"
+    ],
+    "4-rw-one-channels-variance-anomaly": [
+      "variance"
+    ],
+    "4-saw-all-no-anomaly": [
+      "signal-reset"
+    ],
+    "4-saw-all": [
+      "signal-reset"
+    ],
+    "4-sine-all-channel-anomaly-no-anomaly": [
+      "frequency"
+    ],
+    "4-sine-all-channel-anomaly": [
+      "frequency"
+    ],
+    "4-sine-long-9-diff-anomalies-one-channel-no-anomaly": [
+      "amplitude",
+      "variance",
+      "extremum",
+      "trend",
+      "pattern-shift",
+      "platform",
+      "pattern",
+      "frequency",
+      "mean"
+    ],
+    "4-sine-long-9-diff-anomalies-one-channel": [
+      "amplitude",
+      "variance",
+      "extremum",
+      "trend",
+      "pattern-shift",
+      "platform",
+      "pattern",
+      "frequency",
+      "mean"
+    ],
+    "4-std_cut_wave-stdRatio_2-stdPast_10-no-anomaly": [
+      "signal-cut-match"
+    ],
+    "4-std_cut_wave-stdRatio_2-stdPast_10": [
+      "signal-cut-match"
+    ],
+    "4-std_cut_wave-stdRatio_2-stdPast_30-no-anomaly": [
+      "signal-cut-match"
+    ],
+    "4-std_cut_wave-stdRatio_2-stdPast_30": [
+      "signal-cut-match"
+    ],
+    "4-std_cut_wave-stdRatio_2-stdPast_70-no-anomaly": [
+      "signal-cut-match"
+    ],
+    "4-std_cut_wave-stdRatio_2-stdPast_70": [
+      "signal-cut-match"
+    ],
+    "4-wave-two-channel-no-anomaly": [
+      "signal-reset"
+    ],
+    "4-wave-two-channel": [
+      "signal-reset"
+    ],
+    "6-cbf-one-channel-anomaly-no-anomaly": [
+      "mean"
+    ],
+    "6-cbf-one-channel-anomaly": [
+      "mean"
+    ],
+    "6-ecg-one-channel-anomaly-no-anomaly": [
+      "frequency"
+    ],
+    "6-ecg-one-channel-anomaly": [
+      "frequency"
+    ],
+    "6-ecg-one-channel-pattern-anomaly-no-anomaly": [
+      "pattern"
+    ],
+    "6-ecg-one-channel-pattern-anomaly": [
+      "pattern"
+    ],
+    "6-rw-one-channels-anomaly-no-anomaly": [
+      "mean"
+    ],
+    "6-rw-one-channels-anomaly": [
+      "mean"
+    ],
+    "8-ecg-one-channel-anomaly-no-anomaly": [
+      "frequency"
+    ],
+    "8-ecg-one-channel-anomaly": [
+      "frequency"
+    ],
+    "4-lotka_volterra-2-prey-2-predator-1000-cooldown-1-mil-steps-no-anomaly": [
+      "nature"
+    ],
+    "4-lotka_volterra-2-prey-2-predator-1000-cooldown-1-mil-steps": [
+      "nature"
+    ],
+    "4-lotka_volterra-2-prey-2-predator-300-cooldown-short-no-anomaly": [
+      "nature"
+    ],
+    "4-lotka_volterra-2-prey-2-predator-300-cooldown-short": [
+      "nature"
+    ],
+    "4-lotka_volterra-3-prey-2-predator-300-cooldown-short-no-anomaly": [
+      "nature"
+    ],
+    "4-lotka_volterra-3-prey-2-predator-300-cooldown-short": [
+      "nature"
+    ],
+    "4-lotka_volterra-3-prey-2-predator-500-cooldown-1-mil-steps-no-anomaly": [
+      "nature"
+    ],
+    "4-lotka_volterra-3-prey-2-predator-500-cooldown-1-mil-steps": [
+      "nature"
+    ]
+  }
+}

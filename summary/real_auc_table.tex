@@ -1,0 +1,14 @@
+\begin{tabular}{l|ccccc|ccccc}
+\toprule
+ & \multicolumn{5}{r}{AUC_ROC} \\
+dataset & SWat & calit_v2 & ghl & metro_v2 & smd \\
+model_type &  &  &  &  &  \\
+\midrule
+RealNVP & \bfseries 0.88 & 0.22 & 0.69 ± 0.22 & \bfseries 0.69 & 0.80 ± 0.12 \\
+tcNF-base & \bfseries 0.88 & 0.25 & 0.88 ± 0.09 & 0.48 & 0.78 ± 0.11 \\
+tcNF-cnn & 0.84 & 0.29 & \bfseries 0.89 ± 0.04 & 0.49 & 0.80 ± 0.13 \\
+tcNF-mlp & \bfseries 0.88 & 0.30 & 0.64 ± 0.34 & 0.67 & \bfseries 0.80 ± 0.14 \\
+tcNF-stateful & - & \bfseries 0.76 & - & - & - \\
+tcNF-stateless & \bfseries 0.88 & 0.23 & 0.58 ± 0.40 & 0.53 & 0.78 ± 0.14 \\
+\bottomrule
+\end{tabular}

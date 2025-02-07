@@ -1,0 +1,3790 @@
+{
+    "dataset": "2-rw-one-channels-anomaly",
+    "run_args": {
+        "project": "TFselfopt_re6-fsb-3",
+        "user": "timeflow",
+        "wandb_mode": "offline",
+        "slurm_id": 0,
+        "code_version": 3,
+        "batch_size": 128,
+        "epochs": 10000,
+        "lr": 0.0002,
+        "early_stopping": 50,
+        "past_range": [
+            3
+        ],
+        "nruns": 2,
+        "self_optimization": true,
+        "model_types": [
+            "RealNVP"
+        ],
+        "coupling_layers": [
+            7
+        ],
+        "dataset": "fsb",
+        "generator_seek": 0,
+        "generator_stop": 10000000000.0,
+        "load_pretrained": false,
+        "pretrained_model": ""
+    },
+    "parameters": {
+        "anomalies": [
+            {
+                "channel": 0,
+                "kinds": [
+                    {
+                        "kind": "mean",
+                        "offset": 0.3
+                    }
+                ],
+                "length": 10,
+                "position": "middle"
+            }
+        ],
+        "base-oscillation": {
+            "amplitude": 2.5,
+            "kind": "random-walk",
+            "offset": -2.0,
+            "smoothing": 0.1,
+            "variance": 0.0
+        },
+        "channels": 2,
+        "generation-id": 29,
+        "length": 1000,
+        "name": "2-rw-one-channels-anomaly",
+        "semi-supervised": true,
+        "supervised": true,
+        "origin": "overview-gutentag.yaml",
+        "past": 27,
+        "code_version": 3,
+        "model_type": "tcNF-mlp",
+        "group": "2-rw-one-channels-anomaly",
+        "device": "cuda:1",
+        "epochs": 10000,
+        "coupling_layers_": 3,
+        "coupling_layers": 9,
+        "input_shape": [
+            949,
+            2
+        ],
+        "hist_shape": [
+            949,
+            27,
+            2
+        ],
+        "normalized": true,
+        "z_score": false,
+        "normalize_factors": {
+            "z_score": false,
+            "col_sub": [
+                -4.5,
+                -4.5
+            ],
+            "col_divide": [
+                5.0,
+                5.0
+            ],
+            "col_hist_sub": [
+                -4.5,
+                -4.49548617663241
+            ],
+            "col_hist_divide": [
+                5.0,
+                4.99548617663241
+            ]
+        },
+        "fixed_past": false,
+        "hidden_multiplier": 31,
+        "st_net_layers": 4,
+        "st_dropout": 0.6,
+        "st_funnel_factor": 4,
+        "seed": 52,
+        "encoder_layers": 3,
+        "encoder_dropout": 0.1,
+        "encoder_compression_factor": 1
+    },
+    "optimization_trace": {
+        "0": {
+            "0": {
+                "hidden_multiplier": 26,
+                "st_net_layers": 8,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 2,
+                "coupling_layers": 4,
+                "seed": 98,
+                "past": 24,
+                "encoder_layers": 10,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 20,
+                "opt_goal": 2.8032017275691032,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.40791748464107513,
+                            "test_loss": 4.17939567565918
+                        },
+                        "print": "val_loss: -0.408 * 0.5 + test_loss: 4.179 * 0.5",
+                        "epoch": 519
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8800851970181043,
+                            "VUS_ROC": 0.9048462066583145
+                        },
+                        "print": "(1 - AUC_ROC: 0.880) * 0.3 + (1 - VUS_ROC: 0.905) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 35,
+                "st_net_layers": 6,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 7,
+                "coupling_layers": 3,
+                "seed": 70,
+                "past": 9,
+                "encoder_layers": 14,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 5,
+                "opt_goal": 1.6599255681037903,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.3486603498458862,
+                            "test_loss": 1.7933249473571777
+                        },
+                        "print": "val_loss: 1.349 * 0.5 + test_loss: 1.793 * 0.5",
+                        "epoch": 242
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9232161874334398,
+                            "VUS_ROC": 0.9047615616606004
+                        },
+                        "print": "(1 - AUC_ROC: 0.923) * 0.3 + (1 - VUS_ROC: 0.905) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 7,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 9,
+                "coupling_layers": 13,
+                "seed": 53,
+                "past": 40,
+                "encoder_layers": 13,
+                "encoder_dropout": 0.1,
+                "encoder_compression_factor": 7,
+                "opt_goal": 1.9341221809387208,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.3454880714416504,
+                            "test_loss": 2.911098003387451
+                        },
+                        "print": "val_loss: -0.345 * 0.5 + test_loss: 2.911 * 0.5",
+                        "epoch": 408
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8621938232161874,
+                            "VUS_ROC": 0.8775669519802829
+                        },
+                        "print": "(1 - AUC_ROC: 0.862) * 0.3 + (1 - VUS_ROC: 0.878) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 6,
+                "st_net_layers": 7,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 1,
+                "coupling_layers": 13,
+                "seed": 95,
+                "past": 9,
+                "encoder_layers": 11,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 7,
+                "opt_goal": 5.445183908939361,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.9579209089279175,
+                            "test_loss": 7.3682966232299805
+                        },
+                        "print": "val_loss: 0.958 * 0.5 + test_loss: 7.368 * 0.5",
+                        "epoch": 778
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.876038338658147,
+                            "VUS_ROC": 0.8862029111639097
+                        },
+                        "print": "(1 - AUC_ROC: 0.876) * 0.3 + (1 - VUS_ROC: 0.886) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 15,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 6,
+                "coupling_layers": 5,
+                "seed": 67,
+                "past": 21,
+                "encoder_layers": 14,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 6,
+                "opt_goal": 1.6356534779071805,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.5373401045799255,
+                            "test_loss": 1.6777877807617188
+                        },
+                        "print": "val_loss: 1.537 * 0.5 + test_loss: 1.678 * 0.5",
+                        "epoch": 70
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8993610223642172,
+                            "VUS_ROC": 0.8770210640835593
+                        },
+                        "print": "(1 - AUC_ROC: 0.899) * 0.3 + (1 - VUS_ROC: 0.877) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 28,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 6,
+                "coupling_layers": 5,
+                "seed": 84,
+                "past": 46,
+                "encoder_layers": 8,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 10,
+                "opt_goal": 1.0753512971103192,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.01973787695169449,
+                            "test_loss": 1.5277570486068726
+                        },
+                        "print": "val_loss: 0.020 * 0.5 + test_loss: 1.528 * 0.5",
+                        "epoch": 123
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8871139510117145,
+                            "VUS_ROC": 0.9270766343844552
+                        },
+                        "print": "(1 - AUC_ROC: 0.887) * 0.3 + (1 - VUS_ROC: 0.927) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 26,
+                "st_net_layers": 7,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 3,
+                "coupling_layers": 16,
+                "seed": 68,
+                "past": 18,
+                "encoder_layers": 17,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 8,
+                "opt_goal": 6.695322284102439,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.1799874603748322,
+                            "test_loss": 9.059037208557129
+                        },
+                        "print": "val_loss: 1.180 * 0.5 + test_loss: 9.059 * 0.5",
+                        "epoch": 290
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9303514376996805,
+                            "VUS_ROC": 0.9116440820073881
+                        },
+                        "print": "(1 - AUC_ROC: 0.930) * 0.3 + (1 - VUS_ROC: 0.912) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 47,
+                "st_net_layers": 5,
+                "st_dropout": 0.9,
+                "st_funnel_factor": 5,
+                "coupling_layers": 18,
+                "seed": 96,
+                "past": 17,
+                "encoder_layers": 8,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 17,
+                "opt_goal": 4.432408392429352,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 2.487465262413025,
+                            "test_loss": 5.265955448150635
+                        },
+                        "print": "val_loss: 2.487 * 0.5 + test_loss: 5.266 * 0.5",
+                        "epoch": 55
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.6414270500532481,
+                            "VUS_ROC": 0.6931092117307062
+                        },
+                        "print": "(1 - AUC_ROC: 0.641) * 0.3 + (1 - VUS_ROC: 0.693) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 17,
+                "st_net_layers": 6,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 7,
+                "coupling_layers": 8,
+                "seed": 52,
+                "past": 28,
+                "encoder_layers": 15,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 3,
+                "opt_goal": 2.1502293705940243,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.59941828250885,
+                            "test_loss": 2.386291265487671
+                        },
+                        "print": "val_loss: 1.599 * 0.5 + test_loss: 2.386 * 0.5",
+                        "epoch": 60
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8865814696485623,
+                            "VUS_ROC": 0.8918761933609622
+                        },
+                        "print": "(1 - AUC_ROC: 0.887) * 0.3 + (1 - VUS_ROC: 0.892) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 50,
+                "st_net_layers": 6,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 5,
+                "coupling_layers": 19,
+                "seed": 95,
+                "past": 48,
+                "encoder_layers": 11,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 3,
+                "opt_goal": 1.9312312066555024,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.759872019290924,
+                            "test_loss": 2.0046708583831787
+                        },
+                        "print": "val_loss: 1.760 * 0.5 + test_loss: 2.005 * 0.5",
+                        "epoch": 56
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8886048988285411,
+                            "VUS_ROC": 0.893285539352358
+                        },
+                        "print": "(1 - AUC_ROC: 0.889) * 0.3 + (1 - VUS_ROC: 0.893) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 8,
+                "st_net_layers": 6,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 8,
+                "coupling_layers": 13,
+                "seed": 30,
+                "past": 23,
+                "encoder_layers": 13,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 9,
+                "opt_goal": 1.194003142416477,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.447468563914299,
+                            "test_loss": 1.513946533203125
+                        },
+                        "print": "val_loss: 0.447 * 0.5 + test_loss: 1.514 * 0.5",
+                        "epoch": 363
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8833865814696485,
+                            "VUS_ROC": 0.8954587991118176
+                        },
+                        "print": "(1 - AUC_ROC: 0.883) * 0.3 + (1 - VUS_ROC: 0.895) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 45,
+                "st_net_layers": 5,
+                "st_dropout": 0.9,
+                "st_funnel_factor": 9,
+                "coupling_layers": 8,
+                "seed": 86,
+                "past": 20,
+                "encoder_layers": 13,
+                "encoder_dropout": 0.8,
+                "encoder_compression_factor": 18,
+                "opt_goal": 2.8258590698242183,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 2.2018895149230957,
+                            "test_loss": 3.0932745933532715
+                        },
+                        "print": "val_loss: 2.202 * 0.5 + test_loss: 3.093 * 0.5",
+                        "epoch": 55
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.945580404685836,
+                            "VUS_ROC": 0.9026105472773904
+                        },
+                        "print": "(1 - AUC_ROC: 0.946) * 0.3 + (1 - VUS_ROC: 0.903) * 0.7"
+                    }
+                ]
+            }
+        },
+        "1": {
+            "0": {
+                "hidden_multiplier": 17,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 8,
+                "coupling_layers": 6,
+                "seed": 47,
+                "past": 34,
+                "encoder_layers": 10,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 6,
+                "opt_goal": 1.8299953222274778,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.6307824850082397,
+                            "test_loss": 1.9153722524642944
+                        },
+                        "print": "val_loss: 1.631 * 0.5 + test_loss: 1.915 * 0.5",
+                        "epoch": 70
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8984025559105432,
+                            "VUS_ROC": 0.8974686375678226
+                        },
+                        "print": "(1 - AUC_ROC: 0.898) * 0.3 + (1 - VUS_ROC: 0.897) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 39,
+                "st_net_layers": 3,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 6,
+                "coupling_layers": 5,
+                "seed": 47,
+                "past": 18,
+                "encoder_layers": 7,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 16,
+                "opt_goal": 1.8165749490261078,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.5900093913078308,
+                            "test_loss": 1.9136744737625122
+                        },
+                        "print": "val_loss: 1.590 * 0.5 + test_loss: 1.914 * 0.5",
+                        "epoch": 55
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8837060702875399,
+                            "VUS_ROC": 0.8917270929126883
+                        },
+                        "print": "(1 - AUC_ROC: 0.884) * 0.3 + (1 - VUS_ROC: 0.892) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 29,
+                "st_net_layers": 7,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 7,
+                "coupling_layers": 3,
+                "seed": 55,
+                "past": 33,
+                "encoder_layers": 10,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 8,
+                "opt_goal": 2.146997582912445,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.7379142045974731,
+                            "test_loss": 2.3223190307617188
+                        },
+                        "print": "val_loss: 1.738 * 0.5 + test_loss: 2.322 * 0.5",
+                        "epoch": 56
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.905111821086262,
+                            "VUS_ROC": 0.9007463148372563
+                        },
+                        "print": "(1 - AUC_ROC: 0.905) * 0.3 + (1 - VUS_ROC: 0.901) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 8,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 3,
+                "coupling_layers": 3,
+                "seed": 30,
+                "past": 35,
+                "encoder_layers": 7,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 3,
+                "opt_goal": 0.39924154877662654,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.05918771028518677,
+                            "test_loss": 0.5957112312316895
+                        },
+                        "print": "val_loss: -0.059 * 0.5 + test_loss: 0.596 * 0.5",
+                        "epoch": 265
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9856230031948883,
+                            "VUS_ROC": 0.9779440260504454
+                        },
+                        "print": "(1 - AUC_ROC: 0.986) * 0.3 + (1 - VUS_ROC: 0.978) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 3,
+                "coupling_layers": 3,
+                "seed": 88,
+                "past": 47,
+                "encoder_layers": 20,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 1,
+                "opt_goal": 0.49778935387730594,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.4505264386534691,
+                            "test_loss": 0.5180448889732361
+                        },
+                        "print": "val_loss: 0.451 * 0.5 + test_loss: 0.518 * 0.5",
+                        "epoch": 171
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.984877529286475,
+                            "VUS_ROC": 0.9750392036165241
+                        },
+                        "print": "(1 - AUC_ROC: 0.985) * 0.3 + (1 - VUS_ROC: 0.975) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 23,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 4,
+                "coupling_layers": 6,
+                "seed": 100,
+                "past": 27,
+                "encoder_layers": 9,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 2,
+                "opt_goal": 1.1220116771757602,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.80414729565382,
+                            "test_loss": 1.2582392692565918
+                        },
+                        "print": "val_loss: 0.804 * 0.5 + test_loss: 1.258 * 0.5",
+                        "epoch": 137
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9579339723109691,
+                            "VUS_ROC": 0.921531205620625
+                        },
+                        "print": "(1 - AUC_ROC: 0.958) * 0.3 + (1 - VUS_ROC: 0.922) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 15,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 9,
+                "coupling_layers": 5,
+                "seed": 93,
+                "past": 42,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 13,
+                "opt_goal": 1.1895883329212664,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.048095978796482086,
+                            "test_loss": 1.7200244665145874
+                        },
+                        "print": "val_loss: -0.048 * 0.5 + test_loss: 1.720 * 0.5",
+                        "epoch": 353
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8617678381256656,
+                            "VUS_ROC": 0.8821775899827305
+                        },
+                        "print": "(1 - AUC_ROC: 0.862) * 0.3 + (1 - VUS_ROC: 0.882) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 19,
+                "st_net_layers": 3,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 10,
+                "coupling_layers": 4,
+                "seed": 85,
+                "past": 27,
+                "encoder_layers": 17,
+                "encoder_dropout": 0.8,
+                "encoder_compression_factor": 2,
+                "opt_goal": 1.8272671937942504,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.5927486419677734,
+                            "test_loss": 1.9277751445770264
+                        },
+                        "print": "val_loss: 1.593 * 0.5 + test_loss: 1.928 * 0.5",
+                        "epoch": 73
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.890947816826411,
+                            "VUS_ROC": 0.8941594529468723
+                        },
+                        "print": "(1 - AUC_ROC: 0.891) * 0.3 + (1 - VUS_ROC: 0.894) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 16,
+                "st_net_layers": 6,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 6,
+                "coupling_layers": 3,
+                "seed": 82,
+                "past": 2,
+                "encoder_layers": 6,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 13,
+                "opt_goal": 2.753212784975767,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.5426122322678566,
+                            "test_loss": 3.700613021850586
+                        },
+                        "print": "val_loss: 0.543 * 0.5 + test_loss: 3.701 * 0.5",
+                        "epoch": 787
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9179978700745475,
+                            "VUS_ROC": 0.9024925186971798
+                        },
+                        "print": "(1 - AUC_ROC: 0.918) * 0.3 + (1 - VUS_ROC: 0.902) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 19,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 7,
+                "coupling_layers": 8,
+                "seed": 80,
+                "past": 45,
+                "encoder_layers": 20,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 8,
+                "opt_goal": 2.7532840013504027,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.754288673400879,
+                            "test_loss": 3.181424856185913
+                        },
+                        "print": "val_loss: 1.754 * 0.5 + test_loss: 3.181 * 0.5",
+                        "epoch": 59
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8812566560170394,
+                            "VUS_ROC": 0.8894549831802182
+                        },
+                        "print": "(1 - AUC_ROC: 0.881) * 0.3 + (1 - VUS_ROC: 0.889) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 7,
+                "st_net_layers": 6,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 6,
+                "coupling_layers": 18,
+                "seed": 42,
+                "past": 23,
+                "encoder_layers": 12,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 11,
+                "opt_goal": 4.963985630869865,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.3001538813114166,
+                            "test_loss": 6.534199237823486
+                        },
+                        "print": "val_loss: 1.300 * 0.5 + test_loss: 6.534 * 0.5",
+                        "epoch": 699
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9002129925452609,
+                            "VUS_ROC": 0.8985043480544543
+                        },
+                        "print": "(1 - AUC_ROC: 0.900) * 0.3 + (1 - VUS_ROC: 0.899) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 31,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 8,
+                "coupling_layers": 6,
+                "seed": 35,
+                "past": 5,
+                "encoder_layers": 13,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 13,
+                "opt_goal": 9.965816938877104,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.5569733381271362,
+                            "test_loss": 13.998178482055664
+                        },
+                        "print": "val_loss: 0.557 * 0.5 + test_loss: 13.998 * 0.5",
+                        "epoch": 621
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8243876464323748,
+                            "VUS_ROC": 0.8593539231418834
+                        },
+                        "print": "(1 - AUC_ROC: 0.824) * 0.3 + (1 - VUS_ROC: 0.859) * 0.7"
+                    }
+                ]
+            }
+        },
+        "2": {
+            "0": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 2,
+                "coupling_layers": 11,
+                "seed": 48,
+                "past": 16,
+                "encoder_layers": 12,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 5,
+                "opt_goal": 1.9970720171928404,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.4562503099441528,
+                            "test_loss": 2.2288527488708496
+                        },
+                        "print": "val_loss: 1.456 * 0.5 + test_loss: 2.229 * 0.5",
+                        "epoch": 84
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8844515441959532,
+                            "VUS_ROC": 0.8915070924675655
+                        },
+                        "print": "(1 - AUC_ROC: 0.884) * 0.3 + (1 - VUS_ROC: 0.892) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 15,
+                "st_net_layers": 7,
+                "st_dropout": 0.7,
+                "st_funnel_factor": 4,
+                "coupling_layers": 10,
+                "seed": 69,
+                "past": 50,
+                "encoder_layers": 20,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 6,
+                "opt_goal": 1.9191474854946136,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.7748598456382751,
+                            "test_loss": 1.9809850454330444
+                        },
+                        "print": "val_loss: 1.775 * 0.5 + test_loss: 1.981 * 0.5",
+                        "epoch": 122
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8880724174653887,
+                            "VUS_ROC": 0.8937263254773479
+                        },
+                        "print": "(1 - AUC_ROC: 0.888) * 0.3 + (1 - VUS_ROC: 0.894) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 28,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 5,
+                "coupling_layers": 6,
+                "seed": 52,
+                "past": 39,
+                "encoder_layers": 14,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 6,
+                "opt_goal": 2.3288351237773894,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.7352514863014221,
+                            "test_loss": 2.58322811126709
+                        },
+                        "print": "val_loss: 1.735 * 0.5 + test_loss: 2.583 * 0.5",
+                        "epoch": 56
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8864749733759318,
+                            "VUS_ROC": 0.891638524318597
+                        },
+                        "print": "(1 - AUC_ROC: 0.886) * 0.3 + (1 - VUS_ROC: 0.892) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 25,
+                "st_net_layers": 3,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 3,
+                "coupling_layers": 8,
+                "seed": 54,
+                "past": 41,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 5,
+                "opt_goal": 1.497609160095453,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.24004627019166946,
+                            "test_loss": 2.242318630218506
+                        },
+                        "print": "val_loss: -0.240 * 0.5 + test_loss: 2.242 * 0.5",
+                        "epoch": 170
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8952076677316294,
+                            "VUS_ROC": 0.8961013870747253
+                        },
+                        "print": "(1 - AUC_ROC: 0.895) * 0.3 + (1 - VUS_ROC: 0.896) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 5,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 2,
+                "coupling_layers": 15,
+                "seed": 63,
+                "past": 51,
+                "encoder_layers": 6,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 6,
+                "opt_goal": 1.9475202560424805,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.042158842086792,
+                            "test_loss": 3.6573827266693115
+                        },
+                        "print": "val_loss: -2.042 * 0.5 + test_loss: 3.657 * 0.5",
+                        "epoch": 285
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8498402555910542,
+                            "VUS_ROC": 0.8847467679351274
+                        },
+                        "print": "(1 - AUC_ROC: 0.850) * 0.3 + (1 - VUS_ROC: 0.885) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 12,
+                "st_net_layers": 3,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 5,
+                "coupling_layers": 8,
+                "seed": 84,
+                "past": 47,
+                "encoder_layers": 13,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 11,
+                "opt_goal": 5.150652971863746,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.7190541923046112,
+                            "test_loss": 7.049909591674805
+                        },
+                        "print": "val_loss: 0.719 * 0.5 + test_loss: 7.050 * 0.5",
+                        "epoch": 130
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8850905218317359,
+                            "VUS_ROC": 0.8904819030220464
+                        },
+                        "print": "(1 - AUC_ROC: 0.885) * 0.3 + (1 - VUS_ROC: 0.890) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 6,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 2,
+                "coupling_layers": 4,
+                "seed": 71,
+                "past": 40,
+                "encoder_layers": 7,
+                "encoder_dropout": 0.1,
+                "encoder_compression_factor": 13,
+                "opt_goal": 0.27281969934701916,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.3656090497970581,
+                            "test_loss": 0.2330528348684311
+                        },
+                        "print": "val_loss: 0.366 * 0.5 + test_loss: 0.233 * 0.5",
+                        "epoch": 492
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9289669861554846,
+                            "VUS_ROC": 0.8987084850457555
+                        },
+                        "print": "(1 - AUC_ROC: 0.929) * 0.3 + (1 - VUS_ROC: 0.899) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 18,
+                "st_net_layers": 3,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 1,
+                "coupling_layers": 6,
+                "seed": 70,
+                "past": 23,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 2,
+                "opt_goal": -0.994148576259613,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.5861300230026245,
+                            "test_loss": -0.311870813369751
+                        },
+                        "print": "val_loss: -2.586 * 0.5 + test_loss: -0.312 * 0.5",
+                        "epoch": 999
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9378061767838126,
+                            "VUS_ROC": 0.9144468473666395
+                        },
+                        "print": "(1 - AUC_ROC: 0.938) * 0.3 + (1 - VUS_ROC: 0.914) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 12,
+                "st_net_layers": 5,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 5,
+                "coupling_layers": 7,
+                "seed": 100,
+                "past": 25,
+                "encoder_layers": 10,
+                "encoder_dropout": 0.9,
+                "encoder_compression_factor": 15,
+                "opt_goal": 2.115873974561691,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.6347385048866272,
+                            "test_loss": 2.3220748901367188
+                        },
+                        "print": "val_loss: 1.635 * 0.5 + test_loss: 2.322 * 0.5",
+                        "epoch": 59
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9004259850905217,
+                            "VUS_ROC": 0.8978749523255296
+                        },
+                        "print": "(1 - AUC_ROC: 0.900) * 0.3 + (1 - VUS_ROC: 0.898) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 5,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 2,
+                "coupling_layers": 3,
+                "seed": 76,
+                "past": 23,
+                "encoder_layers": 10,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 8,
+                "opt_goal": 1.6525197088718413,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.5176454186439514,
+                            "test_loss": 1.7103229761123657
+                        },
+                        "print": "val_loss: 1.518 * 0.5 + test_loss: 1.710 * 0.5",
+                        "epoch": 96
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9130990415335464,
+                            "VUS_ROC": 0.9029916230425393
+                        },
+                        "print": "(1 - AUC_ROC: 0.913) * 0.3 + (1 - VUS_ROC: 0.903) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 14,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 6,
+                "coupling_layers": 11,
+                "seed": 91,
+                "past": 25,
+                "encoder_layers": 14,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 12,
+                "opt_goal": 2.0282443344593046,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.5598904490470886,
+                            "test_loss": 2.2289674282073975
+                        },
+                        "print": "val_loss: 1.560 * 0.5 + test_loss: 2.229 * 0.5",
+                        "epoch": 59
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8903088391906283,
+                            "VUS_ROC": 0.8934747144447063
+                        },
+                        "print": "(1 - AUC_ROC: 0.890) * 0.3 + (1 - VUS_ROC: 0.893) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 6,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 10,
+                "coupling_layers": 4,
+                "seed": 70,
+                "past": 44,
+                "encoder_layers": 15,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 6,
+                "opt_goal": 1.7265686631202697,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.7720093727111816,
+                            "test_loss": 1.7070940732955933
+                        },
+                        "print": "val_loss: 1.772 * 0.5 + test_loss: 1.707 * 0.5",
+                        "epoch": 185
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8735889243876465,
+                            "VUS_ROC": 0.8551322085822154
+                        },
+                        "print": "(1 - AUC_ROC: 0.874) * 0.3 + (1 - VUS_ROC: 0.855) * 0.7"
+                    }
+                ]
+            }
+        },
+        "3": {
+            "0": {
+                "hidden_multiplier": 19,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 7,
+                "coupling_layers": 8,
+                "seed": 91,
+                "past": 51,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 10,
+                "opt_goal": 2.298531851172447,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.2705449759960175,
+                            "test_loss": 3.8281362056732178
+                        },
+                        "print": "val_loss: -1.271 * 0.5 + test_loss: 3.828 * 0.5",
+                        "epoch": 365
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8979765708200212,
+                            "VUS_ROC": 0.8975221309697462
+                        },
+                        "print": "(1 - AUC_ROC: 0.898) * 0.3 + (1 - VUS_ROC: 0.898) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 3,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 3,
+                "coupling_layers": 12,
+                "seed": 75,
+                "past": 10,
+                "encoder_layers": 8,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 6,
+                "opt_goal": 1.795880603790283,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.4857606887817383,
+                            "test_loss": 1.9287891387939453
+                        },
+                        "print": "val_loss: 1.486 * 0.5 + test_loss: 1.929 * 0.5",
+                        "epoch": 247
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8829605963791267,
+                            "VUS_ROC": 0.8909580079835656
+                        },
+                        "print": "(1 - AUC_ROC: 0.883) * 0.3 + (1 - VUS_ROC: 0.891) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 2,
+                "coupling_layers": 9,
+                "seed": 94,
+                "past": 34,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 9,
+                "opt_goal": 1.6514333009719848,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.9839940071105957,
+                            "test_loss": 2.780902147293091
+                        },
+                        "print": "val_loss: -0.984 * 0.5 + test_loss: 2.781 * 0.5",
+                        "epoch": 574
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8677316293929712,
+                            "VUS_ROC": 0.8812138599385069
+                        },
+                        "print": "(1 - AUC_ROC: 0.868) * 0.3 + (1 - VUS_ROC: 0.881) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 4,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 4,
+                "coupling_layers": 10,
+                "seed": 42,
+                "past": 19,
+                "encoder_layers": 8,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 2,
+                "opt_goal": 1.579995585978031,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.11973746120929718,
+                            "test_loss": 2.308452606201172
+                        },
+                        "print": "val_loss: -0.120 * 0.5 + test_loss: 2.308 * 0.5",
+                        "epoch": 999
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 1.0,
+                            "VUS_ROC": 0.940032754699425
+                        },
+                        "print": "(1 - AUC_ROC: 1.000) * 0.3 + (1 - VUS_ROC: 0.940) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 6,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 4,
+                "coupling_layers": 5,
+                "seed": 97,
+                "past": 5,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.8,
+                "encoder_compression_factor": 1,
+                "opt_goal": 3.3810065567493437,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.12615197896957397,
+                            "test_loss": 4.775944232940674
+                        },
+                        "print": "val_loss: 0.126 * 0.5 + test_loss: 4.776 * 0.5",
+                        "epoch": 999
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8527156549520767,
+                            "VUS_ROC": 0.8671729939513563
+                        },
+                        "print": "(1 - AUC_ROC: 0.853) * 0.3 + (1 - VUS_ROC: 0.867) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 3,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 5,
+                "coupling_layers": 7,
+                "seed": 48,
+                "past": 33,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 3,
+                "opt_goal": 1.4081212162971495,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.127099633216858,
+                            "test_loss": 2.923215866088867
+                        },
+                        "print": "val_loss: -2.127 * 0.5 + test_loss: 2.923 * 0.5",
+                        "epoch": 970
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.86975505857295,
+                            "VUS_ROC": 0.8910601427593106
+                        },
+                        "print": "(1 - AUC_ROC: 0.870) * 0.3 + (1 - VUS_ROC: 0.891) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 8,
+                "coupling_layers": 4,
+                "seed": 71,
+                "past": 40,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 9,
+                "opt_goal": -0.33216026127338405,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.519063800573349,
+                            "test_loss": -0.252058744430542
+                        },
+                        "print": "val_loss: -0.519 * 0.5 + test_loss: -0.252 * 0.5",
+                        "epoch": 722
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8293929712460064,
+                            "VUS_ROC": 0.8420247813185471
+                        },
+                        "print": "(1 - AUC_ROC: 0.829) * 0.3 + (1 - VUS_ROC: 0.842) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 4,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 3,
+                "coupling_layers": 6,
+                "seed": 73,
+                "past": 31,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 3,
+                "opt_goal": 0.11965116560459137,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.3743445575237274,
+                            "test_loss": 0.33136361837387085
+                        },
+                        "print": "val_loss: -0.374 * 0.5 + test_loss: 0.331 * 0.5",
+                        "epoch": 547
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.869542066027689,
+                            "VUS_ROC": 0.8892216032264157
+                        },
+                        "print": "(1 - AUC_ROC: 0.870) * 0.3 + (1 - VUS_ROC: 0.889) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 5,
+                "coupling_layers": 7,
+                "seed": 74,
+                "past": 11,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 6,
+                "opt_goal": 1.5885073646903038,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.3849850445985794,
+                            "test_loss": 2.1043026447296143
+                        },
+                        "print": "val_loss: 0.385 * 0.5 + test_loss: 2.104 * 0.5",
+                        "epoch": 418
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8794462193823216,
+                            "VUS_ROC": 0.8935273490080788
+                        },
+                        "print": "(1 - AUC_ROC: 0.879) * 0.3 + (1 - VUS_ROC: 0.894) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 3,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 4,
+                "coupling_layers": 13,
+                "seed": 97,
+                "past": 46,
+                "encoder_layers": 8,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 3,
+                "opt_goal": 5.5155840096995234,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.5620339121669531,
+                            "test_loss": 8.120277404785156
+                        },
+                        "print": "val_loss: -0.562 * 0.5 + test_loss: 8.120 * 0.5",
+                        "epoch": 758
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.802555910543131,
+                            "VUS_ROC": 0.8273006436177409
+                        },
+                        "print": "(1 - AUC_ROC: 0.803) * 0.3 + (1 - VUS_ROC: 0.827) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 16,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 4,
+                "coupling_layers": 6,
+                "seed": 88,
+                "past": 2,
+                "encoder_layers": 13,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 1,
+                "opt_goal": 2.3001566290855404,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.4352387189865112,
+                            "test_loss": 2.6708357334136963
+                        },
+                        "print": "val_loss: 1.435 * 0.5 + test_loss: 2.671 * 0.5",
+                        "epoch": 56
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8926517571884984,
+                            "VUS_ROC": 0.894308206452978
+                        },
+                        "print": "(1 - AUC_ROC: 0.893) * 0.3 + (1 - VUS_ROC: 0.894) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 32,
+                "st_net_layers": 3,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 2,
+                "coupling_layers": 3,
+                "seed": 44,
+                "past": 46,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 8,
+                "opt_goal": 0.4674580886960029,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.08654390275478363,
+                            "test_loss": 0.6307070255279541
+                        },
+                        "print": "val_loss: 0.087 * 0.5 + test_loss: 0.631 * 0.5",
+                        "epoch": 514
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9228966986155485,
+                            "VUS_ROC": 0.9232561073981713
+                        },
+                        "print": "(1 - AUC_ROC: 0.923) * 0.3 + (1 - VUS_ROC: 0.923) * 0.7"
+                    }
+                ]
+            }
+        },
+        "4": {
+            "0": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 6,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 10,
+                "coupling_layers": 10,
+                "seed": 59,
+                "past": 20,
+                "encoder_layers": 8,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 5,
+                "opt_goal": 0.6418441139161587,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.19509202986955643,
+                            "test_loss": 0.8333092927932739
+                        },
+                        "print": "val_loss: 0.195 * 0.5 + test_loss: 0.833 * 0.5",
+                        "epoch": 135
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.804898828541001,
+                            "VUS_ROC": 0.8233362018271757
+                        },
+                        "print": "(1 - AUC_ROC: 0.805) * 0.3 + (1 - VUS_ROC: 0.823) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 6,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 1,
+                "coupling_layers": 5,
+                "seed": 73,
+                "past": 35,
+                "encoder_layers": 7,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 4,
+                "opt_goal": 1.2416534785181284,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.20089002326130867,
+                            "test_loss": 1.8598864078521729
+                        },
+                        "print": "val_loss: -0.201 * 0.5 + test_loss: 1.860 * 0.5",
+                        "epoch": 293
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8195953141640043,
+                            "VUS_ROC": 0.8359116508841191
+                        },
+                        "print": "(1 - AUC_ROC: 0.820) * 0.3 + (1 - VUS_ROC: 0.836) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 6,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 3,
+                "coupling_layers": 5,
+                "seed": 50,
+                "past": 39,
+                "encoder_layers": 18,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 9,
+                "opt_goal": 1.847604238986969,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.7182562351226807,
+                            "test_loss": 1.9030390977859497
+                        },
+                        "print": "val_loss: 1.718 * 0.5 + test_loss: 1.903 * 0.5",
+                        "epoch": 71
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8960596379126731,
+                            "VUS_ROC": 0.8960162728493689
+                        },
+                        "print": "(1 - AUC_ROC: 0.896) * 0.3 + (1 - VUS_ROC: 0.896) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 6,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 8,
+                "coupling_layers": 11,
+                "seed": 49,
+                "past": 5,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 6,
+                "opt_goal": 3.8719105750322345,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.736363559961319,
+                            "test_loss": 5.8468852043151855
+                        },
+                        "print": "val_loss: -0.736 * 0.5 + test_loss: 5.847 * 0.5",
+                        "epoch": 526
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8348242811501597,
+                            "VUS_ROC": 0.8578061261910589
+                        },
+                        "print": "(1 - AUC_ROC: 0.835) * 0.3 + (1 - VUS_ROC: 0.858) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 14,
+                "st_net_layers": 5,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 6,
+                "coupling_layers": 4,
+                "seed": 100,
+                "past": 23,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 13,
+                "opt_goal": 0.13141592293977739,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.3155219703912735,
+                            "test_loss": 0.3229607343673706
+                        },
+                        "print": "val_loss: -0.316 * 0.5 + test_loss: 0.323 * 0.5",
+                        "epoch": 504
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8586794462193823,
+                            "VUS_ROC": 0.8873484232137135
+                        },
+                        "print": "(1 - AUC_ROC: 0.859) * 0.3 + (1 - VUS_ROC: 0.887) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 12,
+                "st_net_layers": 3,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 2,
+                "coupling_layers": 10,
+                "seed": 31,
+                "past": 33,
+                "encoder_layers": 4,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 5,
+                "opt_goal": 2.860217064619064,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.858238160610199,
+                            "test_loss": 4.453840732574463
+                        },
+                        "print": "val_loss: -0.858 * 0.5 + test_loss: 4.454 * 0.5",
+                        "epoch": 246
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8957401490947817,
+                            "VUS_ROC": 0.8956148127473025
+                        },
+                        "print": "(1 - AUC_ROC: 0.896) * 0.3 + (1 - VUS_ROC: 0.896) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 16,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 10,
+                "coupling_layers": 7,
+                "seed": 50,
+                "past": 41,
+                "encoder_layers": 6,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 3,
+                "opt_goal": 0.5438202559947967,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.7997471690177917,
+                            "test_loss": 1.1196348667144775
+                        },
+                        "print": "val_loss: -0.800 * 0.5 + test_loss: 1.120 * 0.5",
+                        "epoch": 336
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8598509052183173,
+                            "VUS_ROC": 0.8742043048571257
+                        },
+                        "print": "(1 - AUC_ROC: 0.860) * 0.3 + (1 - VUS_ROC: 0.874) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 17,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 3,
+                "coupling_layers": 7,
+                "seed": 79,
+                "past": 11,
+                "encoder_layers": 4,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 10,
+                "opt_goal": 1.5866756021976471,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.1087300181388855,
+                            "test_loss": 2.220080852508545
+                        },
+                        "print": "val_loss: 0.109 * 0.5 + test_loss: 2.220 * 0.5",
+                        "epoch": 195
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9079872204472844,
+                            "VUS_ROC": 0.9071278588858733
+                        },
+                        "print": "(1 - AUC_ROC: 0.908) * 0.3 + (1 - VUS_ROC: 0.907) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 6,
+                "st_net_layers": 3,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 3,
+                "coupling_layers": 3,
+                "seed": 46,
+                "past": 33,
+                "encoder_layers": 11,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 14,
+                "opt_goal": 1.6600514531135557,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.6929680109024048,
+                            "test_loss": 1.645944356918335
+                        },
+                        "print": "val_loss: 1.693 * 0.5 + test_loss: 1.646 * 0.5",
+                        "epoch": 223
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8773162939297124,
+                            "VUS_ROC": 0.8151712892865135
+                        },
+                        "print": "(1 - AUC_ROC: 0.877) * 0.3 + (1 - VUS_ROC: 0.815) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 20,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 1,
+                "coupling_layers": 3,
+                "seed": 31,
+                "past": 28,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 7,
+                "opt_goal": 0.576116645336151,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.2109707593917847,
+                            "test_loss": 1.770582675933838
+                        },
+                        "print": "val_loss: -2.211 * 0.5 + test_loss: 1.771 * 0.5",
+                        "epoch": 977
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8724174653887115,
+                            "VUS_ROC": 0.8877245159728508
+                        },
+                        "print": "(1 - AUC_ROC: 0.872) * 0.3 + (1 - VUS_ROC: 0.888) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 8,
+                "st_net_layers": 7,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 1,
+                "coupling_layers": 8,
+                "seed": 69,
+                "past": 41,
+                "encoder_layers": 6,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 6,
+                "opt_goal": 1.2689009755849836,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.20419713854789734,
+                            "test_loss": 1.90022873878479
+                        },
+                        "print": "val_loss: -0.204 * 0.5 + test_loss: 1.900 * 0.5",
+                        "epoch": 118
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8861554845580404,
+                            "VUS_ROC": 0.89259036921357
+                        },
+                        "print": "(1 - AUC_ROC: 0.886) * 0.3 + (1 - VUS_ROC: 0.893) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 12,
+                "st_net_layers": 7,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 5,
+                "coupling_layers": 3,
+                "seed": 64,
+                "past": 47,
+                "encoder_layers": 12,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 7,
+                "opt_goal": 1.7661951720714568,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.708075225353241,
+                            "test_loss": 1.791103720664978
+                        },
+                        "print": "val_loss: 1.708 * 0.5 + test_loss: 1.791 * 0.5",
+                        "epoch": 75
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9059637912673056,
+                            "VUS_ROC": 0.9001047226326516
+                        },
+                        "print": "(1 - AUC_ROC: 0.906) * 0.3 + (1 - VUS_ROC: 0.900) * 0.7"
+                    }
+                ]
+            }
+        },
+        "5": {
+            "0": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 1,
+                "coupling_layers": 4,
+                "seed": 95,
+                "past": 30,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 2,
+                "opt_goal": -1.1968575537204742,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.1115100383758545,
+                            "test_loss": -0.8048636317253113
+                        },
+                        "print": "val_loss: -2.112 * 0.5 + test_loss: -0.805 * 0.5",
+                        "epoch": 712
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8767838125665601,
+                            "VUS_ROC": 0.8883319414104089
+                        },
+                        "print": "(1 - AUC_ROC: 0.877) * 0.3 + (1 - VUS_ROC: 0.888) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 7,
+                "coupling_layers": 10,
+                "seed": 81,
+                "past": 21,
+                "encoder_layers": 6,
+                "encoder_dropout": 0.8,
+                "encoder_compression_factor": 5,
+                "opt_goal": 1.4284213960170744,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.7751112580299377,
+                            "test_loss": 1.708411455154419
+                        },
+                        "print": "val_loss: 0.775 * 0.5 + test_loss: 1.708 * 0.5",
+                        "epoch": 385
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9038338658146965,
+                            "VUS_ROC": 0.8994939398088401
+                        },
+                        "print": "(1 - AUC_ROC: 0.904) * 0.3 + (1 - VUS_ROC: 0.899) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 21,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 5,
+                "coupling_layers": 3,
+                "seed": 72,
+                "past": 33,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 18,
+                "opt_goal": 0.05239092111587523,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.6360119581222534,
+                            "test_loss": 0.7759921550750732
+                        },
+                        "print": "val_loss: -1.636 * 0.5 + test_loss: 0.776 * 0.5",
+                        "epoch": 461
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8087326943556975,
+                            "VUS_ROC": 0.8247250777237778
+                        },
+                        "print": "(1 - AUC_ROC: 0.809) * 0.3 + (1 - VUS_ROC: 0.825) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 10,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 4,
+                "coupling_layers": 3,
+                "seed": 54,
+                "past": 45,
+                "encoder_layers": 9,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 17,
+                "opt_goal": 1.5595450758934022,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.7909554243087769,
+                            "test_loss": 2.995473861694336
+                        },
+                        "print": "val_loss: -1.791 * 0.5 + test_loss: 2.995 * 0.5",
+                        "epoch": 809
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8888178913738018,
+                            "VUS_ROC": 0.8946214252985027
+                        },
+                        "print": "(1 - AUC_ROC: 0.889) * 0.3 + (1 - VUS_ROC: 0.895) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 5,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 9,
+                "coupling_layers": 9,
+                "seed": 75,
+                "past": 1,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 7,
+                "opt_goal": 4.9149135537445545,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.7165528759360313,
+                            "test_loss": 6.7142109870910645
+                        },
+                        "print": "val_loss: 0.717 * 0.5 + test_loss: 6.714 * 0.5",
+                        "epoch": 836
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9166134185303515,
+                            "VUS_ROC": 0.905446906226058
+                        },
+                        "print": "(1 - AUC_ROC: 0.917) * 0.3 + (1 - VUS_ROC: 0.905) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 17,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 5,
+                "coupling_layers": 8,
+                "seed": 57,
+                "past": 43,
+                "encoder_layers": 7,
+                "encoder_dropout": 0.9,
+                "encoder_compression_factor": 13,
+                "opt_goal": 2.8652079343795775,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.8876283168792725,
+                            "test_loss": 3.284170627593994
+                        },
+                        "print": "val_loss: 1.888 * 0.5 + test_loss: 3.284 * 0.5",
+                        "epoch": 55
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8825346112886049,
+                            "VUS_ROC": 0.889928033063255
+                        },
+                        "print": "(1 - AUC_ROC: 0.883) * 0.3 + (1 - VUS_ROC: 0.890) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 5,
+                "st_net_layers": 4,
+                "st_dropout": 0.8,
+                "st_funnel_factor": 3,
+                "coupling_layers": 10,
+                "seed": 41,
+                "past": 25,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.7,
+                "encoder_compression_factor": 2,
+                "opt_goal": 1.8217494904994964,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.6185910105705261,
+                            "test_loss": 1.9088174104690552
+                        },
+                        "print": "val_loss: 1.619 * 0.5 + test_loss: 1.909 * 0.5",
+                        "epoch": 264
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8839190628328009,
+                            "VUS_ROC": 0.890682657678572
+                        },
+                        "print": "(1 - AUC_ROC: 0.884) * 0.3 + (1 - VUS_ROC: 0.891) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 17,
+                "st_net_layers": 5,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 8,
+                "coupling_layers": 7,
+                "seed": 60,
+                "past": 25,
+                "encoder_layers": 13,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 7,
+                "opt_goal": 2.7849993288516997,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.525469958782196,
+                            "test_loss": 3.3247976303100586
+                        },
+                        "print": "val_loss: 1.525 * 0.5 + test_loss: 3.325 * 0.5",
+                        "epoch": 55
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9022364217252397,
+                            "VUS_ROC": 0.9000679623476757
+                        },
+                        "print": "(1 - AUC_ROC: 0.902) * 0.3 + (1 - VUS_ROC: 0.900) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 25,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 5,
+                "coupling_layers": 3,
+                "seed": 56,
+                "past": 36,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 5,
+                "opt_goal": -1.2179902851581574,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.7670255899429321,
+                            "test_loss": -0.9826894402503967
+                        },
+                        "print": "val_loss: -1.767 * 0.5 + test_loss: -0.983 * 0.5",
+                        "epoch": 507
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8407880724174654,
+                            "VUS_ROC": 0.8424252874122234
+                        },
+                        "print": "(1 - AUC_ROC: 0.841) * 0.3 + (1 - VUS_ROC: 0.842) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 18,
+                "st_net_layers": 6,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 7,
+                "coupling_layers": 5,
+                "seed": 64,
+                "past": 1,
+                "encoder_layers": 7,
+                "encoder_dropout": 0.8,
+                "encoder_compression_factor": 9,
+                "opt_goal": 7.03740263171494,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.7827924154698849,
+                            "test_loss": 9.717949867248535
+                        },
+                        "print": "val_loss: 0.783 * 0.5 + test_loss: 9.718 * 0.5",
+                        "epoch": 430
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9739084132055378,
+                            "VUS_ROC": 0.9168276119874001
+                        },
+                        "print": "(1 - AUC_ROC: 0.974) * 0.3 + (1 - VUS_ROC: 0.917) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 4,
+                "st_net_layers": 5,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 8,
+                "coupling_layers": 3,
+                "seed": 65,
+                "past": 21,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.9,
+                "encoder_compression_factor": 1,
+                "opt_goal": 1.2087375178933142,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.4496111124753952,
+                            "test_loss": 1.5340774059295654
+                        },
+                        "print": "val_loss: 0.450 * 0.5 + test_loss: 1.534 * 0.5",
+                        "epoch": 488
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.908839190628328,
+                            "VUS_ROC": 0.9007925099795973
+                        },
+                        "print": "(1 - AUC_ROC: 0.909) * 0.3 + (1 - VUS_ROC: 0.901) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 10,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 7,
+                "coupling_layers": 4,
+                "seed": 38,
+                "past": 19,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.1,
+                "encoder_compression_factor": 13,
+                "opt_goal": -1.953899049758911,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.6030163764953613,
+                            "test_loss": -1.675705909729004
+                        },
+                        "print": "val_loss: -2.603 * 0.5 + test_loss: -1.676 * 0.5",
+                        "epoch": 999
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8821086261980832,
+                            "VUS_ROC": 0.8311641240404417
+                        },
+                        "print": "(1 - AUC_ROC: 0.882) * 0.3 + (1 - VUS_ROC: 0.831) * 0.7"
+                    }
+                ]
+            }
+        },
+        "6": {
+            "0": {
+                "hidden_multiplier": 39,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 7,
+                "coupling_layers": 5,
+                "seed": 34,
+                "past": 32,
+                "encoder_layers": 4,
+                "encoder_dropout": 0.1,
+                "encoder_compression_factor": 8,
+                "opt_goal": -0.06527664661407473,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.82395076751709,
+                            "test_loss": 1.1170122623443604
+                        },
+                        "print": "val_loss: -2.824 * 0.5 + test_loss: 1.117 * 0.5",
+                        "epoch": 569
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8848775292864749,
+                            "VUS_ROC": 0.8900931725508334
+                        },
+                        "print": "(1 - AUC_ROC: 0.885) * 0.3 + (1 - VUS_ROC: 0.890) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 22,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 4,
+                "coupling_layers": 6,
+                "seed": 48,
+                "past": 8,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 8,
+                "opt_goal": 4.592735832929611,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.6042298674583435,
+                            "test_loss": 6.820006847381592
+                        },
+                        "print": "val_loss: -0.604 * 0.5 + test_loss: 6.820 * 0.5",
+                        "epoch": 999
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8774227902023429,
+                            "VUS_ROC": 0.8856583414452804
+                        },
+                        "print": "(1 - AUC_ROC: 0.877) * 0.3 + (1 - VUS_ROC: 0.886) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 3,
+                "st_net_layers": 3,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 3,
+                "coupling_layers": 4,
+                "seed": 64,
+                "past": 22,
+                "encoder_layers": 12,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 11,
+                "opt_goal": 0.17311593145132065,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.20228084921836853,
+                            "test_loss": 0.1606166809797287
+                        },
+                        "print": "val_loss: 0.202 * 0.5 + test_loss: 0.161 * 0.5",
+                        "epoch": 329
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9766773162939297,
+                            "VUS_ROC": 0.9692162159290323
+                        },
+                        "print": "(1 - AUC_ROC: 0.977) * 0.3 + (1 - VUS_ROC: 0.969) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 30,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 7,
+                "coupling_layers": 4,
+                "seed": 54,
+                "past": 28,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 14,
+                "opt_goal": -0.6004561632871628,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.530096411705017,
+                            "test_loss": -0.20203891396522522
+                        },
+                        "print": "val_loss: -1.530 * 0.5 + test_loss: -0.202 * 0.5",
+                        "epoch": 684
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8912673056443025,
+                            "VUS_ROC": 0.8929920940073712
+                        },
+                        "print": "(1 - AUC_ROC: 0.891) * 0.3 + (1 - VUS_ROC: 0.893) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 20,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 5,
+                "coupling_layers": 3,
+                "seed": 42,
+                "past": 13,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 3,
+                "opt_goal": -0.44391450732946397,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.2183880805969238,
+                            "test_loss": -0.11199726164340973
+                        },
+                        "print": "val_loss: -1.218 * 0.5 + test_loss: -0.112 * 0.5",
+                        "epoch": 849
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8895633652822151,
+                            "VUS_ROC": 0.8936804499713795
+                        },
+                        "print": "(1 - AUC_ROC: 0.890) * 0.3 + (1 - VUS_ROC: 0.894) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 10,
+                "st_net_layers": 5,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 4,
+                "coupling_layers": 5,
+                "seed": 72,
+                "past": 48,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 7,
+                "opt_goal": 0.5576698422431945,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.5810577869415283,
+                            "test_loss": 1.9028388261795044
+                        },
+                        "print": "val_loss: -2.581 * 0.5 + test_loss: 1.903 * 0.5",
+                        "epoch": 784
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8494142705005325,
+                            "VUS_ROC": 0.8723400220964038
+                        },
+                        "print": "(1 - AUC_ROC: 0.849) * 0.3 + (1 - VUS_ROC: 0.872) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 14,
+                "st_net_layers": 3,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 6,
+                "coupling_layers": 5,
+                "seed": 57,
+                "past": 38,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 1,
+                "opt_goal": -1.189509892463684,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.23730206489563,
+                            "test_loss": -0.7404561042785645
+                        },
+                        "print": "val_loss: -2.237 * 0.5 + test_loss: -0.740 * 0.5",
+                        "epoch": 568
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8500532481363153,
+                            "VUS_ROC": 0.8183967216521063
+                        },
+                        "print": "(1 - AUC_ROC: 0.850) * 0.3 + (1 - VUS_ROC: 0.818) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 3,
+                "coupling_layers": 5,
+                "seed": 69,
+                "past": 29,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 1,
+                "opt_goal": 0.3156349897384644,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.8915555477142334,
+                            "test_loss": 1.2615737915039062
+                        },
+                        "print": "val_loss: -1.892 * 0.5 + test_loss: 1.262 * 0.5",
+                        "epoch": 555
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8765708200212993,
+                            "VUS_ROC": 0.8949658763099212
+                        },
+                        "print": "(1 - AUC_ROC: 0.877) * 0.3 + (1 - VUS_ROC: 0.895) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 19,
+                "st_net_layers": 7,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 10,
+                "coupling_layers": 3,
+                "seed": 44,
+                "past": 36,
+                "encoder_layers": 6,
+                "encoder_dropout": 0.1,
+                "encoder_compression_factor": 15,
+                "opt_goal": -0.7540892213582993,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.9588400721549988,
+                            "test_loss": -0.23776742815971375
+                        },
+                        "print": "val_loss: -1.959 * 0.5 + test_loss: -0.238 * 0.5",
+                        "epoch": 999
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9404685835995741,
+                            "VUS_ROC": 0.9227975257713648
+                        },
+                        "print": "(1 - AUC_ROC: 0.940) * 0.3 + (1 - VUS_ROC: 0.923) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 19,
+                "st_net_layers": 4,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 1,
+                "coupling_layers": 7,
+                "seed": 89,
+                "past": 31,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 3,
+                "opt_goal": -1.659840726852417,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.3721495866775513,
+                            "test_loss": -1.3545655012130737
+                        },
+                        "print": "val_loss: -2.372 * 0.5 + test_loss: -1.355 * 0.5",
+                        "epoch": 345
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.920234291799787,
+                            "VUS_ROC": 0.8476964775958092
+                        },
+                        "print": "(1 - AUC_ROC: 0.920) * 0.3 + (1 - VUS_ROC: 0.848) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 11,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 4,
+                "coupling_layers": 4,
+                "seed": 42,
+                "past": 45,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 11,
+                "opt_goal": 0.08694449067115784,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.4720825552940369,
+                            "test_loss": 0.7550989389419556
+                        },
+                        "print": "val_loss: -1.472 * 0.5 + test_loss: 0.755 * 0.5",
+                        "epoch": 623
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9840255591054313,
+                            "VUS_ROC": 0.9655747742100427
+                        },
+                        "print": "(1 - AUC_ROC: 0.984) * 0.3 + (1 - VUS_ROC: 0.966) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 23,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 9,
+                "coupling_layers": 8,
+                "seed": 49,
+                "past": 28,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 5,
+                "opt_goal": 0.41803764104843133,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.673658013343811,
+                            "test_loss": 1.3144786357879639
+                        },
+                        "print": "val_loss: -1.674 * 0.5 + test_loss: 1.314 * 0.5",
+                        "epoch": 467
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8900958466453675,
+                            "VUS_ROC": 0.8907504528172681
+                        },
+                        "print": "(1 - AUC_ROC: 0.890) * 0.3 + (1 - VUS_ROC: 0.891) * 0.7"
+                    }
+                ]
+            }
+        },
+        "7": {
+            "0": {
+                "hidden_multiplier": 20,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 7,
+                "coupling_layers": 11,
+                "seed": 76,
+                "past": 33,
+                "encoder_layers": 4,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 6,
+                "opt_goal": 5.43725613951683,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.8493029475212097,
+                            "test_loss": 8.560067176818848
+                        },
+                        "print": "val_loss: -1.849 * 0.5 + test_loss: 8.560 * 0.5",
+                        "epoch": 600
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8617678381256656,
+                            "VUS_ROC": 0.883258379056897
+                        },
+                        "print": "(1 - AUC_ROC: 0.862) * 0.3 + (1 - VUS_ROC: 0.883) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 24,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 3,
+                "coupling_layers": 6,
+                "seed": 77,
+                "past": 22,
+                "encoder_layers": 4,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 5,
+                "opt_goal": -0.051999396085739225,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.119201123714447,
+                            "test_loss": 0.8339442014694214
+                        },
+                        "print": "val_loss: -2.119 * 0.5 + test_loss: 0.834 * 0.5",
+                        "epoch": 597
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9005324813631523,
+                            "VUS_ROC": 0.8986301469975096
+                        },
+                        "print": "(1 - AUC_ROC: 0.901) * 0.3 + (1 - VUS_ROC: 0.899) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 45,
+                "st_net_layers": 8,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 3,
+                "coupling_layers": 6,
+                "seed": 90,
+                "past": 31,
+                "encoder_layers": 4,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 3,
+                "opt_goal": 0.12968994379043586,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.9703850746154785,
+                            "test_loss": 1.0297220945358276
+                        },
+                        "print": "val_loss: -1.970 * 0.5 + test_loss: 1.030 * 0.5",
+                        "epoch": 220
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.7949946751863686,
+                            "VUS_ROC": 0.8050852998407121
+                        },
+                        "print": "(1 - AUC_ROC: 0.795) * 0.3 + (1 - VUS_ROC: 0.805) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 5,
+                "coupling_layers": 9,
+                "seed": 41,
+                "past": 27,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 5,
+                "opt_goal": -0.3637841001152992,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.6738308668136597,
+                            "test_loss": 0.1976645141839981
+                        },
+                        "print": "val_loss: -1.674 * 0.5 + test_loss: 0.198 * 0.5",
+                        "epoch": 999
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8912673056443026,
+                            "VUS_ROC": 0.8955114051599963
+                        },
+                        "print": "(1 - AUC_ROC: 0.891) * 0.3 + (1 - VUS_ROC: 0.896) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 34,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 8,
+                "coupling_layers": 3,
+                "seed": 61,
+                "past": 47,
+                "encoder_layers": 4,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 5,
+                "opt_goal": 1.8618128299713135,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.323833703994751,
+                            "test_loss": 3.6556613445281982
+                        },
+                        "print": "val_loss: -2.324 * 0.5 + test_loss: 3.656 * 0.5",
+                        "epoch": 662
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8670926517571884,
+                            "VUS_ROC": 0.8317287087833962
+                        },
+                        "print": "(1 - AUC_ROC: 0.867) * 0.3 + (1 - VUS_ROC: 0.832) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 12,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 2,
+                "coupling_layers": 3,
+                "seed": 97,
+                "past": 18,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 10,
+                "opt_goal": -0.25898161232471467,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.6316226124763489,
+                            "test_loss": 0.3292931020259857
+                        },
+                        "print": "val_loss: -1.632 * 0.5 + test_loss: 0.329 * 0.5",
+                        "epoch": 999
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8307774227902023,
+                            "VUS_ROC": 0.818744748966648
+                        },
+                        "print": "(1 - AUC_ROC: 0.831) * 0.3 + (1 - VUS_ROC: 0.819) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 31,
+                "st_net_layers": 4,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 4,
+                "coupling_layers": 9,
+                "seed": 52,
+                "past": 27,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.1,
+                "encoder_compression_factor": 1,
+                "opt_goal": -3.0074480772018433,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -3.3753128051757812,
+                            "test_loss": -2.8497917652130127
+                        },
+                        "print": "val_loss: -3.375 * 0.5 + test_loss: -2.850 * 0.5",
+                        "epoch": 657
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 1.0,
+                            "VUS_ROC": 0.9594498441046259
+                        },
+                        "print": "(1 - AUC_ROC: 1.000) * 0.3 + (1 - VUS_ROC: 0.959) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 37,
+                "st_net_layers": 6,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 5,
+                "coupling_layers": 5,
+                "seed": 84,
+                "past": 29,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 5,
+                "opt_goal": 0.97807257771492,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.00510483980178833,
+                            "test_loss": 1.3994343280792236
+                        },
+                        "print": "val_loss: -0.005 * 0.5 + test_loss: 1.399 * 0.5",
+                        "epoch": 175
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9101171458998936,
+                            "VUS_ROC": 0.9032443155409058
+                        },
+                        "print": "(1 - AUC_ROC: 0.910) * 0.3 + (1 - VUS_ROC: 0.903) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 1,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 6,
+                "coupling_layers": 5,
+                "seed": 59,
+                "past": 32,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 9,
+                "opt_goal": -0.6086231045424938,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.7663650512695312,
+                            "test_loss": -0.11244798451662064
+                        },
+                        "print": "val_loss: -1.766 * 0.5 + test_loss: -0.112 * 0.5",
+                        "epoch": 919
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8792332268370607,
+                            "VUS_ROC": 0.8882653632120167
+                        },
+                        "print": "(1 - AUC_ROC: 0.879) * 0.3 + (1 - VUS_ROC: 0.888) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 12,
+                "st_net_layers": 7,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 1,
+                "coupling_layers": 9,
+                "seed": 64,
+                "past": 44,
+                "encoder_layers": 6,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 7,
+                "opt_goal": 1.7714631885290144,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.16072991490364075,
+                            "test_loss": 2.461777448654175
+                        },
+                        "print": "val_loss: 0.161 * 0.5 + test_loss: 2.462 * 0.5",
+                        "epoch": 178
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8027689030883919,
+                            "VUS_ROC": 0.8376191793967056
+                        },
+                        "print": "(1 - AUC_ROC: 0.803) * 0.3 + (1 - VUS_ROC: 0.838) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 10,
+                "st_net_layers": 3,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 3,
+                "coupling_layers": 4,
+                "seed": 80,
+                "past": 19,
+                "encoder_layers": 11,
+                "encoder_dropout": 0.5,
+                "encoder_compression_factor": 2,
+                "opt_goal": 1.7645364463329314,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.691831886768341,
+                            "test_loss": 1.7956955432891846
+                        },
+                        "print": "val_loss: 1.692 * 0.5 + test_loss: 1.796 * 0.5",
+                        "epoch": 79
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8844515441959532,
+                            "VUS_ROC": 0.8903801128557595
+                        },
+                        "print": "(1 - AUC_ROC: 0.884) * 0.3 + (1 - VUS_ROC: 0.890) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 4,
+                "st_dropout": 0.1,
+                "st_funnel_factor": 1,
+                "coupling_layers": 7,
+                "seed": 71,
+                "past": 34,
+                "encoder_layers": 4,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 1,
+                "opt_goal": 1.848324418067932,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -3.4653193950653076,
+                            "test_loss": 4.125600337982178
+                        },
+                        "print": "val_loss: -3.465 * 0.5 + test_loss: 4.126 * 0.5",
+                        "epoch": 935
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8895633652822151,
+                            "VUS_ROC": 0.8931853705798584
+                        },
+                        "print": "(1 - AUC_ROC: 0.890) * 0.3 + (1 - VUS_ROC: 0.893) * 0.7"
+                    }
+                ]
+            }
+        },
+        "8": {
+            "0": {
+                "hidden_multiplier": 13,
+                "st_net_layers": 3,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 2,
+                "coupling_layers": 8,
+                "seed": 83,
+                "past": 32,
+                "encoder_layers": 6,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 5,
+                "opt_goal": 3.2071699813008308,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.2338578850030899,
+                            "test_loss": 4.681896209716797
+                        },
+                        "print": "val_loss: -0.234 * 0.5 + test_loss: 4.682 * 0.5",
+                        "epoch": 663
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.880937167199148,
+                            "VUS_ROC": 0.8880769900706353
+                        },
+                        "print": "(1 - AUC_ROC: 0.881) * 0.3 + (1 - VUS_ROC: 0.888) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 10,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 4,
+                "coupling_layers": 8,
+                "seed": 37,
+                "past": 34,
+                "encoder_layers": 7,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 6,
+                "opt_goal": 1.545859159529209,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.3982284516096115,
+                            "test_loss": 2.037700891494751
+                        },
+                        "print": "val_loss: 0.398 * 0.5 + test_loss: 2.038 * 0.5",
+                        "epoch": 107
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8702875399361022,
+                            "VUS_ROC": 0.8872214476086321
+                        },
+                        "print": "(1 - AUC_ROC: 0.870) * 0.3 + (1 - VUS_ROC: 0.887) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 22,
+                "st_net_layers": 3,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 1,
+                "coupling_layers": 7,
+                "seed": 75,
+                "past": 14,
+                "encoder_layers": 7,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 3,
+                "opt_goal": 3.524557489156723,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.0176817774772644,
+                            "test_loss": 5.471231460571289
+                        },
+                        "print": "val_loss: -1.018 * 0.5 + test_loss: 5.471 * 0.5",
+                        "epoch": 661
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8942492012779553,
+                            "VUS_ROC": 0.8957217986318593
+                        },
+                        "print": "(1 - AUC_ROC: 0.894) * 0.3 + (1 - VUS_ROC: 0.896) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 17,
+                "st_net_layers": 6,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 3,
+                "coupling_layers": 3,
+                "seed": 58,
+                "past": 31,
+                "encoder_layers": 4,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 4,
+                "opt_goal": 1.1813254475593566,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.1891149282455444,
+                            "test_loss": 2.6257998943328857
+                        },
+                        "print": "val_loss: -2.189 * 0.5 + test_loss: 2.626 * 0.5",
+                        "epoch": 683
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.821618743343983,
+                            "VUS_ROC": 0.8466760934591508
+                        },
+                        "print": "(1 - AUC_ROC: 0.822) * 0.3 + (1 - VUS_ROC: 0.847) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 14,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 9,
+                "coupling_layers": 10,
+                "seed": 59,
+                "past": 28,
+                "encoder_layers": 7,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 3,
+                "opt_goal": 2.587588226795196,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.0081862211227417,
+                            "test_loss": 3.7000629901885986
+                        },
+                        "print": "val_loss: -0.008 * 0.5 + test_loss: 3.700 * 0.5",
+                        "epoch": 206
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8850905218317359,
+                            "VUS_ROC": 0.8947187904704226
+                        },
+                        "print": "(1 - AUC_ROC: 0.885) * 0.3 + (1 - VUS_ROC: 0.895) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 25,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 5,
+                "coupling_layers": 11,
+                "seed": 42,
+                "past": 17,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 3,
+                "opt_goal": 3.361839914321899,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.7867283821105957,
+                            "test_loss": 5.996940612792969
+                        },
+                        "print": "val_loss: -2.787 * 0.5 + test_loss: 5.997 * 0.5",
+                        "epoch": 559
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.880937167199148,
+                            "VUS_ROC": 0.8917231045722249
+                        },
+                        "print": "(1 - AUC_ROC: 0.881) * 0.3 + (1 - VUS_ROC: 0.892) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 26,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 2,
+                "coupling_layers": 7,
+                "seed": 54,
+                "past": 27,
+                "encoder_layers": 8,
+                "encoder_dropout": 0.6,
+                "encoder_compression_factor": 3,
+                "opt_goal": 2.635760360956192,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.63326758146286,
+                            "test_loss": 3.0654001235961914
+                        },
+                        "print": "val_loss: 1.633 * 0.5 + test_loss: 3.065 * 0.5",
+                        "epoch": 55
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8847710330138445,
+                            "VUS_ROC": 0.890703501783928
+                        },
+                        "print": "(1 - AUC_ROC: 0.885) * 0.3 + (1 - VUS_ROC: 0.891) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 15,
+                "st_net_layers": 4,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 7,
+                "coupling_layers": 4,
+                "seed": 79,
+                "past": 34,
+                "encoder_layers": 11,
+                "encoder_dropout": 0.1,
+                "encoder_compression_factor": 1,
+                "opt_goal": 0.5435849487781523,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.0460514426231384,
+                            "test_loss": 1.2248576879501343
+                        },
+                        "print": "val_loss: -1.046 * 0.5 + test_loss: 1.225 * 0.5",
+                        "epoch": 389
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9012779552715656,
+                            "VUS_ROC": 0.9294333826001138
+                        },
+                        "print": "(1 - AUC_ROC: 0.901) * 0.3 + (1 - VUS_ROC: 0.929) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 19,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 2,
+                "coupling_layers": 6,
+                "seed": 62,
+                "past": 17,
+                "encoder_layers": 8,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 10,
+                "opt_goal": 2.4395781517028805,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.5767860412597656,
+                            "test_loss": 2.8093461990356445
+                        },
+                        "print": "val_loss: 1.577 * 0.5 + test_loss: 2.809 * 0.5",
+                        "epoch": 55
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8870074547390842,
+                            "VUS_ROC": 0.8920692800701371
+                        },
+                        "print": "(1 - AUC_ROC: 0.887) * 0.3 + (1 - VUS_ROC: 0.892) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 16,
+                "st_net_layers": 4,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 2,
+                "coupling_layers": 6,
+                "seed": 53,
+                "past": 32,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 5,
+                "opt_goal": -0.5778006255626678,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.249066472053528,
+                            "test_loss": 0.13845616579055786
+                        },
+                        "print": "val_loss: -2.249 * 0.5 + test_loss: 0.138 * 0.5",
+                        "epoch": 453
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8851970181043664,
+                            "VUS_ROC": 0.8775575548492845
+                        },
+                        "print": "(1 - AUC_ROC: 0.885) * 0.3 + (1 - VUS_ROC: 0.878) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 21,
+                "st_net_layers": 4,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 4,
+                "coupling_layers": 8,
+                "seed": 57,
+                "past": 21,
+                "encoder_layers": 10,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 7,
+                "opt_goal": 2.7275152564048764,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 1.5176078081130981,
+                            "test_loss": 3.246047019958496
+                        },
+                        "print": "val_loss: 1.518 * 0.5 + test_loss: 3.246 * 0.5",
+                        "epoch": 58
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8959531416400426,
+                            "VUS_ROC": 0.8961977278340876
+                        },
+                        "print": "(1 - AUC_ROC: 0.896) * 0.3 + (1 - VUS_ROC: 0.896) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 35,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 1,
+                "coupling_layers": 7,
+                "seed": 62,
+                "past": 32,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.1,
+                "encoder_compression_factor": 6,
+                "opt_goal": 2.2980017956346273,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.6554541401565075,
+                            "test_loss": 3.5637686252593994
+                        },
+                        "print": "val_loss: -0.655 * 0.5 + test_loss: 3.564 * 0.5",
+                        "epoch": 161
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8838125665601704,
+                            "VUS_ROC": 0.8891404555518758
+                        },
+                        "print": "(1 - AUC_ROC: 0.884) * 0.3 + (1 - VUS_ROC: 0.889) * 0.7"
+                    }
+                ]
+            }
+        },
+        "9": {
+            "0": {
+                "hidden_multiplier": 6,
+                "st_net_layers": 6,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 3,
+                "coupling_layers": 3,
+                "seed": 56,
+                "past": 22,
+                "encoder_layers": 4,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 8,
+                "opt_goal": -0.22672746796160936,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.7052582502365112,
+                            "test_loss": -0.02164284698665142
+                        },
+                        "print": "val_loss: -0.705 * 0.5 + test_loss: -0.022 * 0.5",
+                        "epoch": 439
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.888604898828541,
+                            "VUS_ROC": 0.8978880440937705
+                        },
+                        "print": "(1 - AUC_ROC: 0.889) * 0.3 + (1 - VUS_ROC: 0.898) * 0.7"
+                    }
+                ]
+            },
+            "1": {
+                "hidden_multiplier": 28,
+                "st_net_layers": 5,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 2,
+                "coupling_layers": 4,
+                "seed": 77,
+                "past": 23,
+                "encoder_layers": 7,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 5,
+                "opt_goal": 0.7788954876363277,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": 0.3510713651776314,
+                            "test_loss": 0.962248682975769
+                        },
+                        "print": "val_loss: 0.351 * 0.5 + test_loss: 0.962 * 0.5",
+                        "epoch": 172
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8921192758253461,
+                            "VUS_ROC": 0.8994075847376215
+                        },
+                        "print": "(1 - AUC_ROC: 0.892) * 0.3 + (1 - VUS_ROC: 0.899) * 0.7"
+                    }
+                ]
+            },
+            "2": {
+                "hidden_multiplier": 29,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 3,
+                "coupling_layers": 3,
+                "seed": 82,
+                "past": 39,
+                "encoder_layers": 6,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 3,
+                "opt_goal": 0.9058041453361511,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.9143460988998413,
+                            "test_loss": 2.1144399642944336
+                        },
+                        "print": "val_loss: -1.914 * 0.5 + test_loss: 2.114 * 0.5",
+                        "epoch": 716
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.88604898828541,
+                            "VUS_ROC": 0.9009893929530175
+                        },
+                        "print": "(1 - AUC_ROC: 0.886) * 0.3 + (1 - VUS_ROC: 0.901) * 0.7"
+                    }
+                ]
+            },
+            "3": {
+                "hidden_multiplier": 8,
+                "st_net_layers": 5,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 1,
+                "coupling_layers": 6,
+                "seed": 59,
+                "past": 33,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.1,
+                "encoder_compression_factor": 9,
+                "opt_goal": 0.776995849609375,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.5680246353149414,
+                            "test_loss": 2.210576057434082
+                        },
+                        "print": "val_loss: -2.568 * 0.5 + test_loss: 2.211 * 0.5",
+                        "epoch": 315
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8828541001064963,
+                            "VUS_ROC": 0.8890196382869566
+                        },
+                        "print": "(1 - AUC_ROC: 0.883) * 0.3 + (1 - VUS_ROC: 0.889) * 0.7"
+                    }
+                ]
+            },
+            "4": {
+                "hidden_multiplier": 2,
+                "st_net_layers": 7,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 6,
+                "coupling_layers": 4,
+                "seed": 65,
+                "past": 27,
+                "encoder_layers": 6,
+                "encoder_dropout": 0.1,
+                "encoder_compression_factor": 3,
+                "opt_goal": -0.348413036763668,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.7581139504909515,
+                            "test_loss": -0.17282693088054657
+                        },
+                        "print": "val_loss: -0.758 * 0.5 + test_loss: -0.173 * 0.5",
+                        "epoch": 399
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8288604898828541,
+                            "VUS_ROC": 0.8118936369286442
+                        },
+                        "print": "(1 - AUC_ROC: 0.829) * 0.3 + (1 - VUS_ROC: 0.812) * 0.7"
+                    }
+                ]
+            },
+            "5": {
+                "hidden_multiplier": 10,
+                "st_net_layers": 3,
+                "st_dropout": 0.4,
+                "st_funnel_factor": 4,
+                "coupling_layers": 5,
+                "seed": 82,
+                "past": 37,
+                "encoder_layers": 8,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 6,
+                "opt_goal": 1.313025291264057,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.3739847093820572,
+                            "test_loss": 2.036029577255249
+                        },
+                        "print": "val_loss: -0.374 * 0.5 + test_loss: 2.036 * 0.5",
+                        "epoch": 345
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8192758253461129,
+                            "VUS_ROC": 0.8413035299396892
+                        },
+                        "print": "(1 - AUC_ROC: 0.819) * 0.3 + (1 - VUS_ROC: 0.841) * 0.7"
+                    }
+                ]
+            },
+            "6": {
+                "hidden_multiplier": 30,
+                "st_net_layers": 4,
+                "st_dropout": 0.3,
+                "st_funnel_factor": 8,
+                "coupling_layers": 3,
+                "seed": 57,
+                "past": 23,
+                "encoder_layers": 5,
+                "encoder_dropout": 0.4,
+                "encoder_compression_factor": 3,
+                "opt_goal": 0.47225047945976256,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.09804791212081909,
+                            "test_loss": 0.7166640758514404
+                        },
+                        "print": "val_loss: -0.098 * 0.5 + test_loss: 0.717 * 0.5",
+                        "epoch": 184
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8538871139510117,
+                            "VUS_ROC": 0.8870015772060518
+                        },
+                        "print": "(1 - AUC_ROC: 0.854) * 0.3 + (1 - VUS_ROC: 0.887) * 0.7"
+                    }
+                ]
+            },
+            "7": {
+                "hidden_multiplier": 19,
+                "st_net_layers": 4,
+                "st_dropout": 0.5,
+                "st_funnel_factor": 4,
+                "coupling_layers": 10,
+                "seed": 84,
+                "past": 26,
+                "encoder_layers": 9,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 5,
+                "opt_goal": 2.16270103380084,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -0.5837889537215233,
+                            "test_loss": 3.339768171310425
+                        },
+                        "print": "val_loss: -0.584 * 0.5 + test_loss: 3.340 * 0.5",
+                        "epoch": 489
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8270500532481363,
+                            "VUS_ROC": 0.8348986101143926
+                        },
+                        "print": "(1 - AUC_ROC: 0.827) * 0.3 + (1 - VUS_ROC: 0.835) * 0.7"
+                    }
+                ]
+            },
+            "8": {
+                "hidden_multiplier": 39,
+                "st_net_layers": 3,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 2,
+                "coupling_layers": 3,
+                "seed": 41,
+                "past": 33,
+                "encoder_layers": 7,
+                "encoder_dropout": 0.1,
+                "encoder_compression_factor": 1,
+                "opt_goal": 2.002584159374237,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -3.0333250761032104,
+                            "test_loss": 4.160830974578857
+                        },
+                        "print": "val_loss: -3.033 * 0.5 + test_loss: 4.161 * 0.5",
+                        "epoch": 999
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8673056443024495,
+                            "VUS_ROC": 0.8724966703669655
+                        },
+                        "print": "(1 - AUC_ROC: 0.867) * 0.3 + (1 - VUS_ROC: 0.872) * 0.7"
+                    }
+                ]
+            },
+            "9": {
+                "hidden_multiplier": 12,
+                "st_net_layers": 3,
+                "st_dropout": 0.9,
+                "st_funnel_factor": 6,
+                "coupling_layers": 11,
+                "seed": 59,
+                "past": 40,
+                "encoder_layers": 4,
+                "encoder_dropout": 0.1,
+                "encoder_compression_factor": 4,
+                "opt_goal": -1.1502531886100769,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -1.1762648820877075,
+                            "test_loss": -1.1391053199768066
+                        },
+                        "print": "val_loss: -1.176 * 0.5 + test_loss: -1.139 * 0.5",
+                        "epoch": 931
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9160809371671991,
+                            "VUS_ROC": 0.8964837416154814
+                        },
+                        "print": "(1 - AUC_ROC: 0.916) * 0.3 + (1 - VUS_ROC: 0.896) * 0.7"
+                    }
+                ]
+            },
+            "10": {
+                "hidden_multiplier": 37,
+                "st_net_layers": 5,
+                "st_dropout": 0.6,
+                "st_funnel_factor": 5,
+                "coupling_layers": 12,
+                "seed": 55,
+                "past": 25,
+                "encoder_layers": 4,
+                "encoder_dropout": 0.3,
+                "encoder_compression_factor": 2,
+                "opt_goal": 0.5883285403251648,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.4745657444000244,
+                            "test_loss": 1.900997519493103
+                        },
+                        "print": "val_loss: -2.475 * 0.5 + test_loss: 1.901 * 0.5",
+                        "epoch": 521
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.9244941427050053,
+                            "VUS_ROC": 0.9056644676816854
+                        },
+                        "print": "(1 - AUC_ROC: 0.924) * 0.3 + (1 - VUS_ROC: 0.906) * 0.7"
+                    }
+                ]
+            },
+            "11": {
+                "hidden_multiplier": 25,
+                "st_net_layers": 7,
+                "st_dropout": 0.2,
+                "st_funnel_factor": 6,
+                "coupling_layers": 6,
+                "seed": 91,
+                "past": 32,
+                "encoder_layers": 3,
+                "encoder_dropout": 0.2,
+                "encoder_compression_factor": 11,
+                "opt_goal": 1.2347880005836487,
+                "details": [
+                    {
+                        "values": {
+                            "val_loss": -2.599918007850647,
+                            "test_loss": 2.8782334327697754
+                        },
+                        "print": "val_loss: -2.600 * 0.5 + test_loss: 2.878 * 0.5",
+                        "epoch": 819
+                    },
+                    {
+                        "values": {
+                            "AUC_ROC": 0.8645367412140574,
+                            "VUS_ROC": 0.8225122286236363
+                        },
+                        "print": "(1 - AUC_ROC: 0.865) * 0.3 + (1 - VUS_ROC: 0.823) * 0.7"
+                    }
+                ]
+            }
+        },
+        "iterations": 10,
+        "best_params": {
+            "hidden_multiplier": 31,
+            "st_net_layers": 4,
+            "st_dropout": 0.6,
+            "st_funnel_factor": 4,
+            "coupling_layers": 9,
+            "seed": 52,
+            "past": 27,
+            "encoder_layers": 3,
+            "encoder_dropout": 0.1,
+            "encoder_compression_factor": 1,
+            "hist_shape": [
+                949,
+                27,
+                2
+            ]
+        },
+        "best_candidate": [
+            7,
+            [
+                6
+            ]
+        ]
+    },
+    "test": {
+        "0": {
+            "AUC_ROC": 1.0,
+            "AUC_PR": 0.9999999999999999,
+            "Precision": 1.0,
+            "Recall": 0.9,
+            "F": 0.9473684210526315,
+            "Precision_at_k": 0.9,
+            "Rprecision": 1.0,
+            "Rrecall": 0.9200000000000002,
+            "RF": 0.9583333333333334,
+            "R_AUC_ROC": 0.9717426214176424,
+            "R_AUC_PR": 0.7707055855367805,
+            "VUS_ROC": 0.9594498441046259,
+            "VUS_PR": 0.679594770642977,
+            "Affiliation_Precision": 1.0,
+            "Affiliation_Recall": 1.0,
+            "sliding_window": 125.0
+        },
+        "mean": {
+            "AUC_ROC": 1.0,
+            "AUC_PR": 0.9999999999999999,
+            "Precision": 1.0,
+            "Recall": 0.9,
+            "F": 0.9473684210526315,
+            "Precision_at_k": 0.9,
+            "Rprecision": 1.0,
+            "Rrecall": 0.9200000000000002,
+            "RF": 0.9583333333333334,
+            "R_AUC_ROC": 0.9717426214176424,
+            "R_AUC_PR": 0.7707055855367805,
+            "VUS_ROC": 0.9594498441046259,
+            "VUS_PR": 0.679594770642977,
+            "Affiliation_Precision": 1.0,
+            "Affiliation_Recall": 1.0,
+            "sliding_window": 125.0
+        }
+    }
+}

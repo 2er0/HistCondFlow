@@ -1,0 +1,14 @@
+\begin{tabular}{l|ccccc|ccccc}
+\toprule
+ & \multicolumn{5}{r}{VUS_ROC} \\
+dataset & SWat & calit_v2 & ghl & metro_v2 & smd \\
+model_type &  &  &  &  &  \\
+\midrule
+RealNVP & \bfseries 0.88 & 0.35 & 0.70 ± 0.22 & \bfseries 0.85 & \bfseries 0.81 ± 0.10 \\
+tcNF-base & \bfseries 0.88 & 0.40 & 0.89 ± 0.09 & 0.78 & 0.80 ± 0.09 \\
+tcNF-cnn & 0.83 & 0.44 & \bfseries 0.90 ± 0.04 & 0.76 & 0.80 ± 0.11 \\
+tcNF-mlp & \bfseries 0.88 & 0.44 & 0.66 ± 0.32 & 0.80 & 0.80 ± 0.12 \\
+tcNF-stateful & - & \bfseries 0.77 & - & - & - \\
+tcNF-stateless & 0.86 & 0.35 & 0.59 ± 0.38 & 0.79 & 0.80 ± 0.11 \\
+\bottomrule
+\end{tabular}

@@ -5,18 +5,10 @@ import pandas as pd
 
 from dataset.DatasetUtils.GHL.main import load_ghl_g
 from dataset.DatasetUtils.Metro.main import load_metro
-from dataset.DatasetUtils.Occupancy.main import load_occupancy
 from dataset.DatasetUtils.calit2.main import load_calit2
 from dataset.DatasetUtils.smd.main import load_smd_g
 
 from dataset.DatasetUtils.swat.main import load_swat
-from dataset.DatasetUtils.wadi.main import load_wadi_ori
-from dataset.DatasetUtils.Aneo.main import load_aneo
-from dataset.DatasetUtils.Statnett.main import (load_statnett,
-                                                load_statnett_with_less_anomalies_in_training,
-                                                load_statnett_with_future_as_training, load_base_esoteric_statnett_data,
-                                                load_statnett_with_final_values_as_training,
-                                                load_no1_zone_statnett_data)
 
 generators = ["smd", "occupancy"]  # 'msl', 'smap',
 files_with_label = [
@@ -66,9 +58,6 @@ def provide_all_datasets():
         elif t == "with_label":
             for d in dataset:
                 yield get_files_with_label_by_name(d)
-        elif t == "without_label":
-            for d in dataset:
-                yield get_files_without_label_by_name(d)
         else:
             raise ValueError("Dataset name not found")
 
@@ -85,8 +74,6 @@ def get_dataset_type(name: str):
         return "generator", get_generator_by_name
     elif name in files_with_label:
         return "with_label", get_files_with_label_by_name
-    elif name in files_without_label:
-        return "without_label", get_files_without_label_by_name
     else:
         raise ValueError("Dataset name not found")
 
@@ -109,40 +96,8 @@ def get_generator_by_name(name: str) -> Generator:
     #     return load_ghl_g()
     if name == generators[0]:
         return load_smd_g()
-    elif name == generators[1]:
-        return load_occupancy()
     else:
         raise ValueError(f"No dataset with the given name available")
-
-
-def pre_load_aneo_data():
-    yield load_aneo()
-
-
-def pre_load_statnett_data():
-    for loader in [load_statnett,
-                   load_statnett_with_less_anomalies_in_training,
-                   load_statnett_with_future_as_training,
-                   load_statnett_with_final_values_as_training,
-                   load_base_esoteric_statnett_data,
-                   load_no1_zone_statnett_data]:
-        yield loader
-
-
-def load_statnett_data():
-    try:
-        for v in pre_load_statnett_data():
-            yield v
-    except Exception as e:
-        print(f"Error loading Statnett data: {e}")
-
-
-def load_aneo_data():
-    try:
-        for name, param, train, test in pre_load_aneo_data():
-            yield name, param, train, test
-    except Exception as e:
-        print(f"Error loading Aneo data: {e}")
 
 
 def get_files_with_label_by_name(name: str) -> (pd.DataFrame, pd.DataFrame):
@@ -160,15 +115,6 @@ def get_files_with_label_by_name(name: str) -> (pd.DataFrame, pd.DataFrame):
     #     return load_occupancy_1()
     # elif name == files_with_label[5]:
     #     return load_occupancy_2()
-    else:
-        raise ValueError(f"No dataset with the given name available")
-
-
-def get_files_without_label_by_name(name: str) -> (np.ndarray, np.ndarray, None):
-    # if name == files_without_label[0]:
-    #    return load_telenor()
-    if name == files_without_label[0]:
-        return load_wadi_ori()
     else:
         raise ValueError(f"No dataset with the given name available")
 
