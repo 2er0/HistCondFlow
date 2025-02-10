@@ -10,16 +10,13 @@ from dataset.DatasetUtils.smd.main import load_smd_g
 
 from dataset.DatasetUtils.swat.main import load_swat
 
-generators = ["smd", "occupancy"]  # 'msl', 'smap',
+generators = ["smd"],
 files_with_label = [
     "swat",
     "calit2",
-    "ghl",  # old
+    "ghl",
     "metro",
-    # "occupancy1", old
-    # "occupancy2", old
-]  # 'wadi_new', [28, 33]
-files_without_label = ["wadi_ori"]  # 'telenor' [34]
+]
 
 
 def remove_zero_columns(param, train, test):
@@ -49,7 +46,6 @@ def provide_all_datasets():
     for t, dataset in [
         ("with_label", files_with_label),
         ("gen", generators),
-        ("without_label", files_without_label),
     ]:
         if t == "gen":
             for d in dataset:
