@@ -1,0 +1,1 @@
+for i in $(ls *.tex); do; pandoc -f latex -s $i -t gfm -o $(echo $i | sed 's/tex/md/'); done
